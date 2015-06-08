@@ -1,26 +1,26 @@
 # View Wireframes
 
-## New Session
-![new-session]
+## Homepage
+![Homepage]
 
-## Feed Show (landing page)
-![feed-show]
+## Mainpage
+![Mainpage]
 
-## Blog Show
-![blog-show]
+## Card Show (landing page)
+![CardShow]
 
-## Post Show
-![post-show]
+## CardShow2 (typing in answer)
+![CardShow2]
 
-## Post Form
-![post-form]
+## Deck Show
+![DeckShow]
 
 ## Search Results
 ![search-results]
 
-[new-session]: ./wireframes/new_session.png
-[feed-show]: ./wireframes/feed_show.png
-[blog-show]: ./wireframes/blog_show.png
-[post-show]: ./wireframes/post_show.png
-[post-form]: ./wireframes/post_form.png
+[Homepage]: ./wireframes/Homepage.png
+[Mainpage]: ./wireframes/Mainpage.png
+[Cardshow]: ./wireframes/Cardshow.png
+[Cardshow2]: ./wireframes/Cardshow2.png
+[Deckshow]: ./wireframes/Deckshow.png
 [search-results]: ./wireframes/search_results.png
