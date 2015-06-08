@@ -1,24 +1,26 @@
-# Flux-capacitr
+# Devour
 
 [Heroku link][heroku]
 
-[heroku]: http://flux-capacitr.herokuapp.com
+[heroku]: http://devour.herokuapp.com
 
 ## Minimum Viable Product
-Flux-capacitr is a clone of Tumblr built on Rails and Backbone. Users can:
+Devour is a clone of Anki built on Rails and Backbone. Users can:
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
-- [x] Create accounts
-- [x] Create sessions (log in)
-- [x] Create blogs
-- [x] Create blog posts
-- [ ] View blogs and posts
-- [ ] Subscribe to blogs
-- [ ] View a feed of subscribed blogs
-- [ ] Tag blog posts
-- [ ] Search for blogs by title
-- [ ] Search for posts by tag
+- [ ] Create accounts
+- [ ] Create sessions (log in)
+- [ ] Create decks
+- [ ] Create flashcards
+- [ ] Memorize flashcards efficiently
+- [ ] Test themselves daily
+- [ ] View data of their progress
+- [ ] Tag decks
+- [ ] Share decks with other users
+- [ ] Search through a public database for other decks to import
+- [ ] See other users' progress
+- [ ] Have competitions to learn the most flashcards
 
 ## Design Docs
 * [View Wireframes][views]
@@ -29,7 +31,7 @@ Flux-capacitr is a clone of Tumblr built on Rails and Backbone. Users can:
 
 ## Implementation Timeline
 
-### Phase 1: User Authentication, Blog Creation (~1 day)
+### Phase 1: User Authentication, Deck Creation (~1 day)
 I will implement user authentication in Rails based on the practices learned at
 App Academy. By the end of this phase, users will be able to create blogs using
 a simple text form in a Rails view. The most important part of this phase will
@@ -38,47 +40,73 @@ to phase 2.
 
 [Details][phase-one]
 
-### Phase 2: Viewing Blogs and Posts (~2 days)
-I will add API routes to serve blog and post data as JSON, then add Backbone
+### Phase 2: Viewing Decks and Cards (~2 days)
+I will add API routes to serve deck and flashcard data as JSON, then add Backbone
 models and collections that fetch data from those routes. By the end of this
-phase, users will be able to create blogs and view both blogs and posts, all
+phase, users will be able to create decks and view both decks and flashcards, all
 inside a single Backbone app.
 
 [Details][phase-two]
 
-### Phase 3: Editing and Displaying Posts (~2 days)
-I plan to use third-party libraries to add functionality to the `PostForm` and
-`PostShow` views in this phase. First I'll need to add a Markdown editor to the
-`PostForm`, and make sure that the Markdown is properly escaped and formatted in
-the `PostShow` view. I also plan to integrate Filepicker for file upload so
-users can add images to blog posts.
+### Phase 3: Learning New Information (~2-3 days)
+I plan to utilize the SM-2 Algorithm (originally designed by P.A. Wozniak) to
+allow users to memorize their flashcards. The algorithm:
+
+1. Split knowledge into smallest possible items.
+2. With all items, associate an initial Easiness-Factor (EF) to 2.5.
+3. Start repetitions:
+
+Time until next repetition(I):
+  I(1) = 1;
+  I(2) = 6;
+  if (n > 2)
+    I(n) = I(n-1) * EF
+
+4. Assess quality of response: 0-5
+5. Assess easiness of the flashcard, based on previous data and
+ response from user:
+
+Easiness Factor(EF):
+  EF' = EF + (.1-(5-q)(0.08 + 0.02(5-q)))
+
+6. If the user's response is less than 3, we start repetitions from the
+beginning, i.e. use I(1) and I(2).
+7. After each repetition session, repeat all items that scored below 2 until
+they score 2.
 
 [Details][phase-three]
 
-### Phase 4: User Feeds (~1-2 days)
-I'll start by adding a `feed` route that uses the `current_user`'s
-`subscribed_blogs` association to serve a list of blog posts ordered
-chronologically. On the Backbone side, I'll make a `FeedShow` view whose `posts`
-collection fetches from the new route.  Ultimately, this will be the page users
-see after logging in.
+### Phase 4: Sharing Decks (~1 day)
+I'll allow users to share decks with other users. This will be done by allowing
+users to see each other in the Users index, and allowing a simple share by
+utilizing a DeckShares association table.
 
 [Details][phase-four]
 
-### Phase 5: Searching for Blogs and Posts (~2 days)
-I'll need to add `search` routes to both the Blogs and Posts controllers. On the
-Backbone side, there will be a `SearchResults` composite view has `BlogsIndex`
-and `PostsIndex` subviews. These views will use plain old `blogs` and `posts`
-collections, but they will fetch from the new `search` routes.
+### Phase 5: Searching for New Decks (~1 day)
+I'll need to add `search` routes to both the Decks controllers. On the
+Backbone side, there will be a `SearchResults` composite view that has
+`Deck` subviews. These views will contain card collections, but they will fetch
+from the new `search` routes.
 
 [Details][phase-five]
 
+### Bonus Phase 6: Making it easier to learn Cards (~1 day)
+I'll figure out a way to make the learning process "easier" for users, by
+improving the presentation of the cards, allowing them to be more alive. This
+may be implemented by adding features that mimic a "working environment" for
+the subject they are currently studying. For instance, if the User is studying
+Biology, then making the background mimic the natural environment and create
+animal noises. This would likely be implemented by allowing the user to choose
+between general deck "themes" which would add additional animation and features.
+Additionally, I want to allow users to input the answer and determine whether
+they wrote it correctly.
+
 ### Bonus Features (TBD)
-- [ ] "Like" button and counter for posts
-- [ ] Custom blog urls
+- [ ] "Like" button and counter for decks
 - [ ] Pagination/infinite scroll
-- [ ] Activity history (e.g. likes, reblogs, taggings)
-- [ ] Post types (image posts, quote posts, etc)
-- [ ] Reblogging
+- [ ] Activity history (e.g. likes, comments, taggings)
+- [ ] Tweets that display User progress
 - [ ] Multiple sessions/session management
 - [ ] User avatars
 - [ ] Typeahead search bar
@@ -88,4 +116,3 @@ collections, but they will fetch from the new `search` routes.
 [phase-three]: ./docs/phases/phase3.md
 [phase-four]: ./docs/phases/phase4.md
 [phase-five]: ./docs/phases/phase5.md
-
