@@ -7,13 +7,13 @@
 ![Mainpage]
 
 ## Card Show (landing page)
-![CardShow]
+![Cardshow]
 
 ## CardShow2 (typing in answer)
-![CardShow2]
+![Cardshow2]
 
 ## Deck Show
-![DeckShow]
+![Deckshow]
 
 ## Search Results
 ![search-results]
