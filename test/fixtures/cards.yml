@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  deck_id: 1
+  question: MyText
+  answer: MyText
+  next_rep: 1
+  e_factor: 1
+
+two:
+  deck_id: 1
+  question: MyText
+  answer: MyText
+  next_rep: 1
+  e_factor: 1

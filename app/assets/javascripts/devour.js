@@ -4,6 +4,10 @@ window.DevourApp = {
 
   Views: {},
 
+  Collections: {},
+
+  Navbar: {},
+
   Models: {},
 
   initialize: function() {
