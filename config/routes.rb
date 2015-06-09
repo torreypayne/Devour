@@ -2,8 +2,9 @@ Rails.application.routes.draw do
 
   root 'users#index'
 
-  resources :users
+  # resources :users
   resources :sessions
+  resources :users
 
   namespace :api do
     # resources :sessions, only: [:new, :create, :destroy]

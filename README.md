@@ -33,7 +33,7 @@ Devour is a clone of Anki built on Rails and Backbone. Users can:
 
 ### Phase 1: User Authentication, Deck Creation (~1 day)
 I will implement user authentication in Rails based on the practices learned at
-App Academy. By the end of this phase, users will be able to create blogs using
+App Academy. By the end of this phase, users will be able to create flashcards using
 a simple text form in a Rails view. The most important part of this phase will
 be pushing the app to Heroku and ensuring that everything works before moving on
 to phase 2.

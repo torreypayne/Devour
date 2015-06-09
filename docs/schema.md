@@ -6,7 +6,7 @@ column name | data type | details
 id          | integer   | not null, primary key
 owner_id    | integer   | not null, foreign key (references users)
 title       | string    | not null
-course_id   | integer   | not null, foreign key (references courses)
+course_id   | integer   | foreign key (references courses)
 
 ## courses
 column name | data type | details
