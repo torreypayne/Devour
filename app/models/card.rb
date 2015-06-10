@@ -20,9 +20,12 @@ class Card < ActiveRecord::Base
 
   def e_factor=(e)
 
+    # Finish
+
   end
 
   def last_passed=(last_pass)
+    # Finish
 
   end
 
