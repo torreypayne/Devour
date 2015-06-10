@@ -17,13 +17,15 @@ ActiveRecord::Schema.define(version: 20150609222604) do
   enable_extension "plpgsql"
 
   create_table "cards", force: :cascade do |t|
-    t.integer  "deck_id",    null: false
-    t.text     "question",   null: false
-    t.text     "answer",     null: false
-    t.integer  "next_rep",   null: false
-    t.integer  "e_factor",   null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "deck_id",     null: false
+    t.text     "question",    null: false
+    t.text     "answer",      null: false
+    t.integer  "next_rep",    null: false
+    t.integer  "e_factor",    null: false
+    t.integer  "repetitions", null: false
+    t.string   "last_passed", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   add_index "cards", ["answer"], name: "index_cards_on_answer", using: :btree

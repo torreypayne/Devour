@@ -22,9 +22,10 @@ default: &default
   pool: 5
 
 development:
-  <<: *default
-  database: sample-project-proposal-master_development
-
+  adapter: postgresql
+  database: devour_app
+  host: localhost
+  username: appacademy
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is

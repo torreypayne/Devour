@@ -6,6 +6,8 @@ class CreateCards < ActiveRecord::Migration
       t.text :answer, null: false
       t.integer :next_rep, null: false
       t.integer :e_factor, null: false
+      t.integer :repetitions, null: false
+      t.string :last_passed, null: false
 
       t.timestamps null: false
     end

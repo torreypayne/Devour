@@ -8,4 +8,6 @@ class Deck < ActiveRecord::Base
   foreign_key: :owner_id
   )
 
+  has_many :cards
+
 end
