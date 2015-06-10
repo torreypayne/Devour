@@ -3,11 +3,11 @@ class UsersController < ApplicationController
   before_action :ensure_logged_in, only: :index
 
   def new
-    @user = User.new
+    # @user = User.new
   end
 
   def create
-    user = User.new(email: user_params[:email], password: user_params[:password])
+    user = User.new(user_params)
     if user.save
       render json: user
     else

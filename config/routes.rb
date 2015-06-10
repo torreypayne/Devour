@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resource :session
   resources :users
   namespace :api do
+    # NAMESPACE YOUR CONTROLLERS ALSO!!!!
     resources :decks
     resources :cards
   end
