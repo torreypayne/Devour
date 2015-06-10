@@ -11,10 +11,16 @@ window.Devour = {
   Models: {},
 
   initialize: function() {
-    var router = new Devour.Routers.Router({
-      $rootEl: $('#content')
+    var decks = new Devour.Collections.Decks();
+    var router = new Devour.Routers.MainRouter({
+      $rootEl: $('#content'),
+      collection: decks
     });
     Backbone.history.start();
   }
 
 };
+
+$(document).ready(function() {
+  Devour.initialize();
+});

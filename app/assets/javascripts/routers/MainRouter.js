@@ -2,7 +2,7 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
 
   initialize: function(options) {
     this.$rootEl = options.$rootEl;
-    this.collection = new Devour.Collections.Decks();
+    this.decks = options.collection;
   },
 
   routes: {
@@ -13,8 +13,12 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
   },
 
   index: function() {
-    this.collection.fetch();
-    var indexView = new Devour.Views.DecksIndex({ collection: this.collection });
+    this.decks.fetch({
+      success: function() {
+        console.log(this.decks);
+      }
+    });
+    var indexView = new Devour.Views.DecksIndex({ collection: this.decks });
     this.swapView(indexView);
   },
 
@@ -22,22 +26,22 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
     var deck = new Devour.Models.Deck();
     var newView = new Devour.Views.DeckForm({
       model: deck,
-      collection: this.collection,
+      collection: this.decks,
     });
     this.swapView(newView);
   },
 
   edit: function(id) {
-    var deck = this.collection.getOrFetch(id);
+    var deck = this.decks.getOrFetch(id);
     var editView = new Devour.Views.DeckForm({
       model: deck,
-      collection: this.collection,
+      collection: this.decks,
     });
     this.swapView(editView);
   },
 
   show: function(id) {
-    var deck = this.collection.getOrFetch(id);
+    var deck = this.decks.getOrFetch(id);
     var showView = new Devour.Views.DeckShow({ model: deck });
     this.swapView(showView);
   },

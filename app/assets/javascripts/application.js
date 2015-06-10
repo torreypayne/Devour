@@ -11,7 +11,16 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
+//  require jquery_ujs
+//  require jquery-ui
+//= require underscore
+//= require jquery.serializejson
 //= require backbone
+//= require devour
 //= require utils/composite_view
+//= require_tree ../templates
+//= require_tree ./models
+//= require_tree ./collections
+//= require_tree ./views
+//= require_tree ./routers
 //= require_tree .

@@ -1,7 +1,6 @@
-Devour.Collections.Decks = Backbone.Collections.extend({
-
-  url: 'api/decks',
+Devour.Collections.Decks = Backbone.Collection.extend({
 
   model: Devour.Models.Deck,
-
+  
+  url: 'api/decks',
 });

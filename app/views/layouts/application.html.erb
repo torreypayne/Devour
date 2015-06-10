@@ -8,9 +8,15 @@
 </head>
 <body>
 
-<div id="main">
-  <%= yield %>
-</div>
+  <% if current_user %>
+    <%= link_to "Log Out", session_url, method: :delete %>
+  <% else %>
+    <%= link_to "Log In", new_session_url %>
+  <% end %>
+
+  <div id="main">
+    <%= yield %>
+  </div>
 
 </body>
 </html>
