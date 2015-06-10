@@ -1,79 +1,46 @@
-class Card < ActiveRecord::Base
-  validates :deck_id, :question, :answer, :next_rep, :e_factor, :last_passed, presence: true
+require 'byebug'
 
-  after_initialize :set_repetitions
-  after_initialize :ensure_time_interval
-  after_initialize :ensure_e_factor
-  after_initialize :set_initial_time
+
+class Card < ActiveRecord::Base
+  validates :deck_id, :question, :answer, presence: true
 
   belongs_to :deck
 
-  attr_accessor :next_rep, :e_factor, :repetitions, :last_passed
-
-  def repetitions=(repetitions)
-    self.repetitions ||= 0
+  def update_e_factor(quality)
+    assess_response(quality)
   end
 
-  def next_rep=(next_rep)
-    self.next_rep ||= 1
-  end
-
-  def e_factor=(e)
-
-    # Finish
-
-  end
-
-  def last_passed=(last_pass)
-    # Finish
-
-  end
-
-
-  def set_repetitions
-    if self.repetitions.nil?
-      self.repetitions = 0
-    end
-  end
-
-  def ensure_time_interval
-    if (self.repetitions == 0 || self.repetitions.nil?)
-      self.next_rep = 1
-    end
-  end
-
-  def ensure_e_factor
-    if self.e_factor.nil?
-      self.e_factor = 2.5
-    end
-  end
-
-  def set_initial_time
-    self.last_passed ||= Time.now
+  def update_last_passed
+    self.last_passed = Time.now
   end
 
   def assess_response(quality)
-    e_factor = e_factor - 0.8 + 0.28*quality - 0.02*(quality*quality)
-    if (quality > 1)
-      self.set_time_interval(quality)
-      self.last_passed = Time.now
-    else
-      self.repetitions = 0
+    self.e_factor = self.e_factor - 0.8 + 0.28*quality - 0.02*(quality*quality)
+    if (self.e_factor < 1.3)
+      self.e_factor = 1.3
     end
+    if (quality > 1)
+      self.repetitions += 1
+      set_time_interval(quality)
+      last_passed = Time.now
+    else
+      repetitions = 0
+    end
+    self.save
+    return self
   end
 
   def set_time_interval(quality)
-    if (repetition == 1)
+    if (self.repetitions == 1)
       if (quality < 4)
-        next_rep = 1
+        self.next_rep = 1
       elsif (quality < 5)
-        next_rep = 2
+        self.next_rep = 2
       else
-        next_rep = 3
+        self.next_rep = 3
       end
     else
-      next_rep *= e_factor.round
+      self.next_rep = (self.next_rep * self.e_factor).round
     end
   end
-
 end

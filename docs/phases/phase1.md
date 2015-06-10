@@ -9,8 +9,8 @@
 ### Controllers
 * UsersController (create, new)
 * SessionsController (create, new, destroy)
-* BlogsController (create, new, show)
-* PostsController (create, new, show)
+* CardsController (create, new, show)
+* DecksController (create, new, show)
 
 ### Views
 * users/new.html.erb
