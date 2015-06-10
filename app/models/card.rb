@@ -61,7 +61,7 @@ class Card < ActiveRecord::Base
 
   def set_time_interval(quality)
     if (repetition == 1)
-      if (quality == < 4)
+      if (quality < 4)
         next_rep = 1
       elsif (quality < 5)
         next_rep = 2
@@ -72,5 +72,5 @@ class Card < ActiveRecord::Base
       next_rep *= e_factor.round
     end
   end
-  
+
 end
