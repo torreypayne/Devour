@@ -4,7 +4,7 @@ class CreateDecks < ActiveRecord::Migration
       t.integer :owner_id, null: false
       t.string :title, null: false
       t.integer :course_id
-      t.boolean :public, null: false
+      t.boolean :public, null: false, default: true
 
       t.timestamps null: false
     end

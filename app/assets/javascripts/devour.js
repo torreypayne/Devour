@@ -1,4 +1,4 @@
-window.DevourApp = {
+window.Devour = {
 
   Routers: {},
 
@@ -11,7 +11,7 @@ window.DevourApp = {
   Models: {},
 
   initialize: function() {
-    var router = new DevourApp.Routers.Router({
+    var router = new Devour.Routers.Router({
       $rootEl: $('#content')
     });
     Backbone.history.start();

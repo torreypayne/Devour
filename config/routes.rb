@@ -1,15 +1,11 @@
 Rails.application.routes.draw do
 
-  # root 'sessions#new'
+  root to: 'static_pages#root'
 
-  # resources :users
-  resources :sessions
+  resource :session
   resources :users
-
   namespace :api do
-    resources :decks do
-      resources :cards
-    end
+    resources :decks
+    resources :cards
   end
-
 end

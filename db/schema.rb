@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20150609222604) do
     t.integer  "next_rep",    default: 1,                     null: false
     t.float    "e_factor",    default: 2.5,                   null: false
     t.integer  "repetitions", default: 0,                     null: false
-    t.datetime "last_passed", default: '2015-06-09 17:20:32', null: false
+    t.datetime "last_passed", default: '2015-06-09 18:09:28', null: false
     t.datetime "created_at",                                  null: false
     t.datetime "updated_at",                                  null: false
   end
@@ -33,12 +33,12 @@ ActiveRecord::Schema.define(version: 20150609222604) do
   add_index "cards", ["question"], name: "index_cards_on_question", using: :btree
 
   create_table "decks", force: :cascade do |t|
-    t.integer  "owner_id",   null: false
-    t.string   "title",      null: false
+    t.integer  "owner_id",                  null: false
+    t.string   "title",                     null: false
     t.integer  "course_id"
-    t.boolean  "public",     null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "public",     default: true, null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   add_index "decks", ["owner_id"], name: "index_decks_on_owner_id", using: :btree
