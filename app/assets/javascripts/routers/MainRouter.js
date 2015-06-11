@@ -40,7 +40,7 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
     this.swapView(editView);
   },
 
-  show: function(id) {
+  showDeck: function(id) {
     var deck = this.decks.getOrFetch(id);
     var showView = new Devour.Views.DeckShow({ model: deck });
     this.swapView(showView);
