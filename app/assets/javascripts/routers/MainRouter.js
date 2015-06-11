@@ -2,6 +2,8 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
 
   initialize: function(options) {
     this.$rootEl = options.$rootEl;
+    this.navbar = options.navbar;
+    this.sidebar = options.sidebar;
     this.decks = options.collection;
   },
 

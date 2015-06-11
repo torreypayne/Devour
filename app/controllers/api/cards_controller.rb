@@ -33,6 +33,8 @@ module Api
     end
 
     def assess_quality(quality)
+      # Make own controller for this
+
       card = Card.find(params[:id])
       card.assess_response(quality)
     end

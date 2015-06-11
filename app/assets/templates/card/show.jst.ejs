@@ -1,8 +1,18 @@
-<% if (!card) { var card = new Devour.Models.Card(); card.id = '999999' } %>
-<div id="active-card" href="#" class="card deck-show card-question" data-id="<%= card.id %>">
-  <% if (card) { %>
-    <%= card.escape('question') %>
-  <% } %>
-</div><br>
-<button type="submit" class="btn btn-lg btn-primary btn-reveal">Reveal Answer</button>
-<div class="card answer-box"></div>
+<% if (!card) {  %>
+
+  <div class="try-again quiz-done">
+    <button class="btn btn-xxlarge btn-danger">TRY AGAIN!!!!!!</button>
+  </div>
+
+<% } else { %>
+
+  <div id="active-card" href="#" class="card deck-show card-question jumbotron" data-id="<%= card.id %>">
+    <div class="container">
+      <button class="btn btn-sm">Edit</button>
+      <button class="btn btn-danger btn-sm">Delete</button>
+      <h1><%= card.escape('question') %></h1>
+      <button type="submit" class="btn btn-lg btn-block btn-primary btn-reveal">Reveal Answer</button>
+      <div class="card answer-box"></div>
+    </div>
+  </div><br>
+<% } %>

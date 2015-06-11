@@ -10,7 +10,7 @@
 user = User.create(email: 'payne@payne.com', password: 'password')
 portuguese = Deck.create(title: 'Portuguese', owner_id: user.id)
 Card.create!(deck_id: 1, question: 'cidade', answer: 'city')
-Card.create(deck_id: portuguese.id, question: 'legal', answer: 'great')
+Card.create(deck_id: portuguese.id, question: 'legal', answer: 'cool')
 Card.create(deck_id: portuguese.id, question: 'amigos', answer: 'friends')
 Card.create(deck_id: portuguese.id, question: 'garota', answer: 'girl')
 Card.create(deck_id: portuguese.id, question: 'logo', answer: 'soon')

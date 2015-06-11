@@ -7,11 +7,12 @@ Devour.Views.CardShow = Backbone.CompositeView.extend({
   className: "card-item",
 
   events: {
-    'click button.card-reveal':'revealAnswer'
+    'click button.answer-button':'assessResponse',
+    'click button.btn-reveal':'revealAnswer'
   },
 
   initialize: function(options) {
-    this.model = options.model;
+    this.deck = options.deck;
     this.listenTo(this.model, 'sync', this.render);
   },
 
@@ -23,17 +24,23 @@ Devour.Views.CardShow = Backbone.CompositeView.extend({
 
   assessResponse: function(event) {
     var quality = $(event.currentTarget).data('quality');
-    $.ajax({
-      url: '/api/cards/',
-      data: { quality: quality },
-      dataType: 'json',
-      method: 'POST'
-    });
+    console.log('Answer evaluated!');
+    var next = this.collection.getOrFetch(this.model.id + 1);
+    this.deck.nextCard(next);
+    // console.log($(event.currentTarget).get('id'));
+    // console.log(quality);
+
+    // $.ajax({
+    //   url: '/api/cards/response',
+    //   data: { quality: quality },
+    //   dataType: 'json',
+    //   method: 'POST'
+    // });
   },
 
   revealAnswer: function(event) {
     $('div.answer-box').append(this.answerTemplate({ card: this.model }));
-    this.activateAnswerButtons();
+    // this.activateAnswerButtons();
   },
 
   destroyCard: function(event) {
