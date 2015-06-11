@@ -8,15 +8,15 @@ window.Devour = {
 
   Collections: {},
 
-  Navbar: {},
+  Navbars: {},
 
-  Sidebar: {},
+  Sidebars: {},
 
   Models: {},
 
   initialize: function() {
-    var navbar = new Devour.Navbar.Navbar();
-    var sidebar = new Devour.Sidebar.Sidebar();
+    var navbar = new Devour.Navbars.Navbar();
+    var sidebar = new Devour.Sidebars.Sidebar();
     var decks = new Devour.Collections.Decks();
     var router = new Devour.Routers.MainRouter({
       $rootEl: $('#content'),

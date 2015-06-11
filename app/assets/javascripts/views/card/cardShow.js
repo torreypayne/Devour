@@ -24,9 +24,11 @@ Devour.Views.CardShow = Backbone.CompositeView.extend({
 
   assessResponse: function(event) {
     var quality = $(event.currentTarget).data('quality');
-    console.log('Answer evaluated!');
-    var next = this.collection.getOrFetch(this.model.id + 1);
-    this.deck.nextCard(next);
+    $.post('api/responses', { 'quality': quality }, function(data) {
+      console.log('Answer evaluated!');
+      var next = this.collection.getOrFetch(this.model.id + 1);
+      this.deck.nextCard(next);
+    });
     // console.log($(event.currentTarget).get('id'));
     // console.log(quality);
 

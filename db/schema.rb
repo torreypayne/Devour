@@ -11,21 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150609222604) do
+ActiveRecord::Schema.define(version: 20150611202715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cards", force: :cascade do |t|
-    t.integer  "deck_id",                                     null: false
-    t.text     "question",                                    null: false
-    t.text     "answer",                                      null: false
-    t.integer  "next_rep",    default: 1,                     null: false
-    t.float    "e_factor",    default: 2.5,                   null: false
-    t.integer  "repetitions", default: 0,                     null: false
-    t.datetime "last_passed", default: '2015-06-10 17:25:56', null: false
-    t.datetime "created_at",                                  null: false
-    t.datetime "updated_at",                                  null: false
+    t.integer  "deck_id",    null: false
+    t.text     "question",   null: false
+    t.text     "answer",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "cards", ["answer"], name: "index_cards_on_answer", using: :btree
@@ -43,6 +39,19 @@ ActiveRecord::Schema.define(version: 20150609222604) do
 
   add_index "decks", ["owner_id"], name: "index_decks_on_owner_id", using: :btree
   add_index "decks", ["title"], name: "index_decks_on_title", using: :btree
+
+  create_table "responses", force: :cascade do |t|
+    t.integer  "card_id",                                     null: false
+    t.integer  "quality",                                     null: false
+    t.float    "e_factor",    default: 2.5,                   null: false
+    t.integer  "next_rep",                                    null: false
+    t.integer  "repetitions", default: 0,                     null: false
+    t.datetime "last_passed", default: '2015-06-10 20:58:28', null: false
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
+  end
+
+  add_index "responses", ["card_id"], name: "index_responses_on_card_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",           null: false

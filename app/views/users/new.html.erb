@@ -1,13 +1,23 @@
 <h1>Sign Up!</h1>
 
-<form class="user user-signup" action="/users" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"
+<form class="user user-signup form form-horizontal" action="/users" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-  <label for="email">Email</label>
-  <input type="text" class='jumbotron' id="email" name="user[email]" value="Email">
+  <img id="logo" src="http://farm1.staticflickr.com/551/18692277976_73ce78935a_b.jpg" alt="Eat memory for dinner">
 
-  <label for="password">Password</label>
-  <input type="password" class="jumbotron" name="user[password]" id="password">
+  <div class="form-group">
+    <label for="email" class="col-md-2">Email</label>
+    <div class="col-md-8">
+      <input type="text" class="form-control" id="email" name="user[email]" placeholder="Email">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="password" class="col-md-2">Password</label>
+    <div class="col-md-8">
+      <input type="password" class="form-control" name="user[password]" id="password" placeholder="password">
+    </div>
+  </div>
 
   <button type="submit" class="btn btn-primary btn-lg">Sign Up!</button>
 

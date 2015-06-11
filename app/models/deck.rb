@@ -10,4 +10,9 @@ class Deck < ActiveRecord::Base
 
   has_many :cards
 
+  def public?
+    # return self['public'] == true
+    #code
+  end
+
 end
