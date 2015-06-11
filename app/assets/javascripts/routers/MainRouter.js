@@ -16,7 +16,7 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
     this.decks.fetch({
       success: function() {
         console.log(this.decks);
-      }
+      }.bind(this)
     });
     var indexView = new Devour.Views.DecksIndex({ collection: this.decks });
     this.swapView(indexView);
@@ -41,8 +41,12 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
   },
 
   showDeck: function(id) {
+    var that = this;
     var deck = this.decks.getOrFetch(id);
-    var showView = new Devour.Views.DeckShow({ model: deck });
+    var showView = new Devour.Views.DeckShow({
+      model: deck,
+      collection: deck.cards()
+    });
     this.swapView(showView);
   },
 

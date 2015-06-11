@@ -32,10 +32,20 @@ module Api
       render json: card
     end
 
+    def assess_quality(quality)
+      card = Card.find(params[:id])
+      card.assess_response(quality)
+    end
+
+
     private
 
     def card_params
       params.require(:card).permit(:deck_id, :question, :answer)
+    end
+
+    def quality
+      params[:quality]
     end
   end
 end

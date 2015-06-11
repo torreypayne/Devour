@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+// .card-item {
+//   display: none;
+// }
+
+.active {
+  display: block;
+}

@@ -13,18 +13,14 @@ Devour.Collections.Decks = Backbone.Collection.extend({
       deck = new Devour.Models.Deck({ id: id });
       deck.fetch({
         success: function() {
+          console.log(deck);
           collection.add(deck);
         }
       });
     }
     return deck;
   },
-
-  parse: function(response) {
-    if (response.cards) {
-      this.model.cards().set(response.cards);
-      delete response.cards;
-    }
-    return response;
-  }
 });
+
+
+// Devour.Collections.decks = new Devour.Collections.Decks;

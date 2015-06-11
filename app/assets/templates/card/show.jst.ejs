@@ -1,0 +1,8 @@
+<% if (!card) { var card = new Devour.Models.Card(); card.id = '999999' } %>
+<div id="active-card" href="#" class="card deck-show card-question" data-id="<%= card.id %>">
+  <% if (card) { %>
+    <%= card.escape('question') %>
+  <% } %>
+</div><br>
+<button type="submit" class="btn btn-lg btn-primary btn-reveal">Reveal Answer</button>
+<div class="card answer-box"></div>
