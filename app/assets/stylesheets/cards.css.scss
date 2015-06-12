@@ -8,8 +8,27 @@
 }
 
 #quiz {
-  position: fixed;
+  position: relative;
   margin-top: 8%;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 13%;
+  margin-right: 13%;
+}
+
+form.new-card {
+  width: 390%;
+  height: 265%;
+}
+
+form.new-card * {
+  display: block;
+}
+
+.new-card textarea {
+  display: block;
+  margin-bottom: 2%;
+  width: 25%;
+}
+
+#create-card {
+  width: 25%;
 }

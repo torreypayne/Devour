@@ -30,8 +30,6 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
   },
 
   nextQuestion: function() {
-    // this._currentIndex += 1;
-    // this._currentCard = this.collection.models[this._currentIndex];
     this.nextCard();
     if (this._currentCard) {
       this.addCardSubview(this._currentCard);
@@ -40,18 +38,17 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
 
   nextCard: function() {
     var review = false;
+    var card;
     while (review === false) {
       this._currentIndex += 1;
       if (this._currentIndex >= this.collection.models.length) {
-        this._currentCard = null;
         review = true;
-        return;
+      } else {
+        card = this.collection.models[this._currentIndex];
+        review = card.needsReview();
       }
-      var card = this.collection.models[this._currentIndex];
-      review = card.needsReview();
     }
     this._currentCard = card;
-    // this.addCardSubview(nextCard);
   },
 
   addCardSubview: function(card) {
@@ -70,8 +67,13 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
   },
 
   newCard: function() {
-    var card = new Devour.Models.Card({ deck: this.model });
-    var view = new Devour.Views.CardForm({ model: card });
+    event.preventDefault();
+    var card = new Devour.Models.Card({ deck_id: this.model.id });
+    this._currentCard = card;
+    var view = new Devour.Views.CardForm({
+      model: card,
+      deck: this.model,
+    });
     this.swapCard(view);
   },
 

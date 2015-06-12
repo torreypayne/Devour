@@ -6,6 +6,7 @@ json.cards @deck.cards do |card|
   json.last_passed (card.latest_response.last_passed)
   json.next_rep card.latest_response.next_rep
   json.current_time (Time.now.to_f * 1000)
+  json.needReview card.needs_review?
   # card.responses card.responses do |response|
   #   json.extract! response, :id, :card_id, :quality, :e_factor, :next_rep, :repetitions, :last_passed
   # end

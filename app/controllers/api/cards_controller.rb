@@ -4,11 +4,11 @@ module Api
     end
 
     def create
-      card = new Card(card_params)
+      card = Card.new(card_params)
       if card.save
         render json: card
       else
-        render json: card.errors, as: :unprocessable_entity
+        render json: { errors: card.errors.full_messages }, as: 422
       end
     end
 
