@@ -9,8 +9,17 @@ class Card < ActiveRecord::Base
     return responses.order('created_at DESC').first if responses.length != 0
     response = Response.new()
     response.e_factor = 2.5
+    response.repetitions = 0
+    response.last_passed = Time.now - 1000.days.ago
     return response
     #code
+  end
+
+  def needs_review?
+    return true if responses.length == 0
+    one_day = 60*60*24
+    lapsed_time = (Time.now - last_passed)/one_day
+    return (lapsed_time >= next_rep)
   end
 
 end

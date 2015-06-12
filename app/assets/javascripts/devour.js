@@ -15,16 +15,18 @@ window.Devour = {
   Models: {},
 
   initialize: function() {
-    var navbar = new Devour.Navbars.Navbar();
-    var sidebar = new Devour.Sidebars.Sidebar();
+    // var sidebar = new Devour.Sidebars.Sidebar();
     var decks = new Devour.Collections.Decks();
     var router = new Devour.Routers.MainRouter({
-      $rootEl: $('#content'),
-      navbar: navbar,
-      sidebar: sidebar,
+      $rootEl: $('#main'),
       collection: decks
     });
     Backbone.history.start();
+    var navbar = new Devour.Navbars.Navbar({
+      $navEl: $('div#navigator'),
+      router: router,
+      collection: decks
+    });
   }
 
 };

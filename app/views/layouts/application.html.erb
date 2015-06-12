@@ -13,17 +13,20 @@
     <%= link_to "Log In", new_session_url %>
   <% end %>
 </div>
-<body>
+<body id='content'>
+
+  <div id="navigator"></div>
 
 
-  <div id="main">
+  <div id="flash">
     <% if flash[:errors] %>
         <% flash[:errors].each do |error| %>
-          <%= error %>
+          <div class="alert alert-error"><%= error %></div>
         <% end %>
       <% end %>
     <%= yield %>
   </div>
+  <div id="main"></div>
 
 </body>
 </html>

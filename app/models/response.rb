@@ -18,19 +18,27 @@ class Response < ActiveRecord::Base
       self.e_factor = 1.3
     end
     if (quality > 1)
-      self.repetitions += 1
-      set_time_interval(quality)
+      increment_repetitions
+      set_time_interval
       last_passed = Time.now
     else
-      repetitions = 0
-      next_rep = 1
+      self.repetitions = 0
+      self.next_rep = 1
     end
     self.save
     return self
   end
 
-  def set_time_interval(quality)
-    if (self.repetitions == 1)
+  def increment_repetitions
+    if self.repetitions
+      self.repetitions += 1
+    else
+      self.repetitions = 1
+    end
+  end
+
+  def set_time_interval
+    if (self.repetitions  == 1)
       if (quality < 4)
         self.next_rep = 1
       elsif (quality < 5)

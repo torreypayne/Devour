@@ -1,7 +1,7 @@
 <ul>
 <% decks.each(function(deck) { %>
 
-  <li><a href="#decks/<%=deck.id%>"><%= deck.escape('title') %></a></li>
+  <h2 class="page-header"><a href="#decks/<%=deck.id%>"><%= deck.escape('title') %></a></h3>
 
 <% }); %>
 </ul>

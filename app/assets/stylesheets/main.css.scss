@@ -1,21 +1,22 @@
 body {
-  background: url('http://cdn.wall-pix.net/albums/entertainment-humour/00004151.Cookie.Monster.jpg') no-repeat center center fixed;
+  background: url("https://c4.staticflickr.com/4/3016/5836154940_5af67bc63d_b.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  padding: 30px;
+  opacity: 0.9;
+}
+
+small.answer {
+  display: block;
+  font-size: 64px;
 }
 
 form {
   position: relative;
   text-align: center;
   margin-top: 18%;
-}
-
-#quiz {
-  margin-top: 29%;
-  margin-left: 29%;
-  margin-right: 29%;
 }
 
 img#logo {

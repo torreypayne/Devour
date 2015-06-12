@@ -1,7 +1,7 @@
 <div class="answer">
 
-  <body class="answer-body"><%= card.escape('answer') %></body>
-  <div class="answer-buttons btn-group-xxlarge">
+  <small class="answer jumbotron"><%= card.escape('answer') %></small>
+  <div class="answer-buttons btn-toolbar btn-group btn-group-justified">
     <button class="btn btn-primary btn-lg answer answer-button" type="submit" data-quality="0" data-card-id="<%= card.id %>" data-e-factor="<%= card.get('e_factor') %>" value="0">0</button>
     <button class="btn btn-primary btn-lg answer answer-button" type="submit" data-quality="1" data-card-id="<%= card.id %>" data-e-factor="<%= card.get('e_factor') %>" value="1">1</button>
     <button class="btn btn-primary btn-lg answer answer-button" type="submit" data-quality="2" data-card-id="<%= card.id %>" data-e-factor="<%= card.get('e_factor') %>" value="2">2</button>
