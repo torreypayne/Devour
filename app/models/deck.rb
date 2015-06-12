@@ -10,6 +10,15 @@ class Deck < ActiveRecord::Base
 
   has_many :cards
 
+  def pending_cards
+    pending = []
+    cards.each do |card|
+      pending.push(card) if card.needs_review?
+    end
+
+    return pending
+  end
+
   def public?
     # return self['public'] == true
     #code
