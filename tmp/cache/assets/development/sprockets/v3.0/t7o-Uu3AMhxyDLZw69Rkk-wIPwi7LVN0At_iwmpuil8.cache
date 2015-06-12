@@ -1,1 +1,0 @@
-I"Bfunction(obj){var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<ul class="deck-list">\n');  decks.each(function(deck) { ; __p.push('\n\n  <h2 class="page-header"><a href="#decks/', deck.id,'">',  deck.escape('title') ,'</a></h3>\n\n');  }); ; __p.push('\n</ul>\n');}return __p.join('');}:ET

@@ -18,8 +18,8 @@ class Card < ActiveRecord::Base
   def needs_review?
     return true if responses.length == 0
     one_day = 60*60*24
-    lapsed_time = (Time.now - last_passed)/one_day
-    return (lapsed_time >= next_rep)
+    lapsed_time = (Time.now - latest_response.last_passed)/one_day
+    return (lapsed_time >= latest_response.next_rep)
   end
 
 end
