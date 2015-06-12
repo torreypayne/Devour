@@ -23,12 +23,27 @@ Devour.Views.CardShow = Backbone.CompositeView.extend({
   },
 
   assessResponse: function(event) {
-    var quality = $(event.currentTarget).data('quality');
-    $.post('api/responses', { 'quality': quality }, function(data) {
-      console.log('Answer evaluated!');
-      var next = this.collection.getOrFetch(this.model.id + 1);
-      this.deck.nextCard(next);
+    var cardShow = this;
+    var responseAttrs = {
+      'quality': $(event.currentTarget).data('quality'),
+      'card_id': $(event.currentTarget).data('card-id'),
+      'e_factor': $(event.currentTarget).data('e-factor'),
+      };
+
+    var response = new Devour.Models.Response(responseAttrs);
+    response.save({}, {
+      success: function() {
+        var next = cardShow.collection.getOrFetch(cardShow.model.id + 1);
+        cardShow.deck.nextCard(next);
+      }
     });
+
+    // $.post('api/responses', { 'quality': quality }, function(data) {
+    //   console.log('Answer evaluated!');
+    //   var next = this.collection.getOrFetch(this.model.id + 1);
+    //   this.deck.nextCard(next);
+    // });
+
     // console.log($(event.currentTarget).get('id'));
     // console.log(quality);
 

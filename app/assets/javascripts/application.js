@@ -11,11 +11,11 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
-//  require jquery_ujs
-//  require jquery-ui
-//= require underscore
+//=  require jquery_ujs
+//=  require jquery-ui
 //= require jquery.serializejson
+//= require bootstrap-sprockets
+//= require underscore
 //= require backbone
 //= require devour
 //= require utils/composite_view

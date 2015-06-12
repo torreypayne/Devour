@@ -2,8 +2,8 @@ module Api
   class ResponsesController < ApplicationController
     def create
       response = Response.new(response_params)
+      response.assert_response
       if response.save
-        response.assert_response
         render json: {}
       else
         render json: response.errors, as: 422
@@ -13,7 +13,7 @@ module Api
     private
 
     def response_params
-      params.require(:response).permit(:card_id, :quality, :current_e_factor)
+      params.require(:response).permit(:card_id, :quality, :e_factor)
     end
   end
 end

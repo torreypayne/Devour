@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20150611202715) do
     t.float    "e_factor",    default: 2.5,                   null: false
     t.integer  "next_rep",                                    null: false
     t.integer  "repetitions", default: 0,                     null: false
-    t.datetime "last_passed", default: '2015-06-10 20:58:28', null: false
+    t.datetime "last_passed", default: '2015-06-10 22:59:57', null: false
     t.datetime "created_at",                                  null: false
     t.datetime "updated_at",                                  null: false
   end

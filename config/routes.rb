@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     # NAMESPACE YOUR CONTROLLERS ALSO!!!!
     resources :decks
     resources :cards
-    resource :response, only: :create
+    resources :responses, only: :create
     # post 'cards/:id/response', action: 'cards#assess_quality'
   end
 end

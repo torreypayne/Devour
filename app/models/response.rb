@@ -4,12 +4,6 @@ class Response < ActiveRecord::Base
   belongs_to :card
 
 
-  def assert_response
-    self.card.assert_response(quality)
-    self.card.save
-    return self
-  end
-
   def update_e_factor(quality)
     assess_response(quality)
   end
@@ -18,8 +12,8 @@ class Response < ActiveRecord::Base
     self.last_passed = Time.now
   end
 
-  def assert_response(quality)
-    self.e_factor = self.e_factor - 0.8 + 0.28*quality - 0.02*(quality*quality)
+  def assert_response
+    self.e_factor = self.e_factor - 0.8 + 0.28*self.quality - 0.02*(self.quality*self.quality)
     if (self.e_factor < 1.3)
       self.e_factor = 1.3
     end
@@ -29,6 +23,7 @@ class Response < ActiveRecord::Base
       last_passed = Time.now
     else
       repetitions = 0
+      next_rep = 1
     end
     self.save
     return self

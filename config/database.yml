@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: sample-project-proposal-master_production
-  username: sample-project-proposal-master
-  password: <%= ENV['SAMPLE-PROJECT-PROPOSAL-MASTER_DATABASE_PASSWORD'] %>
+  database: devour_app_production
+  username: devour
+  password: ""
