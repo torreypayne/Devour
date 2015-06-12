@@ -6,7 +6,7 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
 
   initialize: function(options) {
     this._currentIndex = 0;
-    this.listenTo(this.model.cards(), 'remove', this.removeCardSubview);
+    this.listenTo(this.model.cards().models, 'remove', this.removeCardSubview);
     this.listenTo(this.model, 'sync', this.resetCards);
   },
 
@@ -68,9 +68,9 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
   },
 
   swapCard: function(view) {
-    this._currentView && this._currentView.remove();
+    this._currentView && this.removeSubview('ul.quiz', this._currentView);
     this._currentView = view;
-    this.addSubview('ul.quiz', view);
+    this.addSubview('ul.quiz', this._currentView);
     this.render();
   },
 
