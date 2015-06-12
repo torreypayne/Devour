@@ -7,12 +7,7 @@ class Card < ActiveRecord::Base
 
   def latest_response
     return responses.order('created_at DESC').first if responses.length != 0
-    response = Response.new()
-    response.e_factor = 2.5
-    response.repetitions = 0
-    response.last_passed = (Time.now - 1000.days.ago).to_f * 1000
-    return response
-    #code
+    Response.new
   end
 
   def needs_review?
