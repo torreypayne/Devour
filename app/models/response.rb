@@ -9,7 +9,7 @@ class Response < ActiveRecord::Base
   end
 
   def update_last_passed
-    self.last_passed = Time.now.to_f * 1000
+    last_passed = Time.now.to_f * 1000
   end
 
   def assert_response

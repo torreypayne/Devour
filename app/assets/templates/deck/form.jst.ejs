@@ -1,0 +1,18 @@
+<h1 class="main-header">Create a new deck for us to Devour!! I'm hungry!</h1>
+
+<form class="deck new-deck deck-form form-inline" id="deck-form" action="/api/decks/" method="post">
+  <input type="hidden" name="deck[owner_id]" value="<%= $('div#current-user').data('id') %>">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" name="deck[title]" placeholder="Title">
+  </div>
+  <div class="form-group">
+    <input type="integer" name="deck[course_id]" placeholder="Course Id">
+  </div>
+  <div class="form-group">
+    <input type="radio" name="deck[public]" value="true" checked>Public
+    <input type="radio" name="deck[public]" value="false">Private
+  </div>
+  <button type="submit" class="btn btn-success btn-lg btn-confirm-create-deck">I'm Hungry! (Go Ahead and Create Me :) )</button>
+
+</form>

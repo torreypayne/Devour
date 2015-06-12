@@ -4,7 +4,7 @@ module Api
     end
 
     def create
-      deck = new Deck(deck_params)
+      deck = Deck.new(deck_params)
       if deck.save
         render json: deck
       else

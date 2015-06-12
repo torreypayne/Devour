@@ -12,11 +12,14 @@ Devour.Views.DeckForm = Backbone.View.extend({
 
   render: function() {
     var formView = this.template({ deck: this.model });
+    this.$el.html(formView);
+    return this;
   },
 
   submit: function() {
+    event.preventDefault();
     var formView = this;
-    var $target = $(event.currentTarget).serializeJSON();
+    var $target = $('#deck-form').serializeJSON();
     var deck = new Devour.Models.Deck($target);
     deck.save({}, {
       success: function() {

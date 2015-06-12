@@ -11,7 +11,7 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
     '':'index',
     'decks/new':'newDeck',
     'decks/:id/edit':'editDeck',
-    'decks/:id':'showDeck'
+    'decks/:id':'showDeck',
   },
 
   index: function() {
@@ -57,6 +57,5 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
     this._currentView = view;
     this.$rootEl.html(view.$el);
     view.render();
-  }
-
+  },
 });

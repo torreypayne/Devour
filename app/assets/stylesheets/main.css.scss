@@ -13,8 +13,13 @@ small.answer {
   font-size: 64px;
 }
 
-h1.main-title {
+h1.main-header {
+  margin-top: 10%;
   // font-size: ;
+}
+
+h2.main-header {
+  margin-top: 10%;
 }
 
 ul.deck-list {
@@ -24,6 +29,10 @@ ul.deck-list {
 form {
   position: relative;
   text-align: center;
+  // margin-top: 18%;
+}
+
+form:first-child {
   margin-top: 18%;
 }
 
