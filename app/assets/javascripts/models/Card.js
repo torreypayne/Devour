@@ -3,9 +3,12 @@ Devour.Models.Card = Backbone.Model.extend({
   urlRoot: 'api/cards',
 
   needsReview: function() {
-    var one_day = 60*60*24;
-    var lapsedTime = (this.current_time - this.last_passed) / one_day;
-    if (lapsedTime >= this.next_rep) {
+    var one_day = 60*60*24*1000;
+    var now = new Date(this.attributes.current_time);
+    // Broken; need to convert last_passed into milliseconds
+    var then = new Date(this.attributes.last_passed);
+    var lapsedTime = (now - then) / one_day;
+    if (lapsedTime >= this.attributes.next_rep) {
       return true;
     } else {
       return false;

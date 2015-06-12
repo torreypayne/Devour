@@ -1,7 +1,12 @@
-<ul>
+<ul class="deck-list">
 <% decks.each(function(deck) { %>
 
-  <h2 class="page-header"><a href="#decks/<%=deck.id%>"><%= deck.escape('title') %></a></h3>
+  <div class="form-control">
+    <h2 class="page-header">
+      <a href="#decks/<%=deck.id%>"><%= deck.escape('title') %></a>
+    </h2>
+    <button class="btn btn-success btn-block">Devour it!</button>
+  </div>
 
 <% }); %>
 </ul>

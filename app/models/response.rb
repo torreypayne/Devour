@@ -9,7 +9,7 @@ class Response < ActiveRecord::Base
   end
 
   def update_last_passed
-    self.last_passed = Time.now
+    self.last_passed = Time.now.to_f * 1000
   end
 
   def assert_response
@@ -20,7 +20,8 @@ class Response < ActiveRecord::Base
     if (quality > 1)
       increment_repetitions
       set_time_interval
-      last_passed = Time.now
+      # last_passed = Time.now.to_f * 1000
+      update_last_passed
     else
       self.repetitions = 0
       self.next_rep = 1

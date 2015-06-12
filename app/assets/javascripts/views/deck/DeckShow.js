@@ -26,15 +26,22 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
   },
 
   nextQuestion: function() {
-    this._currentIndex += 1;
-    this._currentCard = this.collection.models[this._currentIndex];
+    // this._currentIndex += 1;
+    // this._currentCard = this.collection.models[this._currentIndex];
+    this.nextCard();
     this.addCardSubview(this._currentCard);
   },
 
-  // nextCard: function(nextCard) {
-  //   this._currentCard = nextCard;
-  //   this.addCardSubview(nextCard);
-  // },
+  nextCard: function() {
+    var review = false;
+    while (review === false) {
+      this._currentIndex += 1;
+      var card = this.collection.models[this._currentIndex];
+      review = card.needsReview();
+    }
+    this._currentCard = card;
+    // this.addCardSubview(nextCard);
+  },
 
   addCardSubview: function(card) {
     var cardItem = new Devour.Views.CardShow({

@@ -13,6 +13,14 @@ small.answer {
   font-size: 64px;
 }
 
+h1.main-title {
+  // font-size: ;
+}
+
+ul.deck-list {
+  margin-top: 58px;
+}
+
 form {
   position: relative;
   text-align: center;
@@ -27,6 +35,10 @@ img#logo {
 form.log-out {
   position: absolute;
   top: -25%;
+}
+
+div.card-item {
+  margin-right: 25%;
 }
 
 // #quiz {

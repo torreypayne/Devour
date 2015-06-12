@@ -10,7 +10,7 @@ class Card < ActiveRecord::Base
     response = Response.new()
     response.e_factor = 2.5
     response.repetitions = 0
-    response.last_passed = Time.now - 1000.days.ago
+    response.last_passed = (Time.now - 1000.days.ago).to_f * 1000
     return response
     #code
   end
