@@ -1,13 +1,12 @@
 Devour.Views.DeckShow = Backbone.CompositeView.extend({
-
   template: JST['deck/show'],
 
   tryAgainTemplate: JST['deck/tryagain'],
 
   initialize: function(options) {
     this._currentIndex = 0;
-    this.listenTo(this.model.cards().models, 'remove', this.removeCardSubview);
     this.listenTo(this.model, 'sync', this.resetCards);
+    this.nextQuestion();
   },
 
   events: {
@@ -23,30 +22,22 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
     return this;
   },
 
-  initialCard: function() {
-    this._currentCard = this.collection.first();
-    this.addCardSubview(this._currentCard);
-  },
-
   resetCards: function() {
     this._currentIndex = 0;
-    this.nextQuestion();
+    if (this.model.reviewCards().length === 0) {
+      this._currentCard = null;
+      this.render();
+      return;
+    } else {
+      this.nextQuestion();
+    }
   },
 
   nextCard: function() {
-    var done = false;
-    var card;
-    while (done === false) {
-      if (this._currentIndex >= this.model.cards().length) {
-        done = true;
-        card = null;
-      } else {
-        card = this.model.cards().models[this._currentIndex];
-        if (card.get('needReview')) {
-          this._currentCard = card;
-          done = true;
-        }
-      }
+    if (this._currentIndex >= this.model.reviewCards().length) {
+      this.model.fetch();
+    } else {
+      this._currentCard = this.model.reviewCards().models[this._currentIndex];
       this._currentIndex += 1;
     }
   },
@@ -68,7 +59,9 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
   },
 
   swapCard: function(view) {
-    this._currentView && this.removeSubview('ul.quiz', this._currentView);
+    if (this._currentView) {
+      this.removeSubview('ul.quiz', this._currentView);
+    }
     this._currentView = view;
     this.addSubview('ul.quiz', this._currentView);
     this.render();
@@ -84,5 +77,4 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
     });
     this.swapCard(view);
   },
-
 });

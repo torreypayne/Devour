@@ -11,4 +11,5 @@ Rails.application.routes.draw do
     resources :responses, only: :create
     # post 'cards/:id/response', action: 'cards#assess_quality'
   end
+  get '/api/decks/:id/review', to: 'api/decks#review', defaults: { format: :json }
 end

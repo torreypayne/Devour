@@ -10,13 +10,13 @@ class Deck < ActiveRecord::Base
 
   has_many :cards
 
-  def pending_cards
-    pending = []
-    cards.each do |card|
-      pending.push(card) if card.needs_review?
+  def review_cards
+    review_array = []
+    self.cards.each do |card|
+      review_array.push(card) if card.needs_review?
     end
 
-    return pending
+    return review_array
   end
 
   def public?

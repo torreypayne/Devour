@@ -29,8 +29,15 @@ module Api
     end
 
     def show
+      # Write 'allCards' param so I can decide if I want review cards
+      #  or all cards
       @deck = Deck.includes(:cards).find(params[:id])
       render :show
+    end
+
+    def review
+      @deck = Deck.includes(:cards).find(params[:id])
+      render :quiz
     end
 
     private

@@ -9,10 +9,22 @@ Devour.Models.Deck = Backbone.Model.extend({
     return this._cards;
   },
 
+  reviewCards: function() {
+    if (!this._reviewCards) {
+      this._reviewCards = new Devour.Collections.Cards([], { deck: this });
+    }
+    return this._reviewCards;
+  },
+
+
+
   parse: function(response) {
     if (response.cards) {
       this.cards().set(response.cards);
       // delete response.cards;
+    }
+    if (response.review_cards) {
+      this.reviewCards().set(response.review_cards);
     }
     return response;
   }

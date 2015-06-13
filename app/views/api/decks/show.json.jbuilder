@@ -11,3 +11,11 @@ json.cards @deck.cards do |card|
   #   json.extract! response, :id, :card_id, :quality, :e_factor, :next_rep, :repetitions, :last_passed
   # end
 end
+json.review_cards(@deck.review_cards) do |review_card|
+  json.extract! review_card, :id, :deck_id, :question, :answer, :responses
+  json.e_factor review_card.latest_response.e_factor
+  json.repetitions review_card.latest_response.repetitions
+  json.last_passed (review_card.latest_response.last_passed)
+  json.next_rep review_card.latest_response.next_rep
+  json.current_time (Time.now.to_f * 1000)
+end
