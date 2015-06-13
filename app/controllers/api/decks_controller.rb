@@ -40,6 +40,11 @@ module Api
       render :quiz
     end
 
+    def public_decks
+      @decks = Deck.all.select! { |card| card.public }
+      render :index
+    end
+
     private
 
     def deck_params

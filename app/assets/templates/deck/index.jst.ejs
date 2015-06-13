@@ -7,7 +7,7 @@
         <%= deck.escape('title') %>
       </h2>
     </a>
-    <button type="submit" class="btn btn-success btn-lg">Devour <%= deck.escape('title') %>!</button>
+    <button type="submit" data-deck-id="<%=deck.id%>" class="btn btn-success btn-lg">Devour <%= deck.escape('title') %>!</button>
     <button class="btn btn-danger btn-lg delete-deck">Delete <%= deck.escape('title') %></button>
   </form>
 

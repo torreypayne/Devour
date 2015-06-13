@@ -12,4 +12,5 @@ Rails.application.routes.draw do
     # post 'cards/:id/response', action: 'cards#assess_quality'
   end
   get '/api/decks/:id/review', to: 'api/decks#review', defaults: { format: :json }
+  get 'api/public/decks', to: 'api/decks#public_decks', defaults: { format: :json }
 end
