@@ -17,7 +17,7 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
 
   search: function() {
     var publicDecks = new Devour.Collections.PublicDecks();
-    var searchView = new Devour.Views.Search({ collection: publicDecks });
+    var searchView = new Devour.Views.SearchView({ collection: publicDecks });
     this.swapView(searchView);
   },
 
