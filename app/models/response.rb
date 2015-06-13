@@ -23,6 +23,11 @@ class Response < ActiveRecord::Base
     if (self.e_factor < 1.3)
       self.e_factor = 1.3
     end
+    
+    if (self.e_factor > 2.5)
+      self.e_factor = 2.5
+    end
+
     if (quality > 1)
       increment_repetitions
       set_time_interval
