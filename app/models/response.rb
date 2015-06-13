@@ -10,20 +10,12 @@ class Response < ActiveRecord::Base
     self.next_rep ||= 1
   end
 
-  def update_e_factor(quality)
-    assess_response(quality)
-  end
-
-  def update_last_passed
-    last_passed = Time.now.to_f * 1000
-  end
-
   def assert_response
     self.e_factor = self.e_factor - 0.8 + 0.28*self.quality - 0.02*(self.quality*self.quality)
     if (self.e_factor < 1.3)
       self.e_factor = 1.3
     end
-    
+
     if (self.e_factor > 2.5)
       self.e_factor = 2.5
     end
@@ -47,6 +39,14 @@ class Response < ActiveRecord::Base
     else
       self.repetitions = 1
     end
+  end
+
+  def update_e_factor(quality)
+    assess_response(quality)
+  end
+
+  def update_last_passed
+    last_passed = Time.now.to_f * 1000
   end
 
   def set_time_interval
