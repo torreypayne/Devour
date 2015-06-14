@@ -1,6 +1,8 @@
 Devour.Views.SearchView = Backbone.View.extend({
 
-  template: JST['search'],
+  template: JST['search/search'],
+
+  resultsTemplate: JST['search/results'],
 
   events: {
     'keyup #search-by-title':'filterDecks',
@@ -17,14 +19,15 @@ Devour.Views.SearchView = Backbone.View.extend({
 
   filterDecks: function(event) {
     var data = $(event.currentTarget).serializeJSON();
-    this.chars = data.get('title');
+    var chars = data.title.toLowerCase();
     var matched = [];
     this.collection.each(function(deck) {
-      if (deck.title.contains(this.chars)) {
+      if (deck.get('title').toLowerCase().includes(chars)) {
         matched.push(deck);
       }
     });
-    return matched;
+    this.collection.set(matched);
+    $('ul.deck-list').html(this.resultsTemplate({ decks: this.collection }));
   },
 
 

@@ -12,7 +12,8 @@ Devour.Navbars.Navbar = Backbone.View.extend({
   template: JST['navbar/navshow'],
 
   render: function() {
-    this.$navEl.html(this.template());
+    var currentUser = $('#current-user').data('id');
+    this.$navEl.html(this.template({ currentUser: currentUser }));
     return this;
   }
 

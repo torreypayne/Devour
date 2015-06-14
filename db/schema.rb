@@ -41,14 +41,14 @@ ActiveRecord::Schema.define(version: 20150611202715) do
   add_index "decks", ["title"], name: "index_decks_on_title", using: :btree
 
   create_table "responses", force: :cascade do |t|
-    t.integer  "card_id",                                     null: false
-    t.integer  "quality",                                     null: false
-    t.float    "e_factor",    default: 2.5,                   null: false
-    t.integer  "next_rep",                                    null: false
-    t.integer  "repetitions", default: 0,                     null: false
-    t.datetime "last_passed", default: '2015-06-10 22:59:57', null: false
-    t.datetime "created_at",                                  null: false
-    t.datetime "updated_at",                                  null: false
+    t.integer  "card_id",                                 null: false
+    t.integer  "quality",                                 null: false
+    t.float    "e_factor",    default: 2.5,               null: false
+    t.integer  "next_rep",                                null: false
+    t.integer  "repetitions", default: 0,                 null: false
+    t.float    "last_passed", default: 1434150335133.437, null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
   end
 
   add_index "responses", ["card_id"], name: "index_responses_on_card_id", using: :btree

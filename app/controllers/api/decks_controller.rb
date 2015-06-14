@@ -41,7 +41,7 @@ module Api
     end
 
     def public_decks
-      @decks = Deck.all.select! { |card| card.public }
+      @decks = Deck.all.select { |card| card.public }
       render :index
     end
 
