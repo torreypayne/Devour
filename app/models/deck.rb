@@ -12,7 +12,7 @@
 #
 
 class Deck < ActiveRecord::Base
-  validates :title, :owner_id, presence: true
+  validates :title, :owner_id, :public, presence: true
 
   after_save :share_with_self
 
@@ -23,7 +23,10 @@ class Deck < ActiveRecord::Base
   foreign_key: :owner_id
   )
 
+  has_many :deck_shares
   has_many :cards
+  has_many :users, through: :deck_shares
+  has_many :responses, through: :cards
 
   def review_cards(user_id)
     review_array = []

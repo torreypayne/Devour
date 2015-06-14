@@ -13,9 +13,9 @@
 class Card < ActiveRecord::Base
   validates :deck_id, :question, :answer, presence: true
 
-
   belongs_to :deck
   has_many :responses
+  has_one :owner, through: :deck
 
   def latest_response(user_id)
     return responses.where(["user_id = ?", user_id]).order('created_at DESC').first if responses.length != 0

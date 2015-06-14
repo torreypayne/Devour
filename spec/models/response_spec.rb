@@ -16,6 +16,24 @@
 
 require 'rails_helper'
 
-RSpec.describe Response, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+# RSpec.describe Response, type: :model do
+#   pending "add some examples to (or delete) #{__FILE__}"
+# end
+
+describe Response do
+  describe "validations" do
+    it { should validate_presence_of(:user_id) }
+    it { should validate_presence_of(:card_id) }
+    it { should validate_presence_of(:quality) }
+    it { should validate_presence_of(:e_factor) }
+    it { should validate_presence_of(:next_rep) }
+    it { should validate_presence_of(:repetitions) }
+    it { should validate_presence_of(:last_passed) }
+  end
+
+  describe "associations" do
+    it { should belong_to(:card) }
+    it { should belong_to(:user) }
+    it { should have_one(:deck) }
+  end
 end

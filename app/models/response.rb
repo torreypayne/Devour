@@ -15,9 +15,12 @@
 #
 
 class Response < ActiveRecord::Base
-  validates :card_id, :user_id, :quality, :e_factor, :repetitions, :next_rep, presence: true
+  validates :card_id, :user_id, :quality, :e_factor, :repetitions, :next_rep, :last_passed, presence: true
   after_initialize :after_initialize
+
   belongs_to :card
+  belongs_to :user
+  has_one :deck, through: :card
 
   def after_initialize
     self.repetitions ||= 2.5
