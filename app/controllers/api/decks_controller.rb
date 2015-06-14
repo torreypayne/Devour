@@ -21,6 +21,9 @@ module Api
     end
 
     def destroy
+      @deck = Deck.find(params[:id])
+      @deck.destroy!
+      render json: {}
     end
 
     def index
