@@ -56,18 +56,17 @@ allow users to memorize their flashcards. The algorithm:
 2. With all items, associate an initial Easiness-Factor (EF) to 2.5.
 3. Start repetitions:
 
-Time until next repetition(I):
-  I(1) = 1;
-  I(2) = 6;
-  if (n > 2)
-    I(n) = I(n-1) * EF
-
+  Time until next repetition(I):
+    I(1) = 1;
+    I(2) = 6;
+    if (n > 2)
+      I(n) = I(n-1) * EF
 4. Assess quality of response: 0-5
 5. Assess easiness of the flashcard, based on previous data and
  response from user:
 
-Easiness Factor(EF):
-  EF' = EF + (.1-(5-q)(0.08 + 0.02(5-q)))
+  Easiness Factor(EF):
+    EF' = EF + (.1-(5-q)(0.08 + 0.02(5-q)))
 
 6. If the user's response is less than 3, we start repetitions from the
 beginning, i.e. use I(1) and I(2).

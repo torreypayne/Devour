@@ -20,7 +20,7 @@
 
 [Homepage]: ./wireframes/Homepage.png
 [Mainpage]: ./wireframes/Mainpage.png
-[Cardshow]: ./wireframes/Cardshow.png
-[Cardshow2]: ./wireframes/Cardshow2.png
+[Cardshow]: ./wireframes/CardShow.png
+[Cardshow2]: ./wireframes/CardShow2.png
 [Deckshow]: ./wireframes/Deckshow.png
 [search-results]: ./wireframes/search_results.png

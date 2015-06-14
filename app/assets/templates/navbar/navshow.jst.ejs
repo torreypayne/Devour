@@ -21,13 +21,14 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li id="add-dropdown" class="sign-out dropdown">
-          <button type="submit" class="dropdown-toggle navbar-btn btn btn-primary" data-toggle="dropdown">
-            <span class="glyphicon glyphicon-plus"></span>
-          </button>
-        </li>
         <% if (currentUser) { %>
-          <li><button class="sign-out btn btn-primary navbar-btn" type="button">Sign Out</button></li>
+          <li>
+            <form action="/session" method="post">
+              <input name="method" type="hidden" value="delete">
+              <input name="authenticity_token" type="hidden">
+              <button type="submit" class="sign-out btn btn-primary navbar-btn">Sign Out</button>
+            </form>
+          </li>
         <% } else { %>
           <li><a href="/session/new">Log in</a></li>
           <li><a href="/users/new">Sign up</a></li>
