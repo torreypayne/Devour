@@ -26,15 +26,14 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'spring'
+  gem 'guard-rspec'
 end
 
 group :test do
   gem 'capybara'
-  gem 'guard-rspec'
   gem 'launchy'
 end
 
 group :development do
   gem 'spring-commands-rspec'
-  gem 'guard-rspec'
 end
