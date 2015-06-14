@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :decks
     resources :cards
     resources :responses, only: :create
+    resources :deck_shares, only: [:create, :destroy]
     # post 'cards/:id/response', action: 'cards#assess_quality'
   end
   get '/api/decks/:id/review', to: 'api/decks#review', defaults: { format: :json }

@@ -3,7 +3,7 @@ Devour.Navbars.Navbar = Backbone.View.extend({
   initialize: function(options) {
     this.$navEl = options.$navEl;
     this.router = options.router;
-    // this.listenTo(this.router, 'route', this.render);
+    this.listenTo(this.router, 'route', this.render);
     this.render();
   },
 
@@ -11,8 +11,11 @@ Devour.Navbars.Navbar = Backbone.View.extend({
 
   template: JST['navbar/navshow'],
 
+  studyDropdown: JST['navbar/study'],
+
   events: {
-    'click button#sign-out':'signOut'
+    'click button#sign-out':'signOut',
+    'click button.dropdown-toggle':'study',
   },
 
   render: function() {
@@ -31,5 +34,14 @@ Devour.Navbars.Navbar = Backbone.View.extend({
       }
     });
   },
+
+  study: function() {
+    var publicDecks = new Devour.Collections.PublicDecks();
+    publicDecks.fetch({
+      success: function() {
+        $('li.study-dropdown').append(this.studyDropdown({decks: publicDecks }));
+      }
+    });
+  }
 
 });

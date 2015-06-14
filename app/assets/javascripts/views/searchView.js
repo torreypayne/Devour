@@ -6,6 +6,7 @@ Devour.Views.SearchView = Backbone.View.extend({
 
   events: {
     'keyup #search-by-title':'filterDecks',
+    'click button.btn-success':'shareDeck',
   },
 
 
@@ -28,6 +29,21 @@ Devour.Views.SearchView = Backbone.View.extend({
     });
     this.collection.set(matched);
     $('ul.deck-list').html(this.resultsTemplate({ decks: this.collection }));
+  },
+
+  shareDeck: function() {
+    var deckId = $(event.target).data('deck-id');
+    var userId = $('#current-user').data('id');
+    var shareOfDeck = new Devour.Models.DeckShare({
+      deck_id: deckId,
+      user_id: userId,
+    });
+    shareOfDeck.save({}, {
+      success: function() {
+        Backbone.history.navigate('', { trigger: true });
+      }.bind(this)
+    });
+
   },
 
 
