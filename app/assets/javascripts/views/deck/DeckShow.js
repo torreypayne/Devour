@@ -36,7 +36,7 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
   nextCard: function() {
     // THIS IS WHERE THE REAL LEARNING HAPPENS!!!
     var learningChunk = 5;
-    if (this._currentIndex > 4) {
+    if (this._currentIndex > learningChunk-1 || this._currentIndex >= this.model.reviewCards().length) {
       this.model.fetch();
     } else {
       this._currentCard = this.model.reviewCards().models[this._currentIndex];
