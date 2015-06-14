@@ -23,11 +23,7 @@
       <ul class="nav navbar-nav navbar-right">
         <% if (currentUser) { %>
           <li>
-            <form action="/session" method="post">
-              <input name="method" type="hidden" value="delete">
-              <input name="authenticity_token" type="hidden">
-              <button type="submit" class="sign-out btn btn-primary navbar-btn">Sign Out</button>
-            </form>
+            <button id="sign-out" class="sign-out btn btn-primary navbar-btn">Sign Out</button>
           </li>
         <% } else { %>
           <li><a href="/session/new">Log in</a></li>

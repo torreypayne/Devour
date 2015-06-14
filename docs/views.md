@@ -22,5 +22,5 @@
 [Mainpage]: ./wireframes/Mainpage.png
 [Cardshow]: ./wireframes/CardShow.png
 [Cardshow2]: ./wireframes/CardShow2.png
-[Deckshow]: ./wireframes/Deckshow.png
+[Deckshow]: ./wireframes/DeckShow.png
 [search-results]: ./wireframes/search_results.png
