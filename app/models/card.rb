@@ -5,16 +5,16 @@ class Card < ActiveRecord::Base
   belongs_to :deck
   has_many :responses
 
-  def latest_response
-    return responses.order('created_at DESC').first if responses.length != 0
+  def latest_response(user_id)
+    return responses.where(["user_id = ?", user_id]).order('created_at DESC').first if responses.length != 0
     Response.new
   end
 
-  def needs_review?
+  def needs_review?(user_id)
     return true if responses.length == 0
     one_day = 60*60*24*1000
-    lapsed_time = (Time.now.to_f - latest_response.last_passed)/one_day
-    return (lapsed_time >= latest_response.next_rep)
+    lapsed_time = (Time.now.to_f - latest_response(user_id).last_passed)/one_day
+    return (lapsed_time >= latest_response(user_id).next_rep)
   end
 
 end

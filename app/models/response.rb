@@ -1,5 +1,5 @@
 class Response < ActiveRecord::Base
-  validates :card_id, :quality, :e_factor, :repetitions, :next_rep, presence: true
+  validates :card_id, :user_id, :quality, :e_factor, :repetitions, :next_rep, presence: true
   after_initialize :after_initialize
   belongs_to :card
 
@@ -8,9 +8,11 @@ class Response < ActiveRecord::Base
     self.e_factor ||= 2.5
     self.last_passed ||= (Time.now - 1000.days.ago).to_f * 1000
     self.next_rep ||= 0
+    # self.user_id = current_user.id
   end
 
-  def assert_response
+  def assert_response(user_id)
+    self.user_id = user_id
     self.e_factor = self.e_factor - 0.8 + 0.28*self.quality - 0.02*(self.quality*self.quality)
     if (self.e_factor < 1.3)
       self.e_factor = 1.3

@@ -1,0 +1,12 @@
+<% decks.each(function(deck) { %>
+
+  <form class="form-inline">
+    <a href="#decks/<%=deck.id%>">
+      <h2 class="page-header">
+        <%= deck.escape('title') %>
+      </h2>
+    </a>
+    <button type="submit" data-deck-id="<%=deck.id%>" class="btn btn-success btn-lg">Fork Over <%= deck.escape('title') %> Onto Your Plate!</button>
+  </form>
+
+<% }); %>

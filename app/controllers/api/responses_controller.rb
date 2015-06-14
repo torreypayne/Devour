@@ -2,7 +2,7 @@ module Api
   class ResponsesController < ApplicationController
     def create
       response = Response.new(response_params)
-      response.assert_response
+      response.assert_response(current_user.id)
       if response.save
         render json: {}
       else

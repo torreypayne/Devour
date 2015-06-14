@@ -6,11 +6,13 @@ class User < ActiveRecord::Base
   after_initialize :ensure_session_token
 
   has_many(
-  :decks,
+  :owned_decks,
   class_name: 'Deck',
   foreign_key: :owner_id,
   primary_key: :id
   )
+  has_many :deck_shares
+  has_many :decks, through: :deck_shares
 
   attr_accessor :password
 
