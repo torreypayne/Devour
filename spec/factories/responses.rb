@@ -22,6 +22,10 @@ FactoryGirl.define do
     e_factor 1.5
     next_rep 1
     last_passed 1434165972236.362
+    user
+    card
+    deck
+    # Need to make sure I represent the appropriate 'through' associations
   end
 
 end
