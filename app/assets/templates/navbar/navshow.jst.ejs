@@ -11,13 +11,15 @@
     <div class="collapse navbar-collapse" id="devour-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="#">Decks</a></li>
-        <li id="study-dropdown" class="study dropdown">
-          <a type="submit" href="#/study" class="dropdown-toggle navbar-btn btn btn-default" data-toggle="dropdown">Study</a>
-        </li>
-        <li><a href="#/decks/new">Add</a></li>
-        <li><a href="#/search">Advanced Search</a></li>
-        <li><a>Leaderboard</a></li>
-        <li><a>More</a></li>
+        <% if (currentUser) { %>
+          <li id="study-dropdown" class="study dropdown">
+            <a type="submit" href="#/study" class="dropdown-toggle navbar-btn btn btn-default" data-toggle="dropdown">Study</a>
+          </li>
+          <li><a href="#/decks/new">Add</a></li>
+          <li><a href="#/search">Advanced Search</a></li>
+          <li><a>Leaderboard</a></li>
+          <li><a>More</a></li>
+        <% } %>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
