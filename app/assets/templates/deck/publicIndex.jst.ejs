@@ -1,0 +1,20 @@
+<ul class="deck-list">
+  <div class="jumbotron">
+    <h1>Time to eat!</h1>
+  </div>
+
+
+<% decks.each(function(deck) { %>
+
+  <form class="form-inline">
+    <a href="#decks/<%=deck.id%>">
+      <h2 class="page-header">
+        <%= deck.escape('title') %>
+      </h2>
+    </a>
+    <button type="submit" data-deck-id="<%=deck.id%>" class="btn btn-success btn-lg">Devour <%= deck.escape('title') %>!</button>
+    <button class="btn btn-danger btn-lg delete-deck" data-deck-id="<%=deck.id%>">Delete <%= deck.escape('title') %></button>
+  </form>
+
+<% }); %>
+</ul>
