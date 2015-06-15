@@ -62,9 +62,9 @@ class Response < ActiveRecord::Base
     end
   end
 
-  def update_e_factor(quality)
-    assess_response(quality)
-  end
+  # def update_e_factor(quality)
+  #   assess_response(quality)
+  # end
 
   def update_last_passed
     last_passed = Time.now.to_f * 1000
