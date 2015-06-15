@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
 
+  namespace :api do
+  get 'leaderboards/show'
+  end
+
+  namespace :api do
+  get 'leaderboards/index'
+  end
+
+  get 'leaderboards/show'
+
+  get 'leaderboards/index'
+
   root to: 'static_pages#root'
 
   resource :session

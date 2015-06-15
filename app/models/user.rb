@@ -25,6 +25,8 @@ class User < ActiveRecord::Base
   )
   has_many :deck_shares
   has_many :decks, through: :deck_shares
+  has_many :cards, through: :decks
+  has_many :responses
 
   attr_accessor :password
 

@@ -6,4 +6,11 @@ describe User do
     it { should validate_presence_of(:password_digest) }
     it { should validate_presence_of(:session_token) }
   end
+
+  describe "associations" do
+    it { should have_many(:deck_shares) }
+    it { should have_many(:decks) }
+    it { should have_many(:cards) }
+    it { should have_many(:responses) }
+  end
 end
