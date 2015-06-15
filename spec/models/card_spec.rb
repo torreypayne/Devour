@@ -33,14 +33,14 @@ describe Card do
 
       it "should need to be reviewed after a response of 0" do
         expect(card.needs_review?(user.id)).to be(true)
-        allow(resp).to receive(:quality=).with(0)
+        resp.quality = 0
         resp.assert_response(user.id)
         expect(card.needs_review?(user.id)).to be(true)
       end
 
       it "should need to be reviewed after a response of 1" do
         expect(card.needs_review?(user.id)).to be(true)
-        allow(resp).to receive(:quality=).with(1)
+        resp.quality = 1
         resp.assert_response(user.id)
         expect(card.needs_review?(user.id)).to be(true)
       end

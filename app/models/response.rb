@@ -27,7 +27,6 @@ class Response < ActiveRecord::Base
     self.e_factor ||= 2.5
     self.last_passed ||= (Time.now - 1000.days.ago).to_f * 1000
     self.next_rep ||= 0
-    # self.user_id = current_user.id
   end
 
   def assert_response(user_id)
@@ -41,16 +40,14 @@ class Response < ActiveRecord::Base
       self.e_factor = 2.5
     end
 
+
     if (self.quality > 1)
       increment_repetitions
       set_time_interval
-      # last_passed = Time.now.to_f * 1000
       update_last_passed
-      # debugger
     else
       self.repetitions = 0
       self.next_rep = 0
-      debugger
     end
     self.save
     return self
@@ -63,10 +60,6 @@ class Response < ActiveRecord::Base
       self.repetitions = 1
     end
   end
-
-  # def update_e_factor(quality)
-  #   assess_response(quality)
-  # end
 
   def update_last_passed
     self.last_passed = Time.now.to_f * 1000
