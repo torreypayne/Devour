@@ -75,8 +75,8 @@ def sign_up(email)
   click_button 'Sign Up'
 end
 
-def sign_up_as_mr_payne
-  sign_up("mr_payne@payne.com")
+def sign_up_as_dr_payne
+  sign_up("dr_payne@payne.com")
 end
 
 def sign_in(email)

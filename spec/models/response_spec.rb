@@ -35,5 +35,38 @@ describe Response do
     it { should belong_to(:card) }
     it { should belong_to(:user) }
     it { should have_one(:deck) }
+
+
+  end
+
+  describe "assesses responses correctly" do
+
+    let(:card) { build(:card) }
+    let(:resp) { build(:response, card_id: card.id) }
+
+    it "it is the card's latest response" do
+      expect(card.latest_response).to eq(resp)
+    end
+
+    it "updates the easiness factor" do
+
+    end
+
+    it "updates last_passed" do
+
+    end
+
+    it "updates next_rep" do
+
+    end
+
+    it "increments repetitions by 1 if quality is greater than 1" do
+
+    end
+
+    it "resets repetitions if quality is equal to 0 or 1" do
+
+    end
+
   end
 end
