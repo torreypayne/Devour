@@ -2,7 +2,7 @@ Devour.Collections.Decks = Backbone.Collection.extend({
 
   model: Devour.Models.Deck,
 
-  url: 'api/decks',
+  url: '/api/decks',
 
   getOrFetch: function(id) {
     var collection = this;

@@ -9,17 +9,21 @@
 
 user = User.create!(email: 'payne@payne.com', password: 'password')
 user2 = User.create!(email: Faker::Internet.email, password: Faker::Internet.password)
+user3 = User.create!(email: Faker::Internet.email, password: Faker::Internet.password)
+user4 = User.create!(email: 'payne2@payne.com', password: 'password')
+
 portuguese = Deck.create!(title: 'Portuguese', owner_id: user.id)
 turkish = Deck.create!(title: 'Turkish', owner_id: user.id)
-factory_made = Deck.create!(title: Faker::Name.title, owner_id: user.id)
-another_deck = Deck.create!(title: Faker::Name.title, owner_id: user2.id)
-100.times do |n|
-  Card.create!(deck_id: factory_made.id, question: Faker::Lorem.word, answer: Faker::Lorem.paragraph)
+
+25.times do |n|
+  another_deck = Deck.create!(title: Faker::Name.title, owner_id: user2.id)
+  50.times do |n|
+    card1 = Card.create!(deck_id: another_deck.id, question: Faker::Lorem.word, answer: Faker::Lorem.paragraph(1))
+    card2 = Card.create!(deck_id: another_deck.id, question: Faker::Lorem.word, answer: Faker::Lorem.paragraph(1))
+    resp1 = Response.create!(card_id: card.id, user_id: user1.id, quality: 4)
+  end
 end
-50.times do |n|
-  Card.create!(deck_id: another_deck.id, question: Faker::Lorem.word, answer: Faker::Lorem.paragraph(1))
-end
-Card.create!(deck_id: 1, question: 'cidade', answer: 'city')
+Card.create!(deck_id: portuguese.id, question: 'cidade', answer: 'city')
 Card.create!(deck_id: portuguese.id, question: 'legal', answer: 'cool')
 Card.create!(deck_id: portuguese.id, question: 'amigos', answer: 'friends')
 Card.create!(deck_id: portuguese.id, question: 'garota', answer: 'girl')

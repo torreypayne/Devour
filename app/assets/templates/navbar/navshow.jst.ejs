@@ -12,7 +12,7 @@
       <ul class="nav navbar-nav">
         <li><a href="#">Decks</a></li>
         <li id="study-dropdown" class="study dropdown">
-          <button type="submit" class="dropdown-toggle navbar-btn btn btn-default" data-toggle="dropdown">Study</button>
+          <a type="submit" href="#/study" class="dropdown-toggle navbar-btn btn btn-default" data-toggle="dropdown">Study</a>
         </li>
         <li><a href="#/decks/new">Add</a></li>
         <li><a href="#/search">Advanced Search</a></li>
@@ -23,7 +23,7 @@
       <ul class="nav navbar-nav navbar-right">
         <% if (currentUser) { %>
           <li>
-            <button id="sign-out" class="sign-out btn btn-primary navbar-btn">Sign Out</button>
+            <a id="sign-out" href="#/signOut" class="sign-out btn btn-primary navbar-btn">Sign Out</a>
           </li>
         <% } else { %>
           <li><a href="/session/new">Log in</a></li>

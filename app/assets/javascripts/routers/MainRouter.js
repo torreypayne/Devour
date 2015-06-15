@@ -13,7 +13,15 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
     'decks/:id/edit':'editDeck',
     'decks/:id':'showDeck',
     'search':'search',
+    'signOut':'signOut',
+    'study':'study',
   },
+  //
+  // events: {
+  //   'click button#sign-out':'signOut',
+  //   'click button.dropdown-toggle':'study',
+  //
+  // },
 
   search: function() {
     var publicDecks = new Devour.Collections.PublicDecks();
@@ -68,5 +76,25 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
     this._currentView = view;
     this.$rootEl.html(view.$el);
     view.render();
+  },
+
+  signOut: function(event) {
+    $.ajax({
+      url: '/session',
+      type: 'DELETE',
+      success: function() {
+        Backbone.history.navigate('');
+      }
+    });
+  },
+
+  study: function() {
+    var publicDecks = new Devour.Collections.PublicDecks();
+    publicDecks.fetch({
+      success: function() {
+        console.log("we're here");
+        // $('li.study-dropdown').append(this.studyDropdown({decks: publicDecks }));
+      }
+    });
   },
 });

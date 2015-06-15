@@ -1,6 +1,6 @@
 Devour.Collections.Responses = Backbone.Collection.extend({
 
-  url: 'api/responses',
+  url: '/api/responses',
 
   model: Devour.Models.Response,
 
