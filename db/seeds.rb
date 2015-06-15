@@ -15,12 +15,27 @@ user4 = User.create!(email: 'payne2@payne.com', password: 'password')
 portuguese = Deck.create!(title: 'Portuguese', owner_id: user.id)
 turkish = Deck.create!(title: 'Turkish', owner_id: user.id)
 
-25.times do |n|
-  another_deck = Deck.create!(title: Faker::Name.title, owner_id: user2.id)
+20.times do |n|
+  some_deck = Deck.create!(title: Faker::Name.title, owner_id: user.id)
   50.times do |n|
+    card1 = Card.create!(deck_id: some_deck.id, question: Faker::Lorem.word, answer: Faker::Lorem.paragraph(1))
+    card2 = Card.create!(deck_id: some_deck.id, question: Faker::Lorem.word, answer: Faker::Lorem.paragraph(1))
+    resp1 = Response.new(card_id: card1.id, user_id: user.id, quality: 4)
+    resp1.assert_response(user.id)
+    resp2 = Response.new(card_id: card1.id, user_id: user.id, quality: 4, e_factor: resp1.e_factor, repetitions: resp1.repetitions)
+    resp2.assert_response(user.id)
+  end
+end
+
+15.times do |n|
+  another_deck = Deck.create!(title: Faker::Name.title, owner_id: user2.id)
+  30.times do |n|
     card1 = Card.create!(deck_id: another_deck.id, question: Faker::Lorem.word, answer: Faker::Lorem.paragraph(1))
     card2 = Card.create!(deck_id: another_deck.id, question: Faker::Lorem.word, answer: Faker::Lorem.paragraph(1))
-    resp1 = Response.create!(card_id: card.id, user_id: user1.id, quality: 4)
+    resp1 = Response.new(card_id: card1.id, user_id: user2.id, quality: 4)
+    resp1.assert_response(user2.id)
+    resp2 = Response.new(card_id: card1.id, user_id: user2.id, quality: 4, e_factor: resp1.e_factor, repetitions: resp1.repetitions)
+    resp2.assert_response(user2.id)
   end
 end
 Card.create!(deck_id: portuguese.id, question: 'cidade', answer: 'city')

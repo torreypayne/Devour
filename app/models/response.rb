@@ -23,7 +23,7 @@ class Response < ActiveRecord::Base
   has_one :deck, through: :card
 
   def after_initialize
-    self.repetitions ||= 2.5
+    self.repetitions ||= 0
     self.e_factor ||= 2.5
     self.last_passed ||= (Time.now - 1000.days.ago).to_f * 1000
     self.next_rep ||= 0
