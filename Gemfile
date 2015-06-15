@@ -14,6 +14,7 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'faker'
 # gem 'turbolinks'
 
 group :development, :test do
@@ -24,7 +25,6 @@ group :development, :test do
   gem 'annotate'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
-  gem 'faker'
   gem 'spring'
   gem 'guard-rspec'
 end
