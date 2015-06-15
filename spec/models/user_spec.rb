@@ -8,9 +8,14 @@ describe User do
   end
 
   describe "associations" do
+    it { should have_many(:owned_decks) }
     it { should have_many(:deck_shares) }
     it { should have_many(:decks) }
     it { should have_many(:cards) }
     it { should have_many(:responses) }
+  end
+
+  describe "methods" do
+
   end
 end

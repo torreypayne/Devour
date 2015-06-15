@@ -18,10 +18,10 @@ class User < ActiveRecord::Base
   after_initialize :ensure_session_token
 
   has_many(
-  :owned_decks,
-  class_name: 'Deck',
-  foreign_key: :owner_id,
-  primary_key: :id
+    :owned_decks,
+    class_name: 'Deck',
+    foreign_key: :owner_id,
+    primary_key: :id
   )
   has_many :deck_shares
   has_many :decks, through: :deck_shares
@@ -57,4 +57,13 @@ class User < ActiveRecord::Base
       return nil
     end
   end
+
+  def review_cards
+    return cards.select { |card| card.needs_review?(self.id) }
+  end
+
+  def latest_response
+    return responses.order('created_at DESC').first if responses.length != 0
+  end
+
 end

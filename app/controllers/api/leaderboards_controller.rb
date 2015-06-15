@@ -4,6 +4,7 @@ class Api::LeaderboardsController < ApplicationController
 
   def index
     @users = User.all
-    # So, go ahead with Marcel's idea to make the count based off score = current_user.cards.length - current_user.reviewCards.length
+    # Go ahead with Marcel's idea to make the count based off score = current_user.cards.length - current_user.reviewCards.length
+    render :index
   end
 end
