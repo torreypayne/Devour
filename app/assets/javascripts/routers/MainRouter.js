@@ -15,6 +15,7 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
     'search':'search',
     'signOut':'signOut',
     'study':'study',
+    'publicIndex':'publicDecks',
   },
   //
   // events: {
@@ -29,6 +30,16 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
       success: function() {
       var searchView = new Devour.Views.SearchView({ collection: publicDecks });
       this.swapView(searchView);
+      }.bind(this)
+    });
+  },
+
+  publicDecks: function() {
+    var publicDecks = new Devour.Collections.PublicDecks();
+    publicDecks.fetch({
+      success: function() {
+        var publicView = new Devour.Views.PublicIndex({ collection: publicDecks });
+        this.swapView(publicView);
       }.bind(this)
     });
   },

@@ -16,7 +16,9 @@
             <a type="submit" href="#/study" class="dropdown-toggle navbar-btn btn btn-default" data-toggle="dropdown">Study</a>
           </li>
           <li><a href="#/decks/new">Add</a></li>
-          <li><a href="#/search">Advanced Search</a></li>
+          <li><a href="#/search">Search</a></li>
+          <li><a href="#/publicIndex">Public Decks</a></li>
+
           <li><a>Leaderboard</a></li>
           <li><a>More</a></li>
         <% } %>
@@ -25,7 +27,7 @@
       <ul class="nav navbar-nav navbar-right">
         <% if (currentUser) { %>
           <li>
-            <a id="sign-out" href="#/signOut" class="sign-out btn btn-primary navbar-btn">Sign Out</a>
+            <a id="sign-out" href="#/signOut" class="sign-out btn navbar-btn">Sign Out</a>
           </li>
         <% } else { %>
           <li><a href="/session/new">Log in</a></li>
