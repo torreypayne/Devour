@@ -7,7 +7,7 @@ class CreateResponses < ActiveRecord::Migration
       t.float :e_factor, null: false, default: 2.5
       t.integer :next_rep, null: false
       t.integer :repetitions, null: false, default: 0
-      t.float :last_passed, null: false, :default => (Time.now - 1.days).to_f * 1000
+      t.float :last_passed, null: false
 
       t.timestamps null: false
     end

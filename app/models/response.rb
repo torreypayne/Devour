@@ -41,14 +41,16 @@ class Response < ActiveRecord::Base
       self.e_factor = 2.5
     end
 
-    if (quality > 1)
+    if (self.quality > 1)
       increment_repetitions
       set_time_interval
       # last_passed = Time.now.to_f * 1000
       update_last_passed
+      # debugger
     else
       self.repetitions = 0
       self.next_rep = 0
+      debugger
     end
     self.save
     return self
@@ -67,7 +69,7 @@ class Response < ActiveRecord::Base
   # end
 
   def update_last_passed
-    last_passed = Time.now.to_f * 1000
+    self.last_passed = Time.now.to_f * 1000
   end
 
   def set_time_interval
