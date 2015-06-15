@@ -15,7 +15,7 @@ Devour.Navbars.Navbar = Backbone.View.extend({
 
   events: {
     'click button#sign-out':'signOut',
-    'click button.dropdown-toggle':'study',
+    // 'click a.dropdown-toggle':'study',
   },
 
   render: function() {
