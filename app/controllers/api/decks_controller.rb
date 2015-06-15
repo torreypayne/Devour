@@ -27,7 +27,7 @@ module Api
     end
 
     def index
-      @decks = current_user.decks
+      @decks = current_user.decks if current_user
       render :index
     end
 

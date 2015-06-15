@@ -88,7 +88,7 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
       url: '/session',
       type: 'DELETE',
       success: function() {
-        Backbone.history.navigate('');
+        window.location = '/session/new';
       }
     });
   },
