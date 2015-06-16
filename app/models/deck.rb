@@ -11,7 +11,6 @@
 #  updated_at :datetime         not null
 #
 
-require 'byebug'
 
 class Deck < ActiveRecord::Base
   validates :title, :owner_id, :public, presence: true
