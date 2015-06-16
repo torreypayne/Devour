@@ -87,49 +87,21 @@ describe Response do
       expect(resp.repetitions).to eq(0)
     end
 
-    it "updates e-factor" do
-      resp.assert_response(user.id)
-      expect(resp.e_factor).to eq(1.5)
+    describe "updates e-factor" do
+      it "doesn't change for an answer of 4" do
+        resp.assert_response(user.id)
+        expect(resp.e_factor).to eq(2.3)
+      end
+
+      it "changes for an answer other than 4 (if it doesn't exceed bounds)" do
+        resp.quality = 2
+        resp.assert_response(user.id)
+        expect(resp.e_factor).not_to eq(2.3)
+      end
     end
 
     it "sets upper and lower bounds on e-factor" do
 
-    end
-
-    describe "should inherit e-factor, repetitions, next-repetitions interval, and last-passed from latest response" do
-
-      it "initializes with the most recent response's attributes" do
-        resp1 = resp
-        resp1.save
-        resp2 = build(:response)
-        expect(resp2.previous_response).to eq(resp1)        
-      end
-
-      it "inherits correctly when quality is less than 2" do
-        resp2 = build(:response, card_id: card.id, quality: 0)
-        expect(resp2.e_factor).to eq(resp.e_factor)
-        expect(resp2.repetitions).to eq(resp.repetitions)
-        expect(resp2.next_rep).to eq(resp.next_rep)
-        expect(resp2.last_passed).to eq(resp.last_passed)
-        resp2.assert_response(user.id)
-        expect(resp2.repetitions).to eq(resp.repetitions)
-        expect(resp2.last_passed).to eq(resp.last_passed)
-        expect(resp2.e_factor).not_to eq(resp.e_factor)
-        expect(resp2.next_rep).not_to eq(resp.next_rep)
-      end
-
-      it "inherits correctly when quality is 2 or above" do
-        resp2 = build(:response, card_id: card.id, quality: 3)
-        expect(resp2.e_factor).to eq(resp.e_factor)
-        expect(resp2.repetitions).to eq(resp.repetitions)
-        expect(resp2.next_rep).to eq(resp.next_rep)
-        expect(resp2.last_passed).to eq(resp.last_passed)
-        resp2.assert_response(user.id)
-        expect(resp2.e_factor).not_to eq(resp.e_factor)
-        expect(resp2.repetitions).not_to eq(resp.repetitions)
-        expect(resp2.next_rep).not_to eq(resp.next_rep)
-        expect(resp2.last_passed).not_to eq(resp.last_passed)
-      end
     end
 
     describe "updates the easiness factor" do
@@ -141,7 +113,7 @@ describe Response do
       it "should have a lower e-factor after a response of 0" do
         resp2 = build(:response, card_id: card.id, quality: 0)
         resp2.assert_response(user.id)
-        expect(resp2.e_factor).to eq(1.5)
+        expect(resp2.e_factor).to be_within(0.1).of(1.5)
       end
     end
 

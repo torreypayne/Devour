@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 20150614014919) do
     t.integer  "user_id",                   null: false
     t.integer  "card_id",                   null: false
     t.integer  "quality",                   null: false
-    t.float    "e_factor",    default: 2.5, null: false
+    t.float    "e_factor",    default: 2.3, null: false
     t.integer  "next_rep",                  null: false
     t.integer  "repetitions", default: 0,   null: false
     t.float    "last_passed",               null: false

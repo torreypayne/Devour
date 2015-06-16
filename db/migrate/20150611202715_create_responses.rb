@@ -4,7 +4,7 @@ class CreateResponses < ActiveRecord::Migration
       t.integer :user_id, null: false
       t.integer :card_id, null: false
       t.integer :quality, null: false
-      t.float :e_factor, null: false, default: 2.5
+      t.float :e_factor, null: false, default: 2.3
       t.integer :next_rep, null: false
       t.integer :repetitions, null: false, default: 0
       t.float :last_passed, null: false
