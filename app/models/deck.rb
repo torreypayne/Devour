@@ -11,6 +11,8 @@
 #  updated_at :datetime         not null
 #
 
+require 'byebug'
+
 class Deck < ActiveRecord::Base
   validates :title, :owner_id, :public, presence: true
 
@@ -46,4 +48,21 @@ class Deck < ActiveRecord::Base
     #code
   end
 
+  def self.extract_words(location)
+    words = []
+    file = File.open(location, 'r') do |f|
+      text = f.gets
+      while text
+        line = text.split(" ")
+          # card = Card.create!()
+        words.push((line[1] + "\n"))
+        text = f.gets
+      end
+    end
+    output = File.open('./vendor/assets/extracted_text.txt', 'w') do |f2|
+      words.each do |word|
+        f2.write(word)
+      end
+    end
+  end
 end
