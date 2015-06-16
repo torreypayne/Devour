@@ -106,13 +106,59 @@ class Deck < ActiveRecord::Base
     Card.find_by_sql(sql_str, user_id: user_id, time: Time.now.to_f, day: day)
   end
 
+  # all the cards for this deck that the user needs to review
+  #
+  # needs review if:
+  # a) no responses for that card
+  # b) most recent response where the user scored >= 2 is older than the next
+  #    rep period
+  #
+  # next_rep period is dependent on score
   def review_cards(user_id)
     review_array = []
-    self.cards.each do |card|
+    cs = Card.find_by_sql([<<-SQL, user_id: user_id, id: id])
+      SELECT
+        c.*,
+        r.last_passed,
+        r.next_rep,
+        r.e_factor,
+        r.repetitions
+
+      FROM
+        cards c
+      LEFT OUTER JOIN
+        responses r
+      ON
+        c.id = r.card_id
+      LEFT OUTER JOIN
+        users u
+      ON
+        u.id = r.user_id
+      WHERE
+        (u.id = :user_id OR u.id IS NULL)
+      AND
+        c.deck_id = :id
+      AND
+        (r.id IS NULL
+      OR
+        r.id = (
+          SELECT
+            MAX(id)
+          FROM
+            responses
+          WHERE
+            responses.card_id = c.id
+          AND
+            responses.user_id = u.id
+        )
+      )
+    SQL
+
+    cs.each do |card|
       review_array.push(card) if card.needs_review?(user_id)
     end
 
-    return review_array
+    review_array
   end
 
   def share_with_self
