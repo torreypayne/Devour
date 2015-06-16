@@ -34,7 +34,7 @@ module Api
     def show
       # Write 'allCards' param so I can decide if I want review cards
       #  or all cards
-      @deck = Deck.find(params[:id])
+      @deck = Deck.includes({cards: :responses}).find(params[:id])
       @review_cards = @deck.review_cards(current_user.id).shift(10)
       render :show
     end

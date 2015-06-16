@@ -29,6 +29,83 @@ class Deck < ActiveRecord::Base
   has_many :users, through: :deck_shares
   has_many :responses, through: :cards
 
+
+  def test_stuff
+    day = 60*60*24*1000
+      # SELECT
+      #   cards.*
+      # FROM
+      #   cards
+      # JOIN
+      #   (
+    sql_str = <<-SQL
+          SELECT
+            responses.*
+          FROM
+            responses
+          JOIN
+          (
+            SELECT
+              cards.id, MAX(responses.id) as last_response
+            FROM
+              responses
+            JOIN
+              cards ON cards.id = responses.card_id
+            JOIN
+              users ON users.id = responses.user_id
+            WHERE
+              users.id = ?
+            GROUP BY
+              cards.id
+          ) as card_responses ON card_responses.last_response = responses.id
+    SQL
+      #   ) as latest_responses ON cards.id = latest_responses.card_id
+      # WHERE
+      #   ((? - latest_responses.last_passed)/?) > latest_responses.next_rep
+
+    Response.find_by_sql([sql_str, 1])
+    # Card.find_by_sql([sql_str, 1, Time.now.to_f, day])
+  end
+
+  def review_cards_by_sql(user_id)
+    day = 60*60*24*1000
+    sql_str = <<-SQL
+      SELECT
+        cards.*
+      FROM
+        cards
+      JOIN
+        decks ON decks.id = cards.deck_id
+      JOIN
+        responses ON cards.id = responses.card_id
+      JOIN
+        users ON users.id = responses.user_id
+      JOIN
+        (
+          SELECT
+            cards.id, MAX(responses.id) as last_response
+          FROM
+            responses
+          JOIN
+            cards ON cards.id = responses.card_id
+          JOIN
+            users ON users.id = responses.user_id
+          WHERE
+            users.id = :user_id
+          GROUP BY
+            cards.id
+        ) as card_responses
+      WHERE
+        users.id = :user_id AND
+        (:time - responses.last_passed)/:day > card_responses.last_response
+      GROUP BY
+        cards.id
+      HAVING
+
+    SQL
+    Card.find_by_sql(sql_str, user_id: user_id, time: Time.now.to_f, day: day)
+  end
+
   def review_cards(user_id)
     review_array = []
     self.cards.each do |card|
