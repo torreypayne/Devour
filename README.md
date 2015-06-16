@@ -5,8 +5,10 @@
 [heroku]: http://devour.herokuapp.com
 
 Devour comes complete with a test suite that verifies the functionality of the
-app. The test suite verifies the functionality of the forgetting curve, ensuring
-that each User is tested only on cards that:
+app. The frequency list that provided the English words used in the test databases
+are from the BNC Database by Adam Kilgarriff. The test suite verifies the
+functionality of the forgetting curve, ensuring that each User is only tested
+on cards that:
   1. Are in a deck shared with the User.
   2. New, scheduled for that day, or need to be re-reviewed.
 
