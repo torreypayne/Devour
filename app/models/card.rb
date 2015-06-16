@@ -37,4 +37,8 @@ class Card < ActiveRecord::Base
     return (lapsed_time >= latest_response(user_id).next_rep)
   end
 
+  def new_stuff
+    
+  end
+
 end
