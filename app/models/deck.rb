@@ -123,7 +123,6 @@ class Deck < ActiveRecord::Base
         r.next_rep,
         r.e_factor,
         r.repetitions
-
       FROM
         cards c
       LEFT OUTER JOIN
