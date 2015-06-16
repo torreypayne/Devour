@@ -1,7 +1,7 @@
 module Api
   class ResponsesController < ApplicationController
     def create
-      card = Card.find(response_params[:card_id])
+      card = Card.includes(:responses).find(response_params[:card_id])
       response = card.latest_response(current_user.id)
       response.quality = response_params[:quality]
       response.assert_response(current_user.id)

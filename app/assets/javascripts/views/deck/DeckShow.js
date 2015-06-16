@@ -37,7 +37,19 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
     // THIS IS WHERE THE REAL LEARNING HAPPENS!!!
     var learningChunk = 5;
     if (this._currentIndex > learningChunk-1 || this._currentIndex >= this.model.reviewCards().length) {
-      this.model.fetch();
+      this._currentIndex = 0;
+      for(var i = 0; i < 5; i++) {
+        var card = this.model.reviewCards().models[i];
+        if (card) {
+          card.fetch({
+            success: function() {
+              if (!card.needReview) {
+                this.model.reviewCards().remove(card);
+              }
+            }.bind(this)
+          });
+        }
+      }
     } else {
       this._currentCard = this.model.reviewCards().models[this._currentIndex];
       this._currentIndex += 1;
