@@ -24,7 +24,7 @@ class Response < ActiveRecord::Base
 
   def after_initialize
     self.repetitions ||= 0
-    self.e_factor ||= 2.5
+    self.e_factor ||= 2.3
     self.last_passed ||= (Time.now - 1000.days.ago).to_f * 1000
     self.next_rep ||= 0
   end
@@ -36,8 +36,8 @@ class Response < ActiveRecord::Base
       self.e_factor = 1.3
     end
 
-    if (self.e_factor > 2.5)
-      self.e_factor = 2.5
+    if (self.e_factor > 2.3)
+      self.e_factor = 2.3
     end
 
 

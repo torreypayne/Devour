@@ -19,7 +19,7 @@ FactoryGirl.define do
     user_id 1
     card_id 1
     quality 4
-    e_factor 1.5
+    e_factor 2.3
     next_rep 1
     last_passed 1434165972236.362
     # association :user, factory: :user

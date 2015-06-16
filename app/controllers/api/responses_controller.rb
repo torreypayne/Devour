@@ -1,7 +1,8 @@
 module Api
   class ResponsesController < ApplicationController
     def create
-      response = Response.new(response_params)
+      card = Card.find(response_params[:card_id])
+      response = card.latest_response(current_user.id)
       response.assert_response(current_user.id)
       if response.save
         render json: {}

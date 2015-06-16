@@ -47,14 +47,14 @@ describe Card do
 
       it "should not need to be reviewed after a response of 2" do
         expect(card.needs_review?(user.id)).to be(true)
-        allow(resp).to receive(:quality=).with(2)
+        resp.quality = 2
         resp.assert_response(user.id)
         expect(card.needs_review?(user.id)).to be(false)
       end
 
       it "should not need to be reviewed after a response of 3" do
         expect(card.needs_review?(user.id)).to be(true)
-        allow(resp).to receive(:quality=).with(3)
+        resp.quality = 3
         resp.assert_response(user.id)
         expect(card.needs_review?(user.id)).to be(false)
       end
@@ -67,7 +67,7 @@ describe Card do
 
       it "should not need to be reviewed after a response of 5" do
         expect(card.needs_review?(user.id)).to be(true)
-        allow(resp).to receive(:quality=).with(5)
+        resp.quality = 5
         resp.assert_response(user.id)
         expect(card.needs_review?(user.id)).to be(false)
       end
