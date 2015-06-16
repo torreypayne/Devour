@@ -38,18 +38,19 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
     var learningChunk = 5;
     if (this._currentIndex > learningChunk-1 || this._currentIndex >= this.model.reviewCards().length) {
       this._currentIndex = 0;
-      for(var i = 0; i < 5; i++) {
-        var card = this.model.reviewCards().models[i];
-        if (card) {
-          card.fetch({
-            success: function() {
-              if (!card.needReview) {
-                this.model.reviewCards().remove(card);
-              }
-            }.bind(this)
-          });
-        }
-      }
+      this.model.fetch();
+      // for(var i = 0; i < 5; i++) {
+      //   var card = this.model.reviewCards().models[i];
+      //   if (card) {
+      //     card.fetch({
+      //       success: function() {
+      //         if (!card.needReview) {
+      //           this.model.reviewCards().remove(card);
+      //         }
+      //       }.bind(this)
+      //     });
+      //   }
+      // }
     } else {
       this._currentCard = this.model.reviewCards().models[this._currentIndex];
       this._currentIndex += 1;
