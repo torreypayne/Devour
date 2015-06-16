@@ -3,11 +3,12 @@ module Api
     def create
       card = Card.find(response_params[:card_id])
       response = card.latest_response(current_user.id)
+      response.quality = response_params[:quality]
       response.assert_response(current_user.id)
       if response.save
         render json: {}
       else
-        render json: response.errors, as: 422
+        render json: response.errors, as: :unproccessable_entity
       end
     end
 

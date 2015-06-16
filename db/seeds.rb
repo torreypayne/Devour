@@ -15,21 +15,17 @@ user4 = User.create!(email: 'payne2@payne.com', password: 'password')
 portuguese = Deck.create!(title: 'Portuguese', owner_id: user.id)
 turkish = Deck.create!(title: 'Turkish', owner_id: user.id)
 
-20.times do |n|
+4.times do |n|
   some_deck = Deck.create!(title: Faker::Name.title, owner_id: user.id)
-  50.times do |n|
+  20.times do |n|
     card1 = Card.create!(deck_id: some_deck.id, question: Faker::Lorem.word, answer: Faker::Lorem.paragraph(1))
     card2 = Card.create!(deck_id: some_deck.id, question: Faker::Lorem.word, answer: Faker::Lorem.paragraph(1))
-    resp1 = Response.new(card_id: card1.id, user_id: user.id, quality: 4)
-    resp1.assert_response(user.id)
-    resp2 = Response.new(card_id: card1.id, user_id: user.id, quality: 4, e_factor: resp1.e_factor, repetitions: resp1.repetitions)
-    resp2.assert_response(user.id)
   end
 end
 
-15.times do |n|
+4.times do |n|
   another_deck = Deck.create!(title: Faker::Name.title, owner_id: user2.id)
-  30.times do |n|
+  20.times do |n|
     card1 = Card.create!(deck_id: another_deck.id, question: Faker::Lorem.word, answer: Faker::Lorem.paragraph(1))
     card2 = Card.create!(deck_id: another_deck.id, question: Faker::Lorem.word, answer: Faker::Lorem.paragraph(1))
     resp1 = Response.new(card_id: card1.id, user_id: user2.id, quality: 4)
@@ -38,12 +34,18 @@ end
     resp2.assert_response(user2.id)
   end
 end
-Card.create!(deck_id: portuguese.id, question: 'cidade', answer: 'city')
-Card.create!(deck_id: portuguese.id, question: 'legal', answer: 'cool')
-Card.create!(deck_id: portuguese.id, question: 'amigos', answer: 'friends')
-Card.create!(deck_id: portuguese.id, question: 'garota', answer: 'girl')
-Card.create!(deck_id: portuguese.id, question: 'logo', answer: 'soon')
-Card.create!(deck_id: portuguese.id, question: 'rapido', answer: 'quick')
+
+languages = ['dutch', 'esperanto', 'icelandic', 'indonesian', 'japanese', 'portuguese', 'russian', 'spanish']
+languages.each_with_index do |language, idx|
+  foreign_language_deck = Deck.create!(title: language.capitalize, public: true, course_id: idx, owner_id: user.id)
+  File.open('./vendor/assets/languages/' + language + '.txt','r') do |foreign_text|
+    File.open('./vendor/assets/languages/extracted_text.txt', 'r') do |english_text|
+      question = foreign_text.gets
+      answer = english_text.gets
+      card = Card.create!(deck_id: foreign_language_deck.id, question: question, answer: answer)
+    end
+  end
+end
 Card.create!(deck_id: turkish.id, question: 'bir', answer: 'a')
 Card.create!(deck_id: turkish.id, question: 've', answer: 'and')
 Card.create!(deck_id: turkish.id, question: 'olmak', answer: 'be')

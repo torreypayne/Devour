@@ -16,6 +16,7 @@
 //= require jquery.serializejson
 //= require bootstrap-sprockets
 //= require underscore
+//= require Chart
 //= require backbone
 //= require devour
 //= require utils/composite_view
