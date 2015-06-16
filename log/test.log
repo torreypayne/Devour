@@ -15576,3 +15576,879 @@ DETAIL:  Key (id)=(1) already exists.
   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
   [1m[35m (0.1ms)[0m  BEGIN
   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["deck_id", 1], ["question", "exercitationem"], ["answer", "Vel neque voluptatem enim voluptatem unde. Nemo consequatur debitis ut laboriosam. At rerum quod itaque autem. Accusantium sed dolor debitis. Non dolores et voluptas asperiores voluptas quo repudiandae."], ["created_at", "2015-06-16 00:33:54.164593"], ["updated_at", "2015-06-16 00:33:54.164593"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerson@adams.net' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "HuTIK5K-Qex8vmApJz4wRw"], ["email", "gerson@adams.net"], ["password_digest", "$2a$10$Wlmeb6i2hc7sZQV7i9hAVex2m3Gmk/7WTUZsXRxdHGZWQAvmXP4di"], ["created_at", "2015-06-16 00:33:54.277996"], ["updated_at", "2015-06-16 00:33:54.277996"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "repetitions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["last_passed", 1434414834304.649], ["next_rep", 2], ["user_id", 137], ["card_id", 135], ["quality", 4], ["repetitions", 1], ["created_at", "2015-06-16 00:33:54.308734"], ["updated_at", "2015-06-16 00:33:54.308734"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["deck_id", 1], ["question", "voluptates"], ["answer", "Sit debitis et soluta eos. Cupiditate consequatur dolores vel dolore. Qui deleniti dolorem totam assumenda facere."], ["created_at", "2015-06-16 00:33:54.347132"], ["updated_at", "2015-06-16 00:33:54.347132"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["last_passed", 1434165972236.362], ["next_rep", 1], ["user_id", 1], ["card_id", 136], ["quality", 4], ["created_at", "2015-06-16 00:33:54.376832"], ["updated_at", "2015-06-16 00:33:54.376832"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["deck_id", 1], ["question", "vel"], ["answer", "Quaerat non minus nulla delectus esse ut. Qui aut harum. Eligendi non dolor deserunt. Unde cumque numquam quas repudiandae est qui eos. Amet officia autem iste facere optio."], ["created_at", "2015-06-16 00:33:54.416366"], ["updated_at", "2015-06-16 00:33:54.416366"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'justina@gutkowskimcclure.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "c77nMUDK5zChgcpOo6feJw"], ["email", "justina@gutkowskimcclure.com"], ["password_digest", "$2a$10$uwBrHjTZQ5aTBuuWT2prmOlbK5LOCPW3lIFEPlisbAGGsjfok1gwq"], ["created_at", "2015-06-16 00:33:54.539739"], ["updated_at", "2015-06-16 00:33:54.539739"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "e_factor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["last_passed", 1434165972236.362], ["next_rep", 0], ["user_id", 138], ["card_id", 137], ["quality", 0], ["e_factor", 1.4999999999999998], ["created_at", "2015-06-16 00:33:54.554329"], ["updated_at", "2015-06-16 00:33:54.554329"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["deck_id", 1], ["question", "minima"], ["answer", "Libero dicta amet temporibus recusandae. Ducimus error et ut tenetur amet nisi hic. Corporis iure ut. Eum eos sint neque et et voluptatem reprehenderit. Odio doloribus impedit inventore provident incidunt dolore."], ["created_at", "2015-06-16 00:33:54.582816"], ["updated_at", "2015-06-16 00:33:54.582816"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'marcelino.carroll@hoppe.net' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "Lhlzu7GwFEbXvfRZcVaaTg"], ["email", "marcelino.carroll@hoppe.net"], ["password_digest", "$2a$10$EakcxpKJ64rxZQYjbR13uOCJni5qo14UNKKga8HnCYmI5ED/QI42O"], ["created_at", "2015-06-16 00:33:54.701227"], ["updated_at", "2015-06-16 00:33:54.701227"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "e_factor", "repetitions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["last_passed", 1434414834714.061], ["next_rep", 1], ["user_id", 139], ["card_id", 138], ["quality", 3], ["e_factor", 2.1599999999999997], ["repetitions", 1], ["created_at", "2015-06-16 00:33:54.717069"], ["updated_at", "2015-06-16 00:33:54.717069"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["deck_id", 1], ["question", "fuga"], ["answer", "Distinctio et illo qui qui excepturi. Consequuntur voluptate eveniet. Sunt quaerat modi. Qui eveniet quaerat rerum neque. Sunt quis a sed harum fuga."], ["created_at", "2015-06-16 00:33:54.757840"], ["updated_at", "2015-06-16 00:33:54.757840"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'king.schimmel@kozey.net' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "VAIc94SVvaBoQykWt1yQqg"], ["email", "king.schimmel@kozey.net"], ["password_digest", "$2a$10$DW0awfzlLBut90G/0Qo0cemWuc9A/0sdvCHNIfPi1ghup8kUfYmSS"], ["created_at", "2015-06-16 00:33:54.868495"], ["updated_at", "2015-06-16 00:33:54.868495"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "repetitions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["last_passed", 1434414834888.859], ["next_rep", 2], ["user_id", 140], ["card_id", 139], ["quality", 4], ["repetitions", 1], ["created_at", "2015-06-16 00:33:54.891682"], ["updated_at", "2015-06-16 00:33:54.891682"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["deck_id", 1], ["question", "recusandae"], ["answer", "Sit ullam quia velit nobis molestias. Eius ullam dolorum commodi. Rerum quia voluptate. Quaerat ut occaecati eius odio consequatur nam."], ["created_at", "2015-06-16 00:33:54.918443"], ["updated_at", "2015-06-16 00:33:54.918443"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'wilfrid.schimmel@nikolaushills.info' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "-gy4AHOrYwUf0GpSpkj9EA"], ["email", "wilfrid.schimmel@nikolaushills.info"], ["password_digest", "$2a$10$HHZ0FPlhkKY7mrtcrwDK5OHicr4/ocmHoCFK9qAK33.yl5/uyynLe"], ["created_at", "2015-06-16 00:33:55.029228"], ["updated_at", "2015-06-16 00:33:55.029228"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "e_factor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["last_passed", 1434165972236.362], ["next_rep", 0], ["user_id", 141], ["card_id", 140], ["quality", 0], ["e_factor", 1.4999999999999998], ["created_at", "2015-06-16 00:33:55.043588"], ["updated_at", "2015-06-16 00:33:55.043588"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["deck_id", 1], ["question", "molestias"], ["answer", "Eos repellendus magni libero eum voluptas. Alias eius voluptas id. Molestias qui qui voluptas ut dolore a."], ["created_at", "2015-06-16 00:33:56.506169"], ["updated_at", "2015-06-16 00:33:56.506169"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'tobin_fahey@klocko.org' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["session_token", "wfLISTN07gYcFSctErBihQ"], ["email", "tobin_fahey@klocko.org"], ["password_digest", "$2a$10$hyt6DgycxWrY2V/ufOfZTef/WrQ60/J9eq9op7IKjLLe3LZGQIuMG"], ["created_at", "2015-06-16 00:33:56.605674"], ["updated_at", "2015-06-16 00:33:56.605674"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mResponse Load (0.6ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 142)  [["card_id", 141]]
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["deck_id", 1], ["question", "eos"], ["answer", "Eum aut qui non repudiandae tempora velit optio. Qui consequatur expedita natus accusantium. Et consequatur corporis autem pariatur."], ["created_at", "2015-06-16 00:33:56.632780"], ["updated_at", "2015-06-16 00:33:56.632780"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'jodie.ryan@huel.biz' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["session_token", "f91iIb2fZyiQwFjS5Jh4zQ"], ["email", "jodie.ryan@huel.biz"], ["password_digest", "$2a$10$FcSy2ACGVtn3UQVxbvOFNeMMb8L.C4EbkULkaFVPZ3DZ6dng0vita"], ["created_at", "2015-06-16 00:33:56.710001"], ["updated_at", "2015-06-16 00:33:56.710001"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mResponse Load (0.5ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 143)  [["card_id", 142]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dorcas@hermiston.name' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "7CzkZ4IZN4nyRMJ7q4_YBw"], ["email", "dorcas@hermiston.name"], ["password_digest", "$2a$10$6q/NLizNM/j..lrYvQwOa.j96y6TnOBjoC8sVX/cDI/9BNOg/.N.q"], ["created_at", "2015-06-16 00:33:56.795755"], ["updated_at", "2015-06-16 00:33:56.795755"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "decks" ("title", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Direct Markets Liason"], ["owner_id", 144], ["created_at", "2015-06-16 00:33:56.808957"], ["updated_at", "2015-06-16 00:33:56.808957"]]
+  [1m[36mDeckShare Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "deck_shares" WHERE ("deck_shares"."user_id" = 144 AND "deck_shares"."deck_id" = 43) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "deck_shares" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 144], ["deck_id", 43], ["created_at", "2015-06-16 00:33:56.817508"], ["updated_at", "2015-06-16 00:33:56.817508"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cards" ("question", "answer", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question", "ipsa"], ["answer", "Deleniti eos cupiditate illum veritatis quos ipsam ut. Est sunt dolore omnis autem. Est quo placeat."], ["deck_id", 43], ["created_at", "2015-06-16 00:33:56.821845"], ["updated_at", "2015-06-16 00:33:56.821845"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mResponse Load (0.4ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 144)[0m  [["card_id", 143]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "responses" ("last_passed", "next_rep", "user_id", "quality", "card_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_passed", 1434165972236.362], ["next_rep", 1], ["user_id", 1], ["quality", 4], ["card_id", 143], ["created_at", "2015-06-16 00:33:56.829460"], ["updated_at", "2015-06-16 00:33:56.829460"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "responses" SET "quality" = $1, "user_id" = $2, "e_factor" = $3, "next_rep" = $4, "updated_at" = $5 WHERE "responses"."id" = $6  [["quality", 0], ["user_id", 144], ["e_factor", 1.4999999999999998], ["next_rep", 0], ["updated_at", "2015-06-16 00:33:56.832214"], ["id", 134]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mResponse Load (0.4ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 144)  [["card_id", 143]]
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 144)[0m  [["card_id", 143]]
+  [1m[35mResponse Load (0.5ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 144)  ORDER BY created_at DESC LIMIT 1  [["card_id", 143]]
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 144)[0m  [["card_id", 143]]
+  [1m[35mResponse Load (0.3ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 144)  ORDER BY created_at DESC LIMIT 1  [["card_id", 143]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'efrain@kutch.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "eprEvImsmB1UZmELLNLjvg"], ["email", "efrain@kutch.com"], ["password_digest", "$2a$10$B6Ycl0M9ouuexyPqWtxCF.nFifpr743x4mK8ke.C8v2Wos9xkgnEW"], ["created_at", "2015-06-16 00:33:56.919840"], ["updated_at", "2015-06-16 00:33:56.919840"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "decks" ("title", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "International Marketing Orchestrator"], ["owner_id", 145], ["created_at", "2015-06-16 00:33:56.922504"], ["updated_at", "2015-06-16 00:33:56.922504"]]
+  [1m[36mDeckShare Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "deck_shares" WHERE ("deck_shares"."user_id" = 145 AND "deck_shares"."deck_id" = 44) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "deck_shares" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 145], ["deck_id", 44], ["created_at", "2015-06-16 00:33:56.924980"], ["updated_at", "2015-06-16 00:33:56.924980"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cards" ("question", "answer", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question", "aut"], ["answer", "Quia in qui aut. Et consequatur voluptas aut omnis magni. Totam voluptates quis ut."], ["deck_id", 44], ["created_at", "2015-06-16 00:33:56.927542"], ["updated_at", "2015-06-16 00:33:56.927542"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mResponse Load (0.5ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 145)[0m  [["card_id", 144]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "responses" ("last_passed", "next_rep", "user_id", "quality", "card_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_passed", 1434165972236.362], ["next_rep", 1], ["user_id", 1], ["quality", 4], ["card_id", 144], ["created_at", "2015-06-16 00:33:56.933247"], ["updated_at", "2015-06-16 00:33:56.933247"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "responses" SET "quality" = $1, "user_id" = $2, "e_factor" = $3, "next_rep" = $4, "updated_at" = $5 WHERE "responses"."id" = $6  [["quality", 1], ["user_id", 145], ["e_factor", 1.7599999999999998], ["next_rep", 0], ["updated_at", "2015-06-16 00:33:56.935968"], ["id", 135]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mResponse Load (0.4ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 145)  [["card_id", 144]]
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 145)[0m  [["card_id", 144]]
+  [1m[35mResponse Load (0.3ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 145)  ORDER BY created_at DESC LIMIT 1  [["card_id", 144]]
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 145)[0m  [["card_id", 144]]
+  [1m[35mResponse Load (0.3ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 145)  ORDER BY created_at DESC LIMIT 1  [["card_id", 144]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'vivien_ankunding@cain.info' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "NUlx_-unIUYbOdHqTy_DRA"], ["email", "vivien_ankunding@cain.info"], ["password_digest", "$2a$10$5ntg.MYRBhnL9zi04vTybehpR2WHpaIaCMtOaOQxG6qXen.dhObnq"], ["created_at", "2015-06-16 00:33:57.021396"], ["updated_at", "2015-06-16 00:33:57.021396"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "decks" ("title", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Internal Accountability Supervisor"], ["owner_id", 146], ["created_at", "2015-06-16 00:33:57.024185"], ["updated_at", "2015-06-16 00:33:57.024185"]]
+  [1m[36mDeckShare Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "deck_shares" WHERE ("deck_shares"."user_id" = 146 AND "deck_shares"."deck_id" = 45) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "deck_shares" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 146], ["deck_id", 45], ["created_at", "2015-06-16 00:33:57.026605"], ["updated_at", "2015-06-16 00:33:57.026605"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cards" ("question", "answer", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question", "cum"], ["answer", "Ad ea et id. At ab unde voluptatem error ea eveniet sit. Nobis incidunt laborum minima deleniti architecto. Commodi corrupti velit voluptas voluptas dolorum quia eaque. Sit dolorem doloremque voluptatibus repellendus harum laboriosam et."], ["deck_id", 45], ["created_at", "2015-06-16 00:33:57.029229"], ["updated_at", "2015-06-16 00:33:57.029229"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mResponse Load (0.5ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 146)[0m  [["card_id", 145]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "responses" ("last_passed", "next_rep", "user_id", "quality", "card_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_passed", 1434165972236.362], ["next_rep", 1], ["user_id", 1], ["quality", 4], ["card_id", 145], ["created_at", "2015-06-16 00:33:57.034853"], ["updated_at", "2015-06-16 00:33:57.034853"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "responses" SET "quality" = $1, "user_id" = $2, "e_factor" = $3, "repetitions" = $4, "last_passed" = $5, "updated_at" = $6 WHERE "responses"."id" = $7  [["quality", 2], ["user_id", 146], ["e_factor", 1.9799999999999995], ["repetitions", 1], ["last_passed", 1434414837037.032], ["updated_at", "2015-06-16 00:33:57.037503"], ["id", 136]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mResponse Load (0.3ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 146)  [["card_id", 145]]
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 146)[0m  [["card_id", 145]]
+  [1m[35mResponse Load (0.3ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 146)  ORDER BY created_at DESC LIMIT 1  [["card_id", 145]]
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 146)[0m  [["card_id", 145]]
+  [1m[35mResponse Load (0.3ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 146)  ORDER BY created_at DESC LIMIT 1  [["card_id", 145]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'brook_barrows@dickinson.biz' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "QNsN5gruFzDAxmuNsdAJuw"], ["email", "brook_barrows@dickinson.biz"], ["password_digest", "$2a$10$z3aLUxpm/GBzlzxwg6H/b.9OFu7/KTvKj/Wg/vJrJ15aG1cNlkgcW"], ["created_at", "2015-06-16 00:33:57.123231"], ["updated_at", "2015-06-16 00:33:57.123231"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "decks" ("title", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Senior Quality Architect"], ["owner_id", 147], ["created_at", "2015-06-16 00:33:57.126253"], ["updated_at", "2015-06-16 00:33:57.126253"]]
+  [1m[36mDeckShare Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "deck_shares" WHERE ("deck_shares"."user_id" = 147 AND "deck_shares"."deck_id" = 46) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "deck_shares" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 147], ["deck_id", 46], ["created_at", "2015-06-16 00:33:57.129976"], ["updated_at", "2015-06-16 00:33:57.129976"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cards" ("question", "answer", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question", "quis"], ["answer", "Tenetur voluptatem et harum occaecati libero et. Ipsa praesentium placeat beatae. Unde ipsum adipisci dolore aut sint. Qui distinctio nulla recusandae assumenda eaque est. Est necessitatibus magnam aliquid."], ["deck_id", 46], ["created_at", "2015-06-16 00:33:57.134312"], ["updated_at", "2015-06-16 00:33:57.134312"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 147)[0m  [["card_id", 146]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "responses" ("last_passed", "next_rep", "user_id", "quality", "card_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_passed", 1434165972236.362], ["next_rep", 1], ["user_id", 1], ["quality", 4], ["card_id", 146], ["created_at", "2015-06-16 00:33:57.138991"], ["updated_at", "2015-06-16 00:33:57.138991"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "responses" SET "quality" = $1, "user_id" = $2, "e_factor" = $3, "repetitions" = $4, "last_passed" = $5, "updated_at" = $6 WHERE "responses"."id" = $7  [["quality", 3], ["user_id", 147], ["e_factor", 2.1599999999999997], ["repetitions", 1], ["last_passed", 1434414837140.736], ["updated_at", "2015-06-16 00:33:57.141431"], ["id", 137]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mResponse Load (0.4ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 147)  [["card_id", 146]]
+  [1m[36mResponse Load (0.4ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 147)[0m  [["card_id", 146]]
+  [1m[35mResponse Load (0.4ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 147)  ORDER BY created_at DESC LIMIT 1  [["card_id", 146]]
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 147)[0m  [["card_id", 146]]
+  [1m[35mResponse Load (0.3ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 147)  ORDER BY created_at DESC LIMIT 1  [["card_id", 146]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'leta_jacobs@gaylord.org' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "MhARsxeBa6JmSzAqRN2Lyw"], ["email", "leta_jacobs@gaylord.org"], ["password_digest", "$2a$10$neWxuUSr1F7J89syRatFF.1f2QoGrbsEklLqD5.FXHYBXtUFH33Wu"], ["created_at", "2015-06-16 00:33:57.226652"], ["updated_at", "2015-06-16 00:33:57.226652"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "decks" ("title", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Corporate Paradigm Engineer"], ["owner_id", 148], ["created_at", "2015-06-16 00:33:57.229454"], ["updated_at", "2015-06-16 00:33:57.229454"]]
+  [1m[36mDeckShare Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "deck_shares" WHERE ("deck_shares"."user_id" = 148 AND "deck_shares"."deck_id" = 47) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "deck_shares" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 148], ["deck_id", 47], ["created_at", "2015-06-16 00:33:57.232276"], ["updated_at", "2015-06-16 00:33:57.232276"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cards" ("question", "answer", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question", "pariatur"], ["answer", "Maxime veritatis accusamus. Nesciunt nostrum est. Veniam blanditiis temporibus."], ["deck_id", 47], ["created_at", "2015-06-16 00:33:57.235122"], ["updated_at", "2015-06-16 00:33:57.235122"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mResponse Load (0.5ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 148)[0m  [["card_id", 147]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "responses" ("last_passed", "next_rep", "user_id", "quality", "card_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_passed", 1434165972236.362], ["next_rep", 1], ["user_id", 1], ["quality", 4], ["card_id", 147], ["created_at", "2015-06-16 00:33:57.240753"], ["updated_at", "2015-06-16 00:33:57.240753"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "responses" SET "user_id" = $1, "repetitions" = $2, "next_rep" = $3, "last_passed" = $4, "updated_at" = $5 WHERE "responses"."id" = $6  [["user_id", 148], ["repetitions", 1], ["next_rep", 2], ["last_passed", 1434414837242.945], ["updated_at", "2015-06-16 00:33:57.243502"], ["id", 138]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mResponse Load (0.3ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 148)  [["card_id", 147]]
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 148)[0m  [["card_id", 147]]
+  [1m[35mResponse Load (0.4ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 148)  ORDER BY created_at DESC LIMIT 1  [["card_id", 147]]
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 148)[0m  [["card_id", 147]]
+  [1m[35mResponse Load (0.3ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 148)  ORDER BY created_at DESC LIMIT 1  [["card_id", 147]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'queenie@jerdewaters.info' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "M8hgI7nejQalZguELPW1mQ"], ["email", "queenie@jerdewaters.info"], ["password_digest", "$2a$10$JH61xTQ25hEi3lQShgJqq.4yKHtfNuoajxi2/lFK79Onme20CY6o6"], ["created_at", "2015-06-16 00:33:57.328661"], ["updated_at", "2015-06-16 00:33:57.328661"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "decks" ("title", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Direct Metrics Engineer"], ["owner_id", 149], ["created_at", "2015-06-16 00:33:57.332091"], ["updated_at", "2015-06-16 00:33:57.332091"]]
+  [1m[36mDeckShare Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "deck_shares" WHERE ("deck_shares"."user_id" = 149 AND "deck_shares"."deck_id" = 48) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "deck_shares" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 149], ["deck_id", 48], ["created_at", "2015-06-16 00:33:57.335675"], ["updated_at", "2015-06-16 00:33:57.335675"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cards" ("question", "answer", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question", "facilis"], ["answer", "Doloribus voluptas culpa. Expedita et adipisci harum numquam voluptatem quia. Tempora et qui aut non. Dolores accusantium itaque."], ["deck_id", 48], ["created_at", "2015-06-16 00:33:57.338787"], ["updated_at", "2015-06-16 00:33:57.338787"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 149)[0m  [["card_id", 148]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "responses" ("last_passed", "next_rep", "user_id", "quality", "card_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_passed", 1434165972236.362], ["next_rep", 1], ["user_id", 1], ["quality", 4], ["card_id", 148], ["created_at", "2015-06-16 00:33:57.343289"], ["updated_at", "2015-06-16 00:33:57.343289"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "responses" SET "quality" = $1, "user_id" = $2, "repetitions" = $3, "next_rep" = $4, "last_passed" = $5, "updated_at" = $6 WHERE "responses"."id" = $7  [["quality", 5], ["user_id", 149], ["repetitions", 1], ["next_rep", 3], ["last_passed", 1434414837345.0789], ["updated_at", "2015-06-16 00:33:57.345603"], ["id", 139]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mResponse Load (0.3ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 149)  [["card_id", 148]]
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 149)[0m  [["card_id", 148]]
+  [1m[35mResponse Load (0.4ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 149)  ORDER BY created_at DESC LIMIT 1  [["card_id", 148]]
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 149)[0m  [["card_id", 148]]
+  [1m[35mResponse Load (0.3ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 149)  ORDER BY created_at DESC LIMIT 1  [["card_id", 148]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mDeckShare Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "deck_shares" WHERE ("deck_shares"."user_id" IS NULL AND "deck_shares"."deck_id" IS NULL) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mDeckShare Exists (0.3ms)[0m  SELECT  1 AS one FROM "deck_shares" WHERE ("deck_shares"."user_id" IS NULL AND "deck_shares"."deck_id" IS NULL) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'tyler_goldner@watsica.net' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "hURTor1dcyLZydtx1ZpbeA"], ["email", "tyler_goldner@watsica.net"], ["password_digest", "$2a$10$RQusVgnuWjGyVXi40aDrK.NqTRhBmii1DtlbzS4b3QzJexP5pvT8C"], ["created_at", "2015-06-16 00:33:57.533229"], ["updated_at", "2015-06-16 00:33:57.533229"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["deck_id", 1], ["question", "iste"], ["answer", "Illum est sit natus sed modi aut. Eaque eum aut sed in minima facere. Quia aut aspernatur recusandae perspiciatis aliquid. Deserunt vitae dignissimos maiores aliquam. Voluptatem tempore animi voluptas laborum culpa omnis."], ["created_at", "2015-06-16 00:33:57.540420"], ["updated_at", "2015-06-16 00:33:57.540420"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'rodger@cummings.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["session_token", "wkRfTCMLvb0kSIm_zF1Hxw"], ["email", "rodger@cummings.com"], ["password_digest", "$2a$10$HnhG5FT71M3G/fppbQQwjOPcTisoGZ9GYSQG4GJtjPZ05Xkj3EbmW"], ["created_at", "2015-06-16 00:33:57.619239"], ["updated_at", "2015-06-16 00:33:57.619239"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "repetitions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_passed", 1434414837620.9863], ["next_rep", 2], ["user_id", 151], ["card_id", 149], ["quality", 4], ["repetitions", 1], ["created_at", "2015-06-16 00:33:57.621688"], ["updated_at", "2015-06-16 00:33:57.621688"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mResponse Load (0.4ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 151)[0m  [["card_id", 149]]
+  [1m[35mResponse Load (0.5ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 151)  ORDER BY created_at DESC LIMIT 1  [["card_id", 149]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["deck_id", 1], ["question", "quam"], ["answer", "Distinctio ab magni et voluptatem adipisci quidem. Cupiditate nemo consequatur et voluptatem nostrum praesentium. Qui rerum et minus fugiat est occaecati. Cumque repellat eius adipisci aperiam fugiat hic. Aliquam quia amet eveniet magnam."], ["created_at", "2015-06-16 00:33:57.630110"], ["updated_at", "2015-06-16 00:33:57.630110"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'ismael@haag.org' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["session_token", "CrxbhVfKt0h36tZ9_Y0U8Q"], ["email", "ismael@haag.org"], ["password_digest", "$2a$10$/P9Fhtpj4MtWH8lHY8VGvOlQxg1NN7nOP1LgV.emLVB/OYBQorfGW"], ["created_at", "2015-06-16 00:33:57.708998"], ["updated_at", "2015-06-16 00:33:57.708998"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "repetitions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_passed", 1434414837711.518], ["next_rep", 2], ["user_id", 152], ["card_id", 150], ["quality", 4], ["repetitions", 1], ["created_at", "2015-06-16 00:33:57.711974"], ["updated_at", "2015-06-16 00:33:57.711974"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mResponse Load (0.4ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 152)[0m  [["card_id", 150]]
+  [1m[35mResponse Load (0.4ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 152)  ORDER BY created_at DESC LIMIT 1  [["card_id", 150]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "repetitions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["last_passed", 1434414837717.4631], ["next_rep", 2], ["user_id", 152], ["card_id", 150], ["quality", 4], ["repetitions", 1], ["created_at", "2015-06-16 00:33:57.717915"], ["updated_at", "2015-06-16 00:33:57.717915"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mResponse Load (0.4ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 152)  [["card_id", 150]]
+  [1m[36mResponse Load (0.4ms)[0m  [1mSELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 152)  ORDER BY created_at DESC LIMIT 1[0m  [["card_id", 150]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["deck_id", 1], ["question", "nam"], ["answer", "Eligendi aut id consequatur ipsa reiciendis. Quas rem eligendi voluptatum reprehenderit ut. At sunt eos quae et quia vel. Dolores error dolorem modi laudantium sapiente porro."], ["created_at", "2015-06-16 00:33:57.724282"], ["updated_at", "2015-06-16 00:33:57.724282"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'sadye_sporer@wehner.net' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "ZblptDoE4-yHOfPyKp_vNQ"], ["email", "sadye_sporer@wehner.net"], ["password_digest", "$2a$10$w4c6Yj7RMmmmaJYgG6Ug1Os/b/x5zeCKUhk/BhStc4MBsg2B6WpBG"], ["created_at", "2015-06-16 00:33:57.803343"], ["updated_at", "2015-06-16 00:33:57.803343"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "e_factor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["last_passed", 1434165972236.362], ["next_rep", 0], ["user_id", 153], ["card_id", 151], ["quality", 0], ["e_factor", 1.4999999999999998], ["created_at", "2015-06-16 00:33:57.806155"], ["updated_at", "2015-06-16 00:33:57.806155"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["deck_id", 1], ["question", "rerum"], ["answer", "Assumenda earum reiciendis consequatur rerum et. Qui recusandae quis asperiores sed atque. Dolores et voluptas doloribus at doloremque."], ["created_at", "2015-06-16 00:33:57.810938"], ["updated_at", "2015-06-16 00:33:57.810938"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'elena_beahan@purdypagac.info' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "HOiAKv8rgotAEPY4uVcgCw"], ["email", "elena_beahan@purdypagac.info"], ["password_digest", "$2a$10$YXGH0W.OaRtPmIXbZ5CfQuTsf1iSZpzhDyZgKgqELua1.nyuovl62"], ["created_at", "2015-06-16 00:33:57.888475"], ["updated_at", "2015-06-16 00:33:57.888475"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "repetitions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["last_passed", 1434414837890.2632], ["next_rep", 2], ["user_id", 154], ["card_id", 152], ["quality", 4], ["repetitions", 1], ["created_at", "2015-06-16 00:33:57.890722"], ["updated_at", "2015-06-16 00:33:57.890722"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["deck_id", 1], ["question", "et"], ["answer", "Enim consectetur enim sapiente autem debitis. Ullam itaque molestiae. Non est exercitationem natus ullam sunt non deleniti. Explicabo accusantium magnam sunt ipsam ut tenetur. Minima tempora optio nesciunt enim veritatis autem."], ["created_at", "2015-06-16 00:33:57.895891"], ["updated_at", "2015-06-16 00:33:57.895891"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'elaina@miller.info' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "OcIEXfLtYlGy7f0QrHNWHw"], ["email", "elaina@miller.info"], ["password_digest", "$2a$10$8q8ZCYhhJLzowOhRu0Gc/uInkY1CwKMl80uifm6ZRd4C/F/uKoUpq"], ["created_at", "2015-06-16 00:33:57.976592"], ["updated_at", "2015-06-16 00:33:57.976592"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "repetitions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["last_passed", 1434414837978.73], ["next_rep", 2], ["user_id", 155], ["card_id", 153], ["quality", 4], ["repetitions", 1], ["created_at", "2015-06-16 00:33:57.979395"], ["updated_at", "2015-06-16 00:33:57.979395"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["deck_id", 1], ["question", "dolores"], ["answer", "Dolorum id assumenda aut. Et quis qui beatae facere tempore quaerat repellat. Consequatur odit officiis eum. Quia minima deleniti aperiam sed nihil itaque maiores."], ["created_at", "2015-06-16 00:33:57.984540"], ["updated_at", "2015-06-16 00:33:57.984540"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'laisha@bauch.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "zl4iqoy3uUeCbsKFbUu5nA"], ["email", "laisha@bauch.com"], ["password_digest", "$2a$10$BHLIsRGbljNx47B/0u7/1.3yNOa2tJoGdOe.Mk6k.7xKp7gSJQMpi"], ["created_at", "2015-06-16 00:33:58.066946"], ["updated_at", "2015-06-16 00:33:58.066946"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "e_factor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["last_passed", 1434165972236.362], ["next_rep", 0], ["user_id", 156], ["card_id", 154], ["quality", 1], ["e_factor", 1.7599999999999998], ["created_at", "2015-06-16 00:33:58.069112"], ["updated_at", "2015-06-16 00:33:58.069112"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["deck_id", 1], ["question", "aut"], ["answer", "Pariatur tempora quod. Rerum consequuntur dolores aut blanditiis nostrum. Voluptatibus non harum odio quos vero."], ["created_at", "2015-06-16 00:33:58.074900"], ["updated_at", "2015-06-16 00:33:58.074900"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'haylee_white@von.org' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "RhL3VQ87LSqL5GrCZlAc3Q"], ["email", "haylee_white@von.org"], ["password_digest", "$2a$10$YUHSdJqjMASHGz9nQZKgaewluC7KdxkO.mNQN4GvbzW3ub0JPBg/2"], ["created_at", "2015-06-16 00:33:58.153109"], ["updated_at", "2015-06-16 00:33:58.153109"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "repetitions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["last_passed", 1434414838155.159], ["next_rep", 2], ["user_id", 157], ["card_id", 155], ["quality", 4], ["repetitions", 1], ["created_at", "2015-06-16 00:33:58.155852"], ["updated_at", "2015-06-16 00:33:58.155852"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["deck_id", 1], ["question", "voluptatem"], ["answer", "Doloribus tempore magnam eos aut quia voluptatem. Quia et consequatur sunt optio doloremque. Animi atque quidem dolor fuga libero eaque illum."], ["created_at", "2015-06-16 00:33:58.160708"], ["updated_at", "2015-06-16 00:33:58.160708"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'jovanny@douglasrodriguez.net' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "fwUWv5ujClh8T_YPiupf7w"], ["email", "jovanny@douglasrodriguez.net"], ["password_digest", "$2a$10$Q0KTIAp0BImVwQsfadLNS.onwGsUoME6UGWBP429b4.g0ieB2qcrO"], ["created_at", "2015-06-16 00:33:58.242055"], ["updated_at", "2015-06-16 00:33:58.242055"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "e_factor", "repetitions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["last_passed", 1434414838243.816], ["next_rep", 1], ["user_id", 158], ["card_id", 156], ["quality", 2], ["e_factor", 1.9799999999999995], ["repetitions", 1], ["created_at", "2015-06-16 00:33:58.244424"], ["updated_at", "2015-06-16 00:33:58.244424"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["deck_id", 1], ["question", "quis"], ["answer", "At tempore iusto dolorum temporibus. Et et autem tempora autem qui. Quibusdam excepturi omnis eos. Esse quis qui recusandae. Quis sit natus mollitia et autem."], ["created_at", "2015-06-16 00:33:58.249767"], ["updated_at", "2015-06-16 00:33:58.249767"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'arvid@mannbraun.biz' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "Ejk4Bgc3AddLvOoxSviSgg"], ["email", "arvid@mannbraun.biz"], ["password_digest", "$2a$10$i1numiPfpDe17ITZ5qavrOjR1S35Pg.DynShF0qrCL2cZc1s0xWn2"], ["created_at", "2015-06-16 00:33:58.327145"], ["updated_at", "2015-06-16 00:33:58.327145"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "repetitions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["last_passed", 1434414838329.1252], ["next_rep", 2], ["user_id", 159], ["card_id", 157], ["quality", 4], ["repetitions", 1], ["created_at", "2015-06-16 00:33:58.329803"], ["updated_at", "2015-06-16 00:33:58.329803"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["deck_id", 1], ["question", "ut"], ["answer", "Sapiente ea enim rerum sint. Quos adipisci aut laudantium praesentium consectetur atque. Amet explicabo dolorum sit soluta quos facilis. Pariatur ipsa id libero et eos vitae. Velit sit quisquam cupiditate."], ["created_at", "2015-06-16 00:33:58.335293"], ["updated_at", "2015-06-16 00:33:58.335293"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'wilford.aufderhar@treutelhartmann.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "WqT4se0xe5LrB3eW_n3OkQ"], ["email", "wilford.aufderhar@treutelhartmann.com"], ["password_digest", "$2a$10$EFaatvOM3DO1pTWQ0PAXMeED7HNlFDdgG0xFLLxKQIYoA5AFPUrzS"], ["created_at", "2015-06-16 00:33:58.419448"], ["updated_at", "2015-06-16 00:33:58.419448"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "e_factor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["last_passed", 1434165972236.362], ["next_rep", 0], ["user_id", 160], ["card_id", 158], ["quality", 0], ["e_factor", 1.4999999999999998], ["created_at", "2015-06-16 00:33:58.421801"], ["updated_at", "2015-06-16 00:33:58.421801"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (15.6ms)[0m  INSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["deck_id", 1], ["question", "asperiores"], ["answer", "Ut ea ab omnis commodi qui. Soluta eos occaecati modi. Necessitatibus cum voluptas."], ["created_at", "2015-06-16 00:47:47.885135"], ["updated_at", "2015-06-16 00:47:47.885135"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (1.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'zora_schiller@jones.name' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["session_token", "dNIxh0uLgHagfqfWN8VPNA"], ["email", "zora_schiller@jones.name"], ["password_digest", "$2a$10$QA2dCjevS33c0wYcGuw3V.UBJLKvYGT16t1u0vk8oljirWPORJPJq"], ["created_at", "2015-06-16 00:47:48.095864"], ["updated_at", "2015-06-16 00:47:48.095864"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mResponse Load (0.6ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 161)  [["card_id", 159]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["deck_id", 1], ["question", "et"], ["answer", "Ducimus dignissimos sint voluptatem ab expedita beatae nisi. Quisquam rem temporibus et aliquid qui illo. Ipsa ea sed quam voluptates est."], ["created_at", "2015-06-16 00:47:48.137631"], ["updated_at", "2015-06-16 00:47:48.137631"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'easton_schinner@halvorson.net' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["session_token", "gFfvj8Tw8FU5UEZELvNMlg"], ["email", "easton_schinner@halvorson.net"], ["password_digest", "$2a$10$cUsYcmNNYMrFmGMEqVt6OOM2I5wSXx./y2WSbuSeI7zysagpvyIqy"], ["created_at", "2015-06-16 00:47:48.213828"], ["updated_at", "2015-06-16 00:47:48.213828"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mResponse Load (0.4ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 162)  [["card_id", 160]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'britney.greenholt@wisoky.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "Br444K-JObQU6qNuPlHLZw"], ["email", "britney.greenholt@wisoky.com"], ["password_digest", "$2a$10$mVOq5yR5AutZtFUGVq.k1OhFBhuMACl/qhuUIb8mfAev7n2iqmIrG"], ["created_at", "2015-06-16 00:47:48.293692"], ["updated_at", "2015-06-16 00:47:48.293692"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "decks" ("title", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Dynamic Assurance Designer"], ["owner_id", 163], ["created_at", "2015-06-16 00:47:48.307442"], ["updated_at", "2015-06-16 00:47:48.307442"]]
+  [1m[36mDeckShare Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "deck_shares" WHERE ("deck_shares"."user_id" = 163 AND "deck_shares"."deck_id" = 49) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "deck_shares" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 163], ["deck_id", 49], ["created_at", "2015-06-16 00:47:48.316120"], ["updated_at", "2015-06-16 00:47:48.316120"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cards" ("question", "answer", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question", "rerum"], ["answer", "Magnam tempora non error. Beatae distinctio nihil dolores quis. Enim ratione saepe architecto quod. Hic autem corrupti perferendis."], ["deck_id", 49], ["created_at", "2015-06-16 00:47:48.320672"], ["updated_at", "2015-06-16 00:47:48.320672"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mResponse Load (0.4ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 163)[0m  [["card_id", 161]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "responses" ("last_passed", "next_rep", "user_id", "quality", "card_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_passed", 1434165972236.362], ["next_rep", 1], ["user_id", 1], ["quality", 4], ["card_id", 161], ["created_at", "2015-06-16 00:47:48.328436"], ["updated_at", "2015-06-16 00:47:48.328436"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  UPDATE "responses" SET "quality" = $1, "user_id" = $2, "e_factor" = $3, "next_rep" = $4, "updated_at" = $5 WHERE "responses"."id" = $6  [["quality", 0], ["user_id", 163], ["e_factor", 1.4999999999999998], ["next_rep", 0], ["updated_at", "2015-06-16 00:47:48.331704"], ["id", 151]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mResponse Load (0.3ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 163)  [["card_id", 161]]
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 163)[0m  [["card_id", 161]]
+  [1m[35mResponse Load (0.4ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 163)  ORDER BY created_at DESC LIMIT 1  [["card_id", 161]]
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 163)[0m  [["card_id", 161]]
+  [1m[35mResponse Load (0.3ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 163)  ORDER BY created_at DESC LIMIT 1  [["card_id", 161]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'imani@oconnell.name' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "6l5d1xL0Ua44fFv3gGHJNQ"], ["email", "imani@oconnell.name"], ["password_digest", "$2a$10$BMAJAvMUe0xl/u0FNRJKx.aSDzZumomRKfWdvEgsia8.Oi9FN64rK"], ["created_at", "2015-06-16 00:47:48.421160"], ["updated_at", "2015-06-16 00:47:48.421160"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "decks" ("title", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Investor Usability Director"], ["owner_id", 164], ["created_at", "2015-06-16 00:47:48.424992"], ["updated_at", "2015-06-16 00:47:48.424992"]]
+  [1m[36mDeckShare Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "deck_shares" WHERE ("deck_shares"."user_id" = 164 AND "deck_shares"."deck_id" = 50) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "deck_shares" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 164], ["deck_id", 50], ["created_at", "2015-06-16 00:47:48.428765"], ["updated_at", "2015-06-16 00:47:48.428765"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cards" ("question", "answer", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question", "omnis"], ["answer", "Est temporibus minus. Eligendi dolor dolorem illum. Aut facere amet rem et."], ["deck_id", 50], ["created_at", "2015-06-16 00:47:48.431832"], ["updated_at", "2015-06-16 00:47:48.431832"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 164)[0m  [["card_id", 162]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "responses" ("last_passed", "next_rep", "user_id", "quality", "card_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_passed", 1434165972236.362], ["next_rep", 1], ["user_id", 1], ["quality", 4], ["card_id", 162], ["created_at", "2015-06-16 00:47:48.436430"], ["updated_at", "2015-06-16 00:47:48.436430"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "responses" SET "quality" = $1, "user_id" = $2, "e_factor" = $3, "next_rep" = $4, "updated_at" = $5 WHERE "responses"."id" = $6  [["quality", 1], ["user_id", 164], ["e_factor", 1.7599999999999998], ["next_rep", 0], ["updated_at", "2015-06-16 00:47:48.438612"], ["id", 152]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mResponse Load (0.3ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 164)  [["card_id", 162]]
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 164)[0m  [["card_id", 162]]
+  [1m[35mResponse Load (0.5ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 164)  ORDER BY created_at DESC LIMIT 1  [["card_id", 162]]
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 164)[0m  [["card_id", 162]]
+  [1m[35mResponse Load (0.3ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 164)  ORDER BY created_at DESC LIMIT 1  [["card_id", 162]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'ernestine.medhurst@schillerheathcote.info' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "CAaqCAzsrE71TgSwvL5joA"], ["email", "ernestine.medhurst@schillerheathcote.info"], ["password_digest", "$2a$10$dRXouTbsu5oc5YXh5Vg7H.mUULWq3IRgAed0/V1bn6UTUkVRZVspe"], ["created_at", "2015-06-16 00:47:48.529255"], ["updated_at", "2015-06-16 00:47:48.529255"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "decks" ("title", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Investor Intranet Associate"], ["owner_id", 165], ["created_at", "2015-06-16 00:47:48.532982"], ["updated_at", "2015-06-16 00:47:48.532982"]]
+  [1m[36mDeckShare Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "deck_shares" WHERE ("deck_shares"."user_id" = 165 AND "deck_shares"."deck_id" = 51) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "deck_shares" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 165], ["deck_id", 51], ["created_at", "2015-06-16 00:47:48.536325"], ["updated_at", "2015-06-16 00:47:48.536325"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cards" ("question", "answer", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question", "iste"], ["answer", "Quia eos amet temporibus cum. Laboriosam temporibus minus aut in. Et officiis culpa qui. Reiciendis molestias numquam. Recusandae nihil veniam velit optio eveniet inventore."], ["deck_id", 51], ["created_at", "2015-06-16 00:47:48.540582"], ["updated_at", "2015-06-16 00:47:48.540582"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mResponse Load (0.4ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 165)[0m  [["card_id", 163]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "responses" ("last_passed", "next_rep", "user_id", "quality", "card_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_passed", 1434165972236.362], ["next_rep", 1], ["user_id", 1], ["quality", 4], ["card_id", 163], ["created_at", "2015-06-16 00:47:48.546155"], ["updated_at", "2015-06-16 00:47:48.546155"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "responses" SET "quality" = $1, "user_id" = $2, "e_factor" = $3, "repetitions" = $4, "last_passed" = $5, "updated_at" = $6 WHERE "responses"."id" = $7  [["quality", 2], ["user_id", 165], ["e_factor", 1.9799999999999995], ["repetitions", 1], ["last_passed", 1434415668548.446], ["updated_at", "2015-06-16 00:47:48.548958"], ["id", 153]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mResponse Load (0.3ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 165)  [["card_id", 163]]
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 165)[0m  [["card_id", 163]]
+  [1m[35mResponse Load (0.3ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 165)  ORDER BY created_at DESC LIMIT 1  [["card_id", 163]]
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 165)[0m  [["card_id", 163]]
+  [1m[35mResponse Load (0.3ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 165)  ORDER BY created_at DESC LIMIT 1  [["card_id", 163]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'hayden_turcotte@dooley.net' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "oGBp2FuZvTgu1o0oMu8HhQ"], ["email", "hayden_turcotte@dooley.net"], ["password_digest", "$2a$10$wJPaIj0fD3Td7kATN6UcVuoLZQfMmOucFdgOLJm03Og7eelOMY1jy"], ["created_at", "2015-06-16 00:47:48.634103"], ["updated_at", "2015-06-16 00:47:48.634103"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "decks" ("title", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "International Creative Liason"], ["owner_id", 166], ["created_at", "2015-06-16 00:47:48.639661"], ["updated_at", "2015-06-16 00:47:48.639661"]]
+  [1m[36mDeckShare Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "deck_shares" WHERE ("deck_shares"."user_id" = 166 AND "deck_shares"."deck_id" = 52) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "deck_shares" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 166], ["deck_id", 52], ["created_at", "2015-06-16 00:47:48.642557"], ["updated_at", "2015-06-16 00:47:48.642557"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cards" ("question", "answer", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question", "rem"], ["answer", "Quia quia ea consequuntur architecto qui sed id. Iste repellat eos necessitatibus voluptatem atque. Voluptate nam ut quisquam nisi rem."], ["deck_id", 52], ["created_at", "2015-06-16 00:47:48.645284"], ["updated_at", "2015-06-16 00:47:48.645284"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 166)[0m  [["card_id", 164]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "responses" ("last_passed", "next_rep", "user_id", "quality", "card_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_passed", 1434165972236.362], ["next_rep", 1], ["user_id", 1], ["quality", 4], ["card_id", 164], ["created_at", "2015-06-16 00:47:48.650004"], ["updated_at", "2015-06-16 00:47:48.650004"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "responses" SET "quality" = $1, "user_id" = $2, "e_factor" = $3, "repetitions" = $4, "last_passed" = $5, "updated_at" = $6 WHERE "responses"."id" = $7  [["quality", 3], ["user_id", 166], ["e_factor", 2.1599999999999997], ["repetitions", 1], ["last_passed", 1434415668651.7551], ["updated_at", "2015-06-16 00:47:48.652211"], ["id", 154]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mResponse Load (0.3ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 166)  [["card_id", 164]]
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 166)[0m  [["card_id", 164]]
+  [1m[35mResponse Load (0.4ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 166)  ORDER BY created_at DESC LIMIT 1  [["card_id", 164]]
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 166)[0m  [["card_id", 164]]
+  [1m[35mResponse Load (0.3ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 166)  ORDER BY created_at DESC LIMIT 1  [["card_id", 164]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'virginie@sanford.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "ZTmcc9b8ZFMSWgFkYm6Qgg"], ["email", "virginie@sanford.com"], ["password_digest", "$2a$10$n/q1HylunhbZnMZRQQQP..02LispVNJ6UT7z7MrQL/rt/SnJwI3bi"], ["created_at", "2015-06-16 00:47:48.738898"], ["updated_at", "2015-06-16 00:47:48.738898"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "decks" ("title", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "International Tactics Liason"], ["owner_id", 167], ["created_at", "2015-06-16 00:47:48.741656"], ["updated_at", "2015-06-16 00:47:48.741656"]]
+  [1m[36mDeckShare Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "deck_shares" WHERE ("deck_shares"."user_id" = 167 AND "deck_shares"."deck_id" = 53) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "deck_shares" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 167], ["deck_id", 53], ["created_at", "2015-06-16 00:47:48.744330"], ["updated_at", "2015-06-16 00:47:48.744330"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cards" ("question", "answer", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question", "nam"], ["answer", "In porro placeat sed. Aperiam adipisci et quia. Vitae qui officiis dolor qui."], ["deck_id", 53], ["created_at", "2015-06-16 00:47:48.747017"], ["updated_at", "2015-06-16 00:47:48.747017"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 167)[0m  [["card_id", 165]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "responses" ("last_passed", "next_rep", "user_id", "quality", "card_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_passed", 1434165972236.362], ["next_rep", 1], ["user_id", 1], ["quality", 4], ["card_id", 165], ["created_at", "2015-06-16 00:47:48.751576"], ["updated_at", "2015-06-16 00:47:48.751576"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "user_id" = $1, "repetitions" = $2, "next_rep" = $3, "last_passed" = $4, "updated_at" = $5 WHERE "responses"."id" = $6  [["user_id", 167], ["repetitions", 1], ["next_rep", 2], ["last_passed", 1434415668753.465], ["updated_at", "2015-06-16 00:47:48.753897"], ["id", 155]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mResponse Load (0.4ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 167)  [["card_id", 165]]
+  [1m[36mResponse Load (0.4ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 167)[0m  [["card_id", 165]]
+  [1m[35mResponse Load (0.3ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 167)  ORDER BY created_at DESC LIMIT 1  [["card_id", 165]]
+  [1m[36mResponse Load (0.4ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 167)[0m  [["card_id", 165]]
+  [1m[35mResponse Load (0.3ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 167)  ORDER BY created_at DESC LIMIT 1  [["card_id", 165]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'brian.willms@halvorson.name' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "o6BSHhwb58nt_MHJKBR_TQ"], ["email", "brian.willms@halvorson.name"], ["password_digest", "$2a$10$P2wjLlzNhC6myEsgwJ2jZOqPGMohrzgs3TVYJhOSJ/tjXYzSaMIYG"], ["created_at", "2015-06-16 00:47:48.837474"], ["updated_at", "2015-06-16 00:47:48.837474"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "decks" ("title", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Central Operations Strategist"], ["owner_id", 168], ["created_at", "2015-06-16 00:47:48.840867"], ["updated_at", "2015-06-16 00:47:48.840867"]]
+  [1m[36mDeckShare Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "deck_shares" WHERE ("deck_shares"."user_id" = 168 AND "deck_shares"."deck_id" = 54) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "deck_shares" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 168], ["deck_id", 54], ["created_at", "2015-06-16 00:47:48.843550"], ["updated_at", "2015-06-16 00:47:48.843550"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cards" ("question", "answer", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question", "minus"], ["answer", "Impedit qui mollitia suscipit veritatis dolorem. Aut consequatur et veniam totam delectus quod. Est nisi sequi similique ut saepe. Error ducimus sed."], ["deck_id", 54], ["created_at", "2015-06-16 00:47:48.848078"], ["updated_at", "2015-06-16 00:47:48.848078"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 168)[0m  [["card_id", 166]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "responses" ("last_passed", "next_rep", "user_id", "quality", "card_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_passed", 1434165972236.362], ["next_rep", 1], ["user_id", 1], ["quality", 4], ["card_id", 166], ["created_at", "2015-06-16 00:47:48.853311"], ["updated_at", "2015-06-16 00:47:48.853311"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "responses" SET "quality" = $1, "user_id" = $2, "repetitions" = $3, "next_rep" = $4, "last_passed" = $5, "updated_at" = $6 WHERE "responses"."id" = $7  [["quality", 5], ["user_id", 168], ["repetitions", 1], ["next_rep", 3], ["last_passed", 1434415668855.389], ["updated_at", "2015-06-16 00:47:48.855809"], ["id", 156]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mResponse Load (0.4ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 168)  [["card_id", 166]]
+  [1m[36mResponse Load (0.4ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 168)[0m  [["card_id", 166]]
+  [1m[35mResponse Load (0.4ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 168)  ORDER BY created_at DESC LIMIT 1  [["card_id", 166]]
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 168)[0m  [["card_id", 166]]
+  [1m[35mResponse Load (0.3ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 168)  ORDER BY created_at DESC LIMIT 1  [["card_id", 166]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mDeckShare Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "deck_shares" WHERE ("deck_shares"."user_id" IS NULL AND "deck_shares"."deck_id" IS NULL) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mDeckShare Exists (0.3ms)[0m  SELECT  1 AS one FROM "deck_shares" WHERE ("deck_shares"."user_id" IS NULL AND "deck_shares"."deck_id" IS NULL) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'edmund.durgan@spencerschowalter.biz' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "CSRDRw83-AgVhO7ge53jqw"], ["email", "edmund.durgan@spencerschowalter.biz"], ["password_digest", "$2a$10$7LQd1rdFju6ur9cD0Jw4iOSzWKj/QGUR4M8ApFNgxWBBXuYHTbOOq"], ["created_at", "2015-06-16 00:47:49.038984"], ["updated_at", "2015-06-16 00:47:49.038984"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["deck_id", 1], ["question", "et"], ["answer", "Beatae exercitationem at consequuntur. Libero deleniti voluptatem. Animi nobis illo sed eaque. Quia aperiam sit."], ["created_at", "2015-06-16 00:47:49.046583"], ["updated_at", "2015-06-16 00:47:49.046583"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'alford_schimmel@medhurstframi.name' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["session_token", "KCff_gKOB2aUMNmGn4_j_g"], ["email", "alford_schimmel@medhurstframi.name"], ["password_digest", "$2a$10$p1zSnjueBjjE077AXbpg7eH0U0p85cbKQzjaVEYewHlld/ob2k5iW"], ["created_at", "2015-06-16 00:47:49.126857"], ["updated_at", "2015-06-16 00:47:49.126857"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "repetitions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_passed", 1434415669128.798], ["next_rep", 2], ["user_id", 170], ["card_id", 167], ["quality", 4], ["repetitions", 1], ["created_at", "2015-06-16 00:47:49.129419"], ["updated_at", "2015-06-16 00:47:49.129419"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mResponse Load (0.4ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 170)[0m  [["card_id", 167]]
+  [1m[35mResponse Load (0.4ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 170)  ORDER BY created_at DESC LIMIT 1  [["card_id", 167]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["deck_id", 1], ["question", "illo"], ["answer", "Occaecati suscipit omnis nemo. Et laborum aut amet sit autem quasi rem. Necessitatibus aspernatur tenetur. Qui eius et cupiditate et velit. Quo voluptates delectus sed facilis magni."], ["created_at", "2015-06-16 00:47:49.137651"], ["updated_at", "2015-06-16 00:47:49.137651"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'sandra_pacocha@schuppe.info' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["session_token", "4Ezsfhk14usSuLLbhCrlfA"], ["email", "sandra_pacocha@schuppe.info"], ["password_digest", "$2a$10$XMygdtZx4rhtMxhi0ha5mOP3soZhXHquW2RsKbq900FTABOB1WpkG"], ["created_at", "2015-06-16 00:47:49.216969"], ["updated_at", "2015-06-16 00:47:49.216969"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "repetitions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_passed", 1434415669218.6921], ["next_rep", 2], ["user_id", 171], ["card_id", 168], ["quality", 4], ["repetitions", 1], ["created_at", "2015-06-16 00:47:49.219389"], ["updated_at", "2015-06-16 00:47:49.219389"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mResponse Load (0.4ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 171)[0m  [["card_id", 168]]
+  [1m[35mResponse Load (0.3ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 171)  ORDER BY created_at DESC LIMIT 1  [["card_id", 168]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "repetitions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["last_passed", 1434415669226.342], ["next_rep", 2], ["user_id", 171], ["card_id", 168], ["quality", 4], ["repetitions", 1], ["created_at", "2015-06-16 00:47:49.226909"], ["updated_at", "2015-06-16 00:47:49.226909"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mResponse Load (0.4ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 171)  [["card_id", 168]]
+  [1m[36mResponse Load (0.4ms)[0m  [1mSELECT  "responses".* FROM "responses" WHERE "responses"."card_id" = $1 AND (user_id = 171)  ORDER BY created_at DESC LIMIT 1[0m  [["card_id", 168]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["deck_id", 1], ["question", "unde"], ["answer", "Ea saepe sit quidem. Possimus dolore rerum et maxime dignissimos. Dignissimos maiores saepe deleniti illum optio rerum."], ["created_at", "2015-06-16 00:47:49.233740"], ["updated_at", "2015-06-16 00:47:49.233740"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'salma@ward.info' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "C3H6S-5GgFaLaqzo9Gzouw"], ["email", "salma@ward.info"], ["password_digest", "$2a$10$pEUiVDKfiivHckhuPzlnJujvtkNyFT9I7QPJQhz1kU3ucyTpvOxVC"], ["created_at", "2015-06-16 00:47:49.316778"], ["updated_at", "2015-06-16 00:47:49.316778"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "e_factor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["last_passed", 1434165972236.362], ["next_rep", 0], ["user_id", 172], ["card_id", 169], ["quality", 0], ["e_factor", 1.4999999999999998], ["created_at", "2015-06-16 00:47:49.321552"], ["updated_at", "2015-06-16 00:47:49.321552"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["deck_id", 1], ["question", "ut"], ["answer", "Sunt recusandae similique quia deleniti. Rerum eius recusandae. Necessitatibus eaque quaerat sit occaecati hic. Temporibus quae amet aut quaerat neque."], ["created_at", "2015-06-16 00:47:49.330887"], ["updated_at", "2015-06-16 00:47:49.330887"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'cade.purdy@lesch.info' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "uP2b5Fc38WpMSsJEv4e_yA"], ["email", "cade.purdy@lesch.info"], ["password_digest", "$2a$10$qqibXYrWkErOIw5S3.l/3OUdmlWo3/jcVzDnGBWs4tiaGcsM/UOb."], ["created_at", "2015-06-16 00:47:49.416281"], ["updated_at", "2015-06-16 00:47:49.416281"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "repetitions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["last_passed", 1434415669418.4219], ["next_rep", 2], ["user_id", 173], ["card_id", 170], ["quality", 4], ["repetitions", 1], ["created_at", "2015-06-16 00:47:49.419208"], ["updated_at", "2015-06-16 00:47:49.419208"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["deck_id", 1], ["question", "beatae"], ["answer", "Pariatur animi voluptatem non soluta sit sed. Cum et voluptatum ut ab dolorem beatae. Aliquid molestias officiis quis."], ["created_at", "2015-06-16 00:47:49.425162"], ["updated_at", "2015-06-16 00:47:49.425162"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'alexzander@bartell.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "BadL2AiXud-r0GQehuwNJw"], ["email", "alexzander@bartell.com"], ["password_digest", "$2a$10$ze86rmrZtalDGHXl4CFgqOlXozAWC03JOlFeSSQIPVd5/umiSyBIW"], ["created_at", "2015-06-16 00:47:49.506341"], ["updated_at", "2015-06-16 00:47:49.506341"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "repetitions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["last_passed", 1434415669508.9468], ["next_rep", 2], ["user_id", 174], ["card_id", 171], ["quality", 4], ["repetitions", 1], ["created_at", "2015-06-16 00:47:49.509377"], ["updated_at", "2015-06-16 00:47:49.509377"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["deck_id", 1], ["question", "qui"], ["answer", "Et doloribus neque molestiae aut. Cum qui eum distinctio ut omnis. Consequatur impedit pariatur et debitis aperiam rerum ullam."], ["created_at", "2015-06-16 00:47:49.513265"], ["updated_at", "2015-06-16 00:47:49.513265"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'christy.gleichner@kihnbernier.info' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "RwavGRfzX4qGEUS5zDHKnA"], ["email", "christy.gleichner@kihnbernier.info"], ["password_digest", "$2a$10$es7zpQlN.hHwKnC91n5OduUOlRJdSE1JfSda36NBWSYwrDq9KmNlW"], ["created_at", "2015-06-16 00:47:49.592459"], ["updated_at", "2015-06-16 00:47:49.592459"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "e_factor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["last_passed", 1434165972236.362], ["next_rep", 0], ["user_id", 175], ["card_id", 172], ["quality", 1], ["e_factor", 1.7599999999999998], ["created_at", "2015-06-16 00:47:49.594826"], ["updated_at", "2015-06-16 00:47:49.594826"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["deck_id", 1], ["question", "in"], ["answer", "Saepe omnis at. Voluptatem qui ut. Quae nobis voluptatum est saepe commodi quia."], ["created_at", "2015-06-16 00:47:49.600227"], ["updated_at", "2015-06-16 00:47:49.600227"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dandre.marks@sawayn.biz' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "JRuosSmSz6HE9aZqZHmmaw"], ["email", "dandre.marks@sawayn.biz"], ["password_digest", "$2a$10$kOu0O3N/MAGLl63CvfGfw.JPr17y3UwTwOPwq59bckCIwMN5jeivq"], ["created_at", "2015-06-16 00:47:49.683061"], ["updated_at", "2015-06-16 00:47:49.683061"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "repetitions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["last_passed", 1434415669685.434], ["next_rep", 2], ["user_id", 176], ["card_id", 173], ["quality", 4], ["repetitions", 1], ["created_at", "2015-06-16 00:47:49.685969"], ["updated_at", "2015-06-16 00:47:49.685969"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["deck_id", 1], ["question", "aut"], ["answer", "Rerum laborum libero et veritatis aut. Explicabo rem harum rerum ratione aut reiciendis numquam. Velit dolor sit dolores earum. Repudiandae possimus occaecati illum."], ["created_at", "2015-06-16 00:47:49.690491"], ["updated_at", "2015-06-16 00:47:49.690491"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'alex_mills@lynch.net' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "oeZH4D5hs4EsljlSWgwfIQ"], ["email", "alex_mills@lynch.net"], ["password_digest", "$2a$10$Q35CviuzfQjAyn4z4v2BaOwKGi8pZ5XeLtv2CfKb89ITCGZdHdUCe"], ["created_at", "2015-06-16 00:47:49.769286"], ["updated_at", "2015-06-16 00:47:49.769286"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "e_factor", "repetitions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["last_passed", 1434415669771.0679], ["next_rep", 1], ["user_id", 177], ["card_id", 174], ["quality", 2], ["e_factor", 1.9799999999999995], ["repetitions", 1], ["created_at", "2015-06-16 00:47:49.771774"], ["updated_at", "2015-06-16 00:47:49.771774"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["deck_id", 1], ["question", "quisquam"], ["answer", "Accusamus fuga recusandae consequatur accusantium. Ut nihil soluta consectetur sed ut. Et optio voluptate. Ad voluptatem et doloribus earum. Officiis qui vel ut eum ea."], ["created_at", "2015-06-16 00:47:49.777055"], ["updated_at", "2015-06-16 00:47:49.777055"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'lauryn_gibson@shields.org' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "3d0f6qwnqEUWcMPQDg1RAw"], ["email", "lauryn_gibson@shields.org"], ["password_digest", "$2a$10$BF1oXoXHS4keHsERyTg4Z.vrNIVgisZ6BekDBZUzlu.po7HkakAf2"], ["created_at", "2015-06-16 00:47:49.856168"], ["updated_at", "2015-06-16 00:47:49.856168"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "repetitions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["last_passed", 1434415669860.677], ["next_rep", 2], ["user_id", 178], ["card_id", 175], ["quality", 4], ["repetitions", 1], ["created_at", "2015-06-16 00:47:49.861549"], ["updated_at", "2015-06-16 00:47:49.861549"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cards" ("deck_id", "question", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["deck_id", 1], ["question", "exercitationem"], ["answer", "Molestiae sunt quaerat perferendis dolores doloribus aperiam. Ut odit alias optio ducimus amet cupiditate. Aut aut quam. Quis occaecati et velit. Perferendis eveniet non explicabo numquam quas."], ["created_at", "2015-06-16 00:47:49.868735"], ["updated_at", "2015-06-16 00:47:49.868735"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'mara_volkman@boscocorkery.org' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("session_token", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["session_token", "H2xYDyxehao1V1kJ4QoU-w"], ["email", "mara_volkman@boscocorkery.org"], ["password_digest", "$2a$10$qqsRQk.1hQaf3Cnwu9xjHuoiFJjoTmV0i5.l.KVBtRnOszSvOCPf2"], ["created_at", "2015-06-16 00:47:49.949099"], ["updated_at", "2015-06-16 00:47:49.949099"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("last_passed", "next_rep", "user_id", "card_id", "quality", "e_factor", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["last_passed", 1434165972236.362], ["next_rep", 0], ["user_id", 179], ["card_id", 176], ["quality", 0], ["e_factor", 1.4999999999999998], ["created_at", "2015-06-16 00:47:49.951276"], ["updated_at", "2015-06-16 00:47:49.951276"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m

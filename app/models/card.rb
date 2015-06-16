@@ -10,7 +10,6 @@
 #  updated_at :datetime         not null
 #
 
-require 'byebug'
 
 class Card < ActiveRecord::Base
   validates :deck_id, :question, :answer, presence: true
