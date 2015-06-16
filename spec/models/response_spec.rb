@@ -41,7 +41,7 @@ describe Response do
       expect(resp.class).to eq(Response)
       expect(resp.repetitions).to eq(0)
       expect(resp.e_factor).to eq(2.3)
-      expect(resp.last_passed).to be_within(0.01).of((Time.now - 1000.days.ago).to_f * 1000)
+      expect(resp.last_passed).to be_within(0.1).of((Time.now - 1000.days.ago).to_f * 1000)
       expect(resp.next_rep).to eq(0)
     end
   end
