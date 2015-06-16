@@ -21,10 +21,11 @@ Devour.Models.Deck = Backbone.Model.extend({
   parse: function(response) {
     if (response.cards) {
       this.cards().set(response.cards);
-      // delete response.cards;
+      delete response.cards;
     }
     if (response.review_cards) {
       this.reviewCards().set(response.review_cards);
+      delete response.review_cards;
     }
     return response;
   }
