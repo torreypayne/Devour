@@ -27,7 +27,11 @@ module Api
     end
 
     def index
-      @decks = current_user.decks if current_user
+      if params[:title]
+        @decks = current_user.decks.where('LOWER(title) ~ ?', params[:title].downcase) if current_user
+      else
+        @decks = current_user.decks if current_user
+      end
       render :index
     end
 
@@ -45,7 +49,11 @@ module Api
     end
 
     def public_decks
-      @decks = Deck.all.select { |card| card.public }
+      if params[:title]
+        @decks = Deck.where(public: true).where('LOWER(title) ~ ?', params[:title].downcase)
+      else
+        @decks = Deck.where(public: true)
+      end
       render :index
     end
 

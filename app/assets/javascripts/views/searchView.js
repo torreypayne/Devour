@@ -22,12 +22,18 @@ Devour.Views.SearchView = Backbone.View.extend({
     var data = $(event.currentTarget).serializeJSON();
     var chars = data.title.toLowerCase();
     var matched = [];
-    this.collection.each(function(deck) {
-      if (deck.get('title').toLowerCase().includes(chars)) {
-        matched.push(deck);
-      }
+    this.collection.fetch({
+      data: data,
+      reset: true
     });
-    this.collection.set(matched);
+
+    // this.collection.each(function(deck) {
+    //
+    //   if (deck.get('title').toLowerCase().includes(chars)) {
+    //     matched.push(deck);
+    //   }
+    // });
+    // this.collection.set(matched);
     $('ul.deck-list').html(this.resultsTemplate({ decks: this.collection }));
   },
 
