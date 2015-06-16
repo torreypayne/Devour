@@ -24,7 +24,10 @@ class Card < ActiveRecord::Base
       return user_responses.order('created_at DESC').first if user_responses && user_responses.length != 0
     end
 
-    Response.new
+    response = Response.new
+    response.card_id = self.id
+    response.user_id = user_id
+    return response
   end
 
   def needs_review?(user_id)
