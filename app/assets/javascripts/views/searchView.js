@@ -5,7 +5,7 @@ Devour.Views.SearchView = Backbone.View.extend({
   resultsTemplate: JST['search/results'],
 
   events: {
-    'keyup #search-by-title':'filterDecks',
+    'keyup #search':'filterDecks',
     'click button.btn-success':'shareDeck',
   },
 

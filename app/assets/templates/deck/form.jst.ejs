@@ -2,17 +2,29 @@
 
 <form class="deck new-deck deck-form form-inline" id="deck-form" action="/api/decks/" method="post">
   <input type="hidden" name="deck[owner_id]" value="<%= $('div#current-user').data('id') %>">
-  <div class="form-group">
-    <label for="title">Title</label>
-    <input type="text" name="deck[title]" placeholder="Title">
+  <div class="form-inline">
+    <div class="input-group input-group-lg">
+      <label for="title">Title</label>
+      <input type="text" name="deck[title]" class="form-control" placeholder="Title">
+    </div>
   </div>
-  <div class="form-group">
-    <input type="integer" name="deck[course_id]" placeholder="Course Id">
+  <div class="form-inline">
+    <div class="input-group input-group-lg">
+      <label for="title">Course ID</label>
+      <input type="integer" name="deck[course_id]" class="form-control" placeholder="Course Id">
+    </div>
   </div>
-  <div class="form-group">
-    <input type="radio" name="deck[public]" value="true" checked>Public
-    <input type="radio" name="deck[public]" value="false">Private
+  <br>
+
+  <div class="btn-group btn-group-justified" role="group">
+    <div class="btn-group">
+      <button type="radio" name="deck[public]" class="btn btn-default" value="true" checked>Public</button>
+    </div>
+    <div class="btn-group">
+      <button type="radio" name="deck[public]" class="btn btn-default" value="false">Private</button>
+    </div>
   </div>
-  <button type="submit" class="btn btn-success btn-lg btn-confirm-create-deck">I'm Hungry! (Go Ahead and Create Me :) )</button>
+  <br>
+  <button type="submit" class="btn btn-default btn-lg btn-confirm-create-deck">Create Your New Deck. Go Study.</button>
 
 </form>

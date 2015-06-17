@@ -1,10 +1,12 @@
 body {
   // background: url("http://2.bp.blogspot.com/-KMbthW5jCCc/UMgJoiRioII/AAAAAAAAJuI/OYQFHhJOBUA/s1600/the-white-room.jpg");
-  background: snow;
+  background: url('http://2.bp.blogspot.com/-KMbthW5jCCc/UMgJoiRioII/AAAAAAAAJuI/OYQFHhJOBUA/s1600/the-white-room.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   padding: 30px;
   opacity: 0.9;
   padding-top: 85px;
@@ -99,6 +101,10 @@ video, iframe {
 
 a.sign-up {
   margin-top: 12%;
+}
+
+.panel-heading {
+  // background: #aliceblue;
 }
 
 // #quiz {

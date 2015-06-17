@@ -1,18 +1,15 @@
 <ul class="deck-list">
-  
+
   <form class="form-inline" id="index">
     <% decks.each(function(deck) { %>
-      <div class="panel panel-default">
-        <button class="btn btn-danger btn-small delete-deck" data-deck-id="<%=deck.id%>"><span class="glyphicon glyphicon-remove"></span></button>
-        <a href="#decks/<%=deck.id%>">
-          <h2 class="panel-heading">
-            <% debugger %>
-            <%= deck.escape('title') %>
-          </h2>
-        </a>
-        <div class="panel panel-body"><%= deck.escape('description') %></div>
-        <button type="submit" data-deck-id="<%=deck.id%>" class="btn btn-primary btn-block">Devour <%= deck.escape('title') %>!</button>
-      </div>
+      <button class="btn btn-danger btn-small delete-deck" data-deck-id="<%=deck.id%>"><span class="glyphicon glyphicon-remove"></span></button>
+      <a href="#decks/<%=deck.id%>">
+        <h2 class="panel-heading">
+          <%= deck.escape('title') %>
+        </h2>
+      </a>
+      <!-- <div class="panel panel-body"><%= deck.escape('description') %></div> -->
+      <button type="submit" data-deck-id="<%=deck.id%>" class="btn btn-primary btn-block">Devour <%= deck.escape('title') %>!</button>
   <% }); %>
   </form>
 </ul>
