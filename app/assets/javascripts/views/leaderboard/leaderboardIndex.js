@@ -3,7 +3,7 @@ Devour.Views.LeaderboardIndex = Backbone.CompositeView.extend({
   template: JST['leaderboard/index'],
 
   initialize: function(options) {
-
+    
   },
 
   render: function() {

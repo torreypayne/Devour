@@ -7,7 +7,7 @@ Devour.Models.Leaderboard = Backbone.Model.extend({
   },
 
   parse: function(response) {
-
+    return response;
   },
 
 });
