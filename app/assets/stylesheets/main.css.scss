@@ -1,5 +1,5 @@
 body {
-  background: url("https://c4.staticflickr.com/4/3016/5836154940_5af67bc63d_b.jpg") no-repeat center center fixed;
+  background: snow;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -38,7 +38,7 @@ form {
 
 .panel-default {
   background: white;
-  
+
 }
 
 form:first-child {
@@ -61,6 +61,22 @@ div.card-item {
 
 button.delete-deck {
   float: right;
+}
+
+#hero {
+  z-index: -1;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: 600px;
+  overflow: hidden;
+  min-width: 1045px;
+}
+
+video, iframe {
+  width: 100%;
+  disabled: true;
 }
 
 // #quiz {
