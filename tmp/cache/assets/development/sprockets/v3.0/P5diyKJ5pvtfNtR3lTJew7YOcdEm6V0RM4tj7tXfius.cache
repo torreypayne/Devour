@@ -1,0 +1,1 @@
+I"Dfunction(obj){var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<form action="/#/cards/new" method="get">\n  <button class="btn btn-primary go-to-add-cards">You are out of cards to Review. Would you like to add new cards to your deck for review?</button>\n</form>\n');}return __p.join('');}:ET

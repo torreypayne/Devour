@@ -4,18 +4,20 @@
     <p>What are you looking to study today? Go ahead and "Devour" a deck you are currently studying, or hop over to the Public Decks section to see decks you may want to add!</p>
   </div>
 
+  <label for="index" class="">Your Collection</label>
 
-<% decks.each(function(deck) { %>
-
-  <form class="form-inline">
-    <a href="#decks/<%=deck.id%>">
-      <h2 class="page-header">
-        <%= deck.escape('title') %>
-      </h2>
-    </a>
-    <button type="submit" data-deck-id="<%=deck.id%>" class="btn btn-success btn-lg">Devour <%= deck.escape('title') %>!</button>
-    <button class="btn btn-danger btn-lg delete-deck" data-deck-id="<%=deck.id%>">Delete <%= deck.escape('title') %></button>
+  <form class="form-inline" id="index">
+    <% decks.each(function(deck) { %>
+      <div class="panel panel-default">
+        <button class="btn btn-danger btn-small delete-deck" data-deck-id="<%=deck.id%>"><span class="glyphicon glyphicon-remove"></span></button>
+        <a href="#decks/<%=deck.id%>">
+          <h2 class="panel-heading">
+            <%= deck.escape('title') %>
+          </h2>
+        </a>
+        <div class="panel panel-body"><%= deck.escape('description') %></div>
+        <button type="submit" data-deck-id="<%=deck.id%>" class="btn btn-primary btn-block">Devour <%= deck.escape('title') %>!</button>
+      </div>
+  <% }); %>
   </form>
-
-<% }); %>
 </ul>

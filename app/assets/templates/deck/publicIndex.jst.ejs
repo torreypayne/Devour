@@ -1,20 +1,21 @@
 <ul class="deck-list">
   <div class="jumbotron">
     <h1>Time to eat!</h1>
+    <p>Public Directory: Fork any decks of your liking, and they will be added to Your Collection.</p>
   </div>
 
 
-<% decks.each(function(deck) { %>
-
-  <form class="form-inline">
-    <a href="#decks/<%=deck.id%>">
-      <h2 class="page-header">
-        <%= deck.escape('title') %>
-      </h2>
-    </a>
-    <button type="submit" data-deck-id="<%=deck.id%>" class="btn btn-success btn-lg">Devour <%= deck.escape('title') %>!</button>
-    <button class="btn btn-danger btn-lg delete-deck" data-deck-id="<%=deck.id%>">Delete <%= deck.escape('title') %></button>
+  <form class="form-inline list-group">
+    <% decks.each(function(deck) { %>
+      <div class="list-group-item">
+        <button class="btn btn-danger btn-small delete-deck" data-deck-id="<%=deck.id%>"><span class="glyphicon glyphicon-remove"></span></button>
+        <a href="#decks/<%=deck.id%>">
+          <h2 class="page-header">
+            <%= deck.escape('title') %>
+          </h2>
+        </a>
+        <button type="submit" data-deck-id="<%=deck.id%>" class="btn btn-primary btn-block">Devour <%= deck.escape('title') %>!</button>
+      </div>
+    <% }); %>
   </form>
-
-<% }); %>
 </ul>

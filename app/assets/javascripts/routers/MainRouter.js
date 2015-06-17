@@ -16,6 +16,7 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
     'signOut':'signOut',
     'study':'study',
     'publicIndex':'publicDecks',
+    'leaderboard':'showLeaders',
   },
 
   search: function() {
@@ -102,5 +103,12 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
         // $('li.study-dropdown').append(this.studyDropdown({decks: publicDecks }));
       }
     });
+  },
+
+  showLeaders: function() {
+    var leaderboardView = new Devour.Views.LeaderboardIndex({
+      model: new Devour.Models.Leaderboard
+    });
+    this.swapView(leaderboardView);
   },
 });
