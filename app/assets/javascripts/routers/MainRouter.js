@@ -41,9 +41,7 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
 
   index: function() {
     this.decks.fetch({
-      success: function() {
-        console.log(this.decks);
-      }.bind(this)
+      data: { page: 1 }
     });
     var indexView = new Devour.Views.DecksIndex({ collection: this.decks });
     this.swapView(indexView);

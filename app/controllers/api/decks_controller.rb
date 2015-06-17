@@ -27,11 +27,12 @@ module Api
     end
 
     def index
-      if params[:title]
-        @decks = current_user.decks.where('LOWER(title) ~ ?', params[:title].downcase) if current_user
-      else
-        @decks = current_user.decks if current_user
-      end
+      # if params[:title]
+      #   @decks = current_user.decks.where('LOWER(title) ~ ?', params[:title].downcase) if current_user
+      # else
+      @decks = current_user.decks if current_user
+      @decks.page(params[:page]).per(3)
+      # end
       render :index
     end
 
@@ -60,7 +61,7 @@ module Api
     private
 
     def deck_params
-      params.require(:deck).permit(:title, :owner_id, :course_id, :public)
+      params.require(:deck).permit(:title, :owner_id, :course_id, :public, :page)
     end
   end
 end

@@ -8,13 +8,25 @@ Devour.Views.DecksIndex = Backbone.View.extend({
   },
 
   initialize: function(options) {
+    this.page = 1;
     this.listenTo(this.collection, 'sync', this.render);
+  },
+
+  events: {
+    'scroll':'addDecks',
   },
 
   render: function() {
     var indexViewer = this.template({ decks: this.collection });
-    this.$el.html(indexViewer);
+    this.$el.append(indexViewer);
     return this;
+  },
+
+  addDecks: function() {
+    this.page += 1;
+    this.collection.fetch({
+      data: { page: this.page }
+    });
   },
 
   study: function(event) {
@@ -25,7 +37,7 @@ Devour.Views.DecksIndex = Backbone.View.extend({
   deleteDeck: function() {
     var deck = this.collection.get($(event.target).data('deck-id'));
     deck.destroy();
-    this.collection.fetch();    
+    this.collection.fetch();
   },
 
 });

@@ -18,6 +18,7 @@
 //= require underscore
 //= require Chart
 //= require jquery.embed
+//= require jquery.jscroll
 //= require backbone
 //= require devour
 //= require utils/composite_view
