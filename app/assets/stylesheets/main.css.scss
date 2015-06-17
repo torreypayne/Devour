@@ -41,14 +41,18 @@ form {
 
 }
 
+div.login-bars {
+  margin-top: 15%;
+}
+
 form:first-child {
   margin-top: 12%;
 }
 
-img#logo {
-  height: 150px;
-  margin-bottom: 25px;
-}
+// img#logo {
+//   height: 150px;
+//   margin-bottom: 25px;
+// }
 
 form.log-out {
   position: absolute;
