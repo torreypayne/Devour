@@ -1,19 +1,19 @@
 Devour.Views.DecksIndex = Backbone.View.extend({
 
+  intro: JST["deck/intro"],
+
   template: JST["deck/index"],
 
   events: {
     'click button.btn-success':'study',
-    'click button.btn-danger':'deleteDeck'
+    'click button.btn-danger':'deleteDeck',
+    'scroll':'addDecks',
   },
 
   initialize: function(options) {
     this.page = 1;
+    this.$el.append(this.intro);
     this.listenTo(this.collection, 'sync', this.render);
-  },
-
-  events: {
-    'scroll':'addDecks',
   },
 
   render: function() {

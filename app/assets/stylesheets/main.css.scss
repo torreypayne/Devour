@@ -1,4 +1,5 @@
 body {
+  // background: url("http://2.bp.blogspot.com/-KMbthW5jCCc/UMgJoiRioII/AAAAAAAAJuI/OYQFHhJOBUA/s1600/the-white-room.jpg");
   background: snow;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -42,11 +43,11 @@ form {
 }
 
 div.login-bars {
-  margin-top: 15%;
+  margin-top: 32%;
 }
 
 form:first-child {
-  margin-top: 12%;
+  margin-top: 4%;
 }
 
 // img#logo {
@@ -82,8 +83,17 @@ button.delete-deck {
   min-width: 1045px;
 }
 
+#background {
+  // background-size: cover;
+  // background-size: contain;
+  position: absolute;
+  z-index: -200;
+  height: 80%;
+}
+
 video, iframe {
-  width: 100%;
+  width: 75%;
+  height: 75%;
   disabled: true;
 }
 
