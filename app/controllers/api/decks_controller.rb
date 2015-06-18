@@ -31,7 +31,7 @@ module Api
       #   @decks = current_user.decks.where('LOWER(title) ~ ?', params[:title].downcase) if current_user
       # else
       @decks = current_user.decks if current_user
-      @decks.page(params[:page]).per(3)
+      @decks.page(params[:page])
       # end
       render :index
     end

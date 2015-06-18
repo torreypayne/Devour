@@ -27,6 +27,8 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'spring'
   gem 'guard-rspec'
+  gem 'database_cleaner'
+  gem 'capybara-webkit'
 end
 
 group :test do

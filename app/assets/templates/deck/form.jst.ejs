@@ -10,18 +10,22 @@
   </div>
   <div class="form-inline">
     <div class="input-group input-group-lg">
-      <label for="title">Course ID</label>
-      <input type="integer" name="deck[course_id]" class="form-control" placeholder="Course Id">
+      <label for="course-id">Course ID</label>
+      <input id="course-id" type="integer" name="deck[course_id]" class="form-control" placeholder="Course ID">
     </div>
   </div>
   <br>
 
-  <div class="btn-group btn-group-justified" role="group">
-    <div class="btn-group">
-      <button type="radio" name="deck[public]" class="btn btn-default" value="true" checked>Public</button>
+  <div class="col-md-12" role="group">
+    <div class="input-group">
+      <span class="input-group-addon">Public
+        <input type="radio" name="deck[public]" class="input-lg" value="true" checked></input>
+      </span>
     </div>
-    <div class="btn-group">
-      <button type="radio" name="deck[public]" class="btn btn-default" value="false">Private</button>
+    <div class="input-group">
+      <span class="input-group-addon">
+        <input type="radio" name="deck[public]" class="input-lg" value="false">Private</input>
+      </span>
     </div>
   </div>
   <br>

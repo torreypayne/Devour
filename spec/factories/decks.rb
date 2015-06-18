@@ -3,7 +3,7 @@ FactoryGirl.define do
     title { Faker::Name.title }
     owner_id 1
     public true
-    # association :owner, factory: :user
+    association :owner, factory: :user
     # association :cards, factory: :card
     # association :deck_shares, factory: :deck_share
     # association :users, factory: :user
