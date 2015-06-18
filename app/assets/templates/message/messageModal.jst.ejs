@@ -2,9 +2,10 @@
 <div class="form-group">
 <% for (i = 0; i < 5; i++) { %>
 
-  <% if (messages[i]) { %>
+  <% if (messages.models[i]) { %>
   <div class="message-item">
-    <span><%= messages[i].escape('body') %></span>
+    <h3><%= messages.models[i].escape('subject') %></h3>
+    <span><%= messages.models[i].escape('body') %></span>
   </div>
   <% } %>
 

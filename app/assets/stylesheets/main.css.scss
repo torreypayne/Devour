@@ -26,8 +26,8 @@ h1.main-header {
   // font-size: ;
 }
 
-h2.main-header {
-  margin-top: 10%;
+.main-header {
+  // margin-top: 10%;
 }
 
 form {
@@ -53,11 +53,6 @@ form:first-child {
   margin-top: 4%;
 }
 
-// img#logo {
-//   height: 150px;
-//   margin-bottom: 25px;
-// }
-
 form.log-out {
   position: absolute;
   top: -25%;
@@ -71,9 +66,6 @@ div.card-item {
   margin-right: 25%;
 }
 
-button.delete-deck {
-  float: right;
-}
 
 #hero {
   z-index: -1;
@@ -109,12 +101,14 @@ a.sign-up {
   margin-top: 12%;
 }
 
-h2#deck-title {
+#quiz {
+  position: relative;
+  margin-top: 2%;
+  margin-left: 13%;
+  margin-right: 13%;
 }
 
-.deck-list button.btn-primary {
-  background-color: cadetblue;
-}
+
 
 // #quiz {
 //   display: block;

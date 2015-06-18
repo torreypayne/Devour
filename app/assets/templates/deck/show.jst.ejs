@@ -1,4 +1,15 @@
-<h2 class="main-header"><%= deck.escape('title') %></h2>
+<div class="main-header jumbotron">
+  <h2><%= deck.escape('title') %></h2>
+  <p>Quiz Time. Try your best to guess the answer, then click "Reveal Answer" to see whether you got it. Choose between 0-5:</p>
+  <div class="quiz-basics list-inline">
+    <span>0: Don't remember.</span>
+    <span>1: Almost.</span>
+    <span>2: Took a bit, but I got it.</span>
+    <span>3: Not immediate, but I got it.</span>
+    <span>4: Confidently recalled the item.</span>
+    <span>5: This was easy.</span>
+  </div>
+</div>
 <ul class="deck cards-list cards-show quiz quiz-index" id="quiz">
 <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
 <!-- // Get the context of the canvas element we want to select

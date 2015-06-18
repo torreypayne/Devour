@@ -1,7 +1,18 @@
-button.go-to-add-cards {
-
+.deck-list button.btn-primary {
+  background-color: cadetblue;
 }
 
-ul.deck-list {
-  
+
+button.delete-deck {
+  float: right;
+}
+
+.deck-list-item-background {
+  background: snow;
+  opacity: 0.8;
+  padding: 3px;
+}
+
+.deck-list-item {
+  padding: 5px;
 }

@@ -6,13 +6,13 @@
 
 <% } else { %>
 
-  <div id="active-card" href="#" class="card deck-show card-question jumbotron" data-id="<%= card.id %>">
-    <div class="container">
-      <button class="btn btn-sm">Edit</button>
-      <button class="btn btn-danger btn-sm">Delete</button>
-      <h1><%= card.escape('question') %></h1>
-      <button type="submit" class="btn btn-lg btn-block btn-primary btn-reveal">Reveal Answer</button>
-      <div class="card answer-box"></div>
-    </div>
-  </div><br>
+  <div class="card-show">
+    <div id="active-card" href="#" class="card deck-show card-question jumbotron" data-id="<%= card.id %>">
+      <div class="container">
+        <h1><%= card.escape('question') %></h1>
+        <button type="submit" class="btn btn-lg btn-block btn-primary btn-reveal">Reveal Answer</button>
+        <div class="card answer-box"></div>
+      </div>
+    </div><br>
+  </div>
 <% } %>

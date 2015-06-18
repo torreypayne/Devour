@@ -30,7 +30,7 @@ module Api
       # if params[:title]
       #   @decks = current_user.decks.where('LOWER(title) ~ ?', params[:title].downcase) if current_user
       # else
-      @decks = current_user.decks if current_user
+      @decks = current_user.decks.includes(:cards) if current_user
       @decks.page(params[:page])
       # end
       render :index
