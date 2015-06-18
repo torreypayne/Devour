@@ -1,0 +1,8 @@
+<div class="form-group">
+  <% users.each(function(user) { %>
+  <div class="user-list-item">
+    <%= user.escape('email') %>
+    <a href="#">Send A Message</a>
+  </div>
+  <% }); %>
+</div>

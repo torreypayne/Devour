@@ -17,6 +17,7 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
     'study':'study',
     'publicIndex':'publicDecks',
     'leaderboard':'showLeaders',
+    'usersIndex':'userIndex'
   },
 
   search: function() {
@@ -109,4 +110,11 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
     });
     this.swapView(leaderboardView);
   },
+
+  userIndex: function() {
+    var usersIndexView = new Devour.Views.UsersIndex({
+      collection: new Devour.Collections.Users()
+    });
+    this.swapView(usersIndexView);
+  }
 });

@@ -27,6 +27,18 @@ class User < ActiveRecord::Base
   has_many :decks, through: :deck_shares
   has_many :cards, through: :decks
   has_many :responses
+  has_many(
+    :sent_messages,
+    class_name: 'Message',
+    foreign_key: :sender_id,
+    primary_key: :id
+  )
+  has_many(
+    :received_messages,
+    class_name: 'Message',
+    foreign_key: :receiver_id,
+    primary_key: :id
+  )
 
   attr_accessor :password
 
