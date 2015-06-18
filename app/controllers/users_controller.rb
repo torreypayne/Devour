@@ -17,6 +17,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def guest_login
+    user = User.new(email: Faker::Internet.email, password: Faker::Internet.password)
+    login!(user)
+    redirect_to root_url
+  end
+
   def index
     users = User.all
     render json: users
