@@ -45,8 +45,15 @@ form {
 }
 
 div.login-bars {
+  margin-right: 26%;
   margin-top: 16%;
-  margin-left: 21%;
+  margin-left: 26%;
+}
+
+div.col-xs-5 {
+  left: 30%;
+  min-width: 200px;
+  clear: left;
 }
 
 form:first-child {
