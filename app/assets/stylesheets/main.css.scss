@@ -12,8 +12,8 @@ body {
   padding-top: 85px;
 }
 
-h1 {
-  // display: relative;
+h1, p {
+  padding: 10px;
 }
 
 small.answer {
@@ -45,7 +45,8 @@ form {
 }
 
 div.login-bars {
-  margin-top: 32%;
+  margin-top: 16%;
+  margin-left: 21%;
 }
 
 form:first-child {
@@ -99,12 +100,17 @@ video, iframe {
   disabled: true;
 }
 
+@media screen and (max-width: 680px)
+{
+    video, iframe { display : none; }
+}
+
 a.sign-up {
   margin-top: 12%;
 }
 
-.panel-heading {
-  // background: #aliceblue;
+h2#deck-title {
+  background: aliceblue;
 }
 
 // #quiz {

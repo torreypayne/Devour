@@ -66,4 +66,14 @@ class User < ActiveRecord::Base
     return responses.order('created_at DESC').first if responses.length != 0
   end
 
+  def data
+    review_times = []
+    one_day = 60 * 60 * 24*1000
+    self.cards.each do |card|
+      lapsed_time = (Time.now.to_f * 1000 - card.latest_response(self.id).last_passed)/one_day
+      review_times.push(lapsed_time.round)
+    end
+    review_times
+  end
+
 end
