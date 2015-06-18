@@ -2,15 +2,15 @@
 
   <form class="form-inline" id="index">
     <% decks.each(function(deck) { %>
-      <div class="deck-list-item">
+      <div class="deck-list-item col-lg-10">
         <button class="btn btn-danger btn-small delete-deck" data-deck-id="<%=deck.id%>"><span class="glyphicon glyphicon-remove"></span></button>
         <a href="#decks/<%=deck.id%>">
-          <h2 class="panel-heading" id="deck-title">
+          <h2 class="page-header" id="deck-title">
             <%= deck.escape('title') %>
           </h2>
         </a>
         <!-- <div class="panel panel-body"><%= deck.escape('description') %></div> -->
-        <button type="submit" data-deck-id="<%=deck.id%>" class="btn btn-primary btn-block">Devour <%= deck.escape('title') %>!</button>
+        <button type="submit" data-deck-id="<%=deck.id%>" class="btn btn-default btn-block">Devour <%= deck.escape('title') %>!</button>
       </div>
   <% }); %>
   </form>
