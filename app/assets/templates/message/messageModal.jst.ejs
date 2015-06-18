@@ -1,0 +1,12 @@
+
+<div class="form-group">
+<% for (i = 0; i < 5; i++) { %>
+
+  <% if (messages[i]) { %>
+  <div class="message-item">
+    <span><%= messages[i].escape('body') %></span>
+  </div>
+  <% } %>
+
+<% } %>
+</div>

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :responses, only: :create
     resources :deck_shares, only: [:create, :destroy]
     resources :leaderboards, only: [:index, :show]
+    resources :messages, only: [:create, :show, :index]
   end
   get '/api/decks/:id/review', to: 'api/decks#review', defaults: { format: :json }
   get 'api/public/decks', to: 'api/decks#public_decks', defaults: { format: :json }
