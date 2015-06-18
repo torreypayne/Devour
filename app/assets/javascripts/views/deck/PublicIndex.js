@@ -7,7 +7,7 @@ Devour.Views.PublicIndex = Backbone.View.extend({
   template: JST['deck/publicIndex'],
 
   events: {
-    'click button.btn-primary':'createDeckShare'
+    'click button.btn-default':'createDeckShare'
   },
 
   render: function() {
