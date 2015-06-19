@@ -164,6 +164,7 @@ class Deck < ActiveRecord::Base
     DeckShare.create!(user_id: owner.id, deck_id: self.id)
   end
 
+
   def public?
     # return self['public'] == true
     #code

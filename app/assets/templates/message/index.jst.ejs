@@ -1,0 +1,34 @@
+<div class="panel panel-default messages">
+  <div class="panel panel-heading">Messages</div>
+  <div class="received-messages">
+    <h2>Received Messages</h2>
+    <table class="table">
+      <th>
+        <td>Subject</td>
+        <td>Body</td>
+      </th>
+    <% received_messages.each(function(message) { %>
+      <tr class="message-item">
+        <td><%= message.escape('subject') %></td>
+        <td><%= message.escape('body') %></td>
+      </tr>
+    <% }); %>
+    </table>
+  </div>
+
+  <div class="sent-messages">
+    <h2>Sent Messages</h2>
+    <table class="table">
+      <th>
+        <td>Subject</td>
+        <td>Body</td>
+      </th>
+    <% sent_messages.each(function(message) { %>
+      <tr>
+        <td><%= message.escape('subject') %></td>
+        <td><%= message.escape('body') %></td>
+      </tr>
+    <% }); %>
+    </table>
+  </div>
+</div>

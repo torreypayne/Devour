@@ -6,7 +6,7 @@ Devour.Views.DecksIndex = Backbone.View.extend({
 
   events: {
     'click button.btn-success':'study',
-    'click button.btn-danger':'deleteDeck',
+    'click button.btn-danger':'deleteDeckShare',
     'scroll':'addDecks',
   },
 

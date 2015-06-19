@@ -9,6 +9,8 @@ class Api::DeckSharesController < ApplicationController
   end
 
   def destroy
+    deckshare = DeckShare.find(params[:id])
+    deckshare.destroy!
   end
 
   private

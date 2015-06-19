@@ -1,5 +1,14 @@
 module Api
   class DecksController < ApiController
+
+
+    def ensure_ownership(deck)
+      unless current_user == deck.owner
+        return true
+      end
+      return false
+    end
+
     def new
     end
 
@@ -22,8 +31,12 @@ module Api
 
     def destroy
       @deck = Deck.find(params[:id])
-      @deck.destroy!
-      render json: {}
+      if ensure_ownership(@deck)
+        @deck.destroy!
+        render json: {}
+      else
+        render json: ["The Current User does not own the selected deck."], as: :unauthorized
+      end
     end
 
     def index

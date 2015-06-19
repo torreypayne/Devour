@@ -1,8 +1,16 @@
-<div class="form-group">
-  <% users.each(function(user) { %>
-  <div class="user-list-item">
-    <%= user.escape('email') %>
-    <a href="#">Send A Message</a>
-  </div>
+<div class="panel panel-default">
+  <div class="panel-heading">User Directory</div>
+  <table class="table">
+    <th>
+      <td>Username</td>
+      <td>Contact</td>
+    </th>
+    <% users.each(function(user) { %>
+    <tr>
+      <td></td>
+      <td><%= user.escape('email') %></td>
+      <td><a href="#" class="create-message" data-id="<%=user.id%>">Send A Message</a></td>
+    </tr>
   <% }); %>
+  </table>
 </div>
