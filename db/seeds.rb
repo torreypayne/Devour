@@ -13,18 +13,6 @@ user2 = User.create!(email: 'payne2@payne.com', password: 'password')
   User.create!(email: Faker::Internet.email, password: Faker::Internet.password)
 end
 
-4.times do |n|
-  another_deck = Deck.create!(title: Faker::Name.title, owner_id: user2.id)
-  15.times do |n|
-    card1 = Card.create!(deck_id: another_deck.id, question: Faker::Lorem.word, answer: Faker::Lorem.paragraph(1))
-    card2 = Card.create!(deck_id: another_deck.id, question: Faker::Lorem.word, answer: Faker::Lorem.paragraph(1))
-    resp1 = Response.new(card_id: card1.id, user_id: user2.id, quality: 4)
-    resp1.assert_response(user2.id)
-    resp2 = Response.new(card_id: card1.id, user_id: user2.id, quality: 4, e_factor: resp1.e_factor, repetitions: resp1.repetitions)
-    resp2.assert_response(user2.id)
-  end
-end
-
 languages = ['dutch', 'esperanto', 'icelandic', 'indonesian', 'japanese', 'portuguese', 'russian', 'spanish']
 languages.each_with_index do |language, idx|
   foreign_language_deck = Deck.create!(title: language.capitalize, public: true, course_id: idx, owner_id: user.id)
