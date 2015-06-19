@@ -1,26 +1,48 @@
-<h1>Welcome, New user. Sign Up!</h1>
+<h1 class="jumbotron">Welcome, New user. Sign Up!</h1>
 
 <form class="user user-signup form form-horizontal" action="/users" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-  <img id="logo" src="http://res.cloudinary.com/tpayne/image/upload/s--xdim-s0F--/q_jpegmini/v1434730435/the-white-room_o9wwww.jpg" alt="Eat memory for dinner">
+  <img id="logo" src="http://res.cloudinary.com/tpayne/image/upload/s--b9itej8b--/e_oil_paint,q_jpegmini/v1434735465/devour_bear_w2f1qs.jpg" alt="Eat memory for dinner"><br>
 
-  <div class="form-group">
-    <% if flash[:errors] %>
-    <div class="alert alert-danger email-error"><span><%= flash[:errors] %></span></div>
-    <% end %>
-    <label for="email" class="col-md-2">Email</label>
-    <div class="col-md-8">
-      <input type="text" class="form-control" id="email" name="user[email]" placeholder="Email">
+
+
+    <div class="form-group col-md-10">
+      <% if flash[:errors] && flash[:errors][:email] %>
+      <div class="form-group has-error">
+        <label for="email" class="control-label has-errors col-xs-2">Email <%= flash[:errors][:email].first %></label>
+        <div class="col-xs-8">
+          <input type="text" class="form-control" id="email" name="user[email]" placeholder="Email">
+        </div>
+      </div>
+      <% else %>
+        <label for="email" class="control-label col-xs-2">Email</label>
+        <div class="col-xs-9">
+          <input type="text" class="form-control" id="email" name="user[email]" placeholder="Email">
+        </div>
+      <% end %>
+
+      <% if flash[:errors] && flash[:errors][:password] %>
+        <div class="form-group has-error">
+          <label for="password" class="control-label has-errors col-xs-2"><%= flash[:errors][:password].first %></label>
+          <div class="col-xs-8">
+            <input type="password" class="form-control" name="user[password]" id="password" placeholder="Password (minimum of 6 characters)">
+          </div>
+        </div>
+      <% else %>
+        <label for="password" class="control-label col-xs-2">Password</label>
+        <div class="col-xs-9">
+          <input type="password" class="form-control" name="user[password]" id="password" placeholder="Password (minimum of 6 characters)">
+        </div>
+      <% end %>
+
+      <label for="password_conf" class="control-label col-xs-2">Password Confirmation</label>
+      <div class="col-xs-9">
+        <input type="password" class="form-control" name="user[password_confirmation]" id="password_conf" placeholder="Password Confirmation">
+      </div>
+
     </div>
-  </div>
 
-    <label for="password" class="col-md-2">Password</label>
-    <div class="col-md-8">
-      <input type="password" class="form-control" name="user[password]" id="password" placeholder="password">
-    </div>
-  </div>
-
-  <button type="submit" class="btn btn-primary btn-lg">Sign Up!</button>
+    <button type="submit" class="btn btn-primary btn-lg">Sign Up!</button>
 
 </form>

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  # before_action :ensure_logged_in, only: :index
+  before_action :ensure_logged_in, only: :index
 
   def new
     # @user = User.new
@@ -12,7 +12,7 @@ class UsersController < ApplicationController
       login!(user)
       redirect_to root_url
     else
-      flash.now[:errors] = user.errors.full_messages
+      flash.now[:errors] = user.errors
       render :new
     end
   end

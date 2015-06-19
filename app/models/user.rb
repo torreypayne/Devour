@@ -11,6 +11,7 @@
 #
 
 class User < ActiveRecord::Base
+  validate :password_confirmed
   validates :email, :password_digest, :session_token, presence: true
   validates :email, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
@@ -42,7 +43,14 @@ class User < ActiveRecord::Base
     primary_key: :id
   )
 
-  attr_accessor :password
+  attr_accessor :password, :password_confirmation
+
+  def password_confirmed
+    if (password != password_confirmation)
+      self.errors[:password] = "Passwords did not match!"
+    end
+  end
+
 
 
   def password=(password)

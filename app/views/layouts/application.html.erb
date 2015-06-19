@@ -18,11 +18,6 @@
 
   <div id="flash">
 
-    <% if flash[:errors] %>
-        <% flash[:errors].each do |error| %>
-          <div class="alert alert-error"><%= error %></div>
-        <% end %>
-      <% end %>
     <%= yield %>
   </div>
   <div id="main"></div>

@@ -7,22 +7,45 @@
   </div>
 
   <div class="login-bars user-login">
-    <div class="form-group">
-      <div class="col-xs-5">
-        <input type="text" class="form-control" id="email" name="user[email]" placeholder="Email">
+    <% if flash[:errors] %>
+      <div class="form-group has-error">
+        <label for="email" class="label label-danger"><%=flash[:errors] %></label><br>
+        <div class="col-xs-5">
+          <input type="text" class="form-control" id="email" name="user[email]" placeholder="Email">
+        </div>
+
+
+        <div class="col-xs-5">
+          <input type="password" class="form-control" name="user[password]" id="password" placeholder="password">
+        </div>
+
+        <div class="col-xs-5">
+          <button class="btn btn-block btn-default">Log In</button>
+          <a href="/users/new" class="btn btn-block btn-default">New User</a>
+          <a href="/users/guest" class="btn btn-block btn-default">Guest Login</a>
+        </div>
       </div>
 
-      <div class="col-xs-5">
-        <input type="password" class="form-control" name="user[password]" id="password" placeholder="password">
+
+    <% else %>
+      <div class="form-group">
+        <div class="col-xs-5">
+          <input type="text" class="form-control" id="email" name="user[email]" placeholder="Email">
+        </div>
+
+
+        <div class="col-xs-5">
+          <input type="password" class="form-control" name="user[password]" id="password" placeholder="password">
+        </div>
+
+        <div class="col-xs-5">
+          <button class="btn btn-block btn-default">Log In</button>
+          <a href="/users/new" class="btn btn-block btn-default">New User</a>
+          <a href="/users/guest" class="btn btn-block btn-default">Guest Login</a>
+        </div>
       </div>
 
-      <div class="col-xs-5">
-        <button class="btn btn-block btn-default">Log In</button>
-        <a href="/users/new" class="btn btn-block btn-default">New User</a>
-        <a href="/users/guest" class="btn btn-block btn-default">Guest Login</a>
-      </div>
-
-    </div>
+      <% end %>
   </div>
 
 </form>

@@ -12,6 +12,10 @@ body {
   padding-top: 15px;
 }
 
+img {
+  margin-bottom: 20px;
+}
+
 h1, p {
   padding: 10px;
 }
@@ -97,11 +101,6 @@ video, iframe {
   width: 75%;
   height: 75%;
   disabled: true;
-}
-
-@media screen and (max-width: 680px)
-{
-    video, iframe { display : none; }
 }
 
 a.sign-up {
