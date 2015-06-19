@@ -1,5 +1,5 @@
 class AuthMailer < ActionMailer::Base
-  default :from => 'admin@example.com'
+  default :from => 'admin@devour.space'
 
   # send a signup email to the user, pass in the user object that
   # contains the user's email address

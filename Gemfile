@@ -41,3 +41,7 @@ group :development do
   gem 'letter_opener'
   gem 'spring-commands-rspec'
 end
+
+group :production do
+  gem 'heroku-deflater'
+end
