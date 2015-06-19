@@ -1,8 +1,9 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="devour-navbar-collapse-1">
+    <button type="button" id="dropdown-button" class="navbar-toggle" data-toggle="collapse" data-target="devour-navbar-collapse-1">
       <span class="sr-only">Toggle navigation/Make this actually toggle a dropdown</span>
-      <span class="icon-bar"><a href="#/search"></a></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
@@ -12,9 +13,11 @@
       </a>
     </div>
 
-    <div class="collapse navbar-collapse">
+    <div class="collapse dropdown-links"></div>
+
+    <div class="collapse navbar-collapse" id="links">
       <% if (currentUser) { %>
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav links">
         <li><a href="#">Decks</a></li>
         <li><a href="#/decks/new">Add</a></li>
         <li><a href="#/search">Search</a></li>
@@ -25,7 +28,7 @@
       </ul>
       <% } else { %>
       <ul class="nav navbar-nav slogan">
-        <li><span class="text-center navbar-brand">Memorization. Made Easy.</span></li>
+        <li><h1 class="text-center navbar-brand">Memorization. Made Easy.</h1></li>
       </ul>
       <% } %>
 

@@ -15,6 +15,7 @@ Devour.Navbars.Navbar = Backbone.View.extend({
 
   events: {
     'click button#sign-out':'signOut',
+    // 'click #dropdown-button':'dropdown',
     // 'click a.dropdown-toggle':'study',
   },
 
@@ -23,6 +24,16 @@ Devour.Navbars.Navbar = Backbone.View.extend({
     this.$navEl.html(this.template({ currentUser: currentUser }));
     return this;
   },
+
+  // dropdown: function(event) {
+  //   $('div#links').toggle('in');
+  //   if ($('div#links').hasClass('in')) {
+  //     var normalBar = $('ul.links');
+  //     $('#links').append(normalBar);
+  //   } else {
+  //     $('div#links').html('');
+  //   }
+  // },
 
   signOut: function(event) {
     event.preventDefault();

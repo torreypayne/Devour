@@ -19,7 +19,8 @@ class UsersController < ApplicationController
   end
 
   def guest_login
-    user = User.new(email: Faker::Internet.email, password: Faker::Internet.password)
+    fake_password = Faker::Internet.password
+    user = User.new(email: Faker::Internet.email, password: fake_password, password_confirmation: fake_password)
     login!(user)
     redirect_to root_url
   end
