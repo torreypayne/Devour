@@ -1,15 +1,29 @@
 <form class="new-card create-card" action="#" method="post">
   <div class="form-group has-error"></div>
 
-  <div class="question-box">
-    <label for="question">Question</label>
+  <div class="question-box input-group input-group-lg">
+    <label class="input-group-addon" for="question" id="question-label">Question</label>
     <textarea class="" rows="6" name="card[question]" placeholder="Question of Yo Choice!"></textarea>
   </div>
-  <div class="answer-box">
-    <label for="answer">Answer</label>
+
+
+  <div class="answer-box input-group input-group-lg">
+    <label class="input-group-addon" for="answer" id="answer-label">Answer</label>
     <textarea class="" rows="6" name="card[answer]" placeholder="Answer of Yo Damn Choice!"></textarea>
   </div>
   <input type="hidden" name="card[deck_id]" value="<%= card.get('deck_id') %>">
+  <div class="btn-toolbar" role="toolbar" aria-label="">
+    <div class="btn-group" role="group" aria-label="">
+      <% if(oneSided) { %>
+          <button class="btn one-sided">One Sided</button>
+          <button class="btn btn-primary two-sided">Two Sided</button>
+    <%  } else { %>
+      <button class="btn btn-primary one-sided">One Sided</button>
+      <button class="btn two-sided">Two Sided</button>
+    <%  } %>
+    </div>
+  </div>
+
   <input id="create-card" type="submit" class="confirm create-card create-card-form create-card-button btn btn-success" value="Create Card"><br>
 
 </form>

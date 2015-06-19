@@ -8,8 +8,8 @@
 }
 
 form.new-card {
-  width: 390%;
-  height: 265%;
+  width: 330%;
+  // height: 265%;
 }
 
 form.new-card * {
@@ -24,4 +24,8 @@ form.new-card * {
 
 #create-card {
   width: 25%;
+}
+
+.two-way-question {
+  background: snow;
 }
