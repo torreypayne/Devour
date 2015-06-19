@@ -18,7 +18,6 @@ Devour.Views.NewMessage = Backbone.View.extend({
 
   submit: function(event) {
     var data = $(event.currentTarget).serializeJSON();
-    debugger;
     var message = new Devour.Models.Message(data);
     message.save({}, {
       success: function() {
