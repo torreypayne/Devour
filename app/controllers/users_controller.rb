@@ -7,12 +7,13 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.new(user_params)
-    if user.save
-      login!(user)
+    @user = User.new(user_params)
+    if @user.save
+      login!(@user)
       redirect_to root_url
+      AuthMailer.signup_email(@user).deliver
     else
-      flash.now[:errors] = user.errors
+      flash.now[:errors] = @user.errors
       render :new
     end
   end

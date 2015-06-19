@@ -9,7 +9,7 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #
-
+require 'byebug'
 class User < ActiveRecord::Base
   validate :password_confirmed
   validates :email, :password_digest, :session_token, presence: true
@@ -46,6 +46,8 @@ class User < ActiveRecord::Base
   attr_accessor :password, :password_confirmation
 
   def password_confirmed
+    p password
+    p password_confirmation
     if (password != password_confirmation)
       self.errors[:password] = "Passwords did not match!"
     end
@@ -54,6 +56,7 @@ class User < ActiveRecord::Base
 
 
   def password=(password)
+    @password = password
     self.password_digest = BCrypt::Password.create(password)
   end
 

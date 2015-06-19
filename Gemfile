@@ -15,7 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'newrelic_rpm'
 gem 'faker'
 gem 'kaminari'
-# gem 'turbolinks'
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug'
@@ -38,5 +38,6 @@ group :test do
 end
 
 group :development do
+  gem 'letter_opener'
   gem 'spring-commands-rspec'
 end
