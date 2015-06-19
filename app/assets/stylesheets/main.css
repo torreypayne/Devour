@@ -1,5 +1,5 @@
 body {
-  background: lightgrey;
+  background: url('http://res.cloudinary.com/tpayne/image/upload/s--qrLvTi_3--/q_jpegmini/v1434731564/iStock_fork-and-knife_c5ugs3.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -48,7 +48,6 @@ form {
 
 .panel-default {
   background: white;
-
 }
 
 div.login-bars {

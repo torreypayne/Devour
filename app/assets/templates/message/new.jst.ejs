@@ -1,6 +1,9 @@
 <form class="form form-horizontal" action="#">
   <input type="hidden" name="message[receiver_id]" value="<%=receiver%>">
 
+  <label for="subject">Subject</label>
+  <input type="text" id="subject" name="message[subject]" value="" placeholder="Subject">
+
   <span>Spill Your Heart Out</span>
   <label for="message-body">Body</label>
   <textarea name="message[body]" rows="8" cols="40" placeholder="Your Message....."></textarea>
