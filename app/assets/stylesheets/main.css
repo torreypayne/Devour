@@ -1,6 +1,5 @@
 body {
-  // background: url("http://2.bp.blogspot.com/-KMbthW5jCCc/UMgJoiRioII/AAAAAAAAJuI/OYQFHhJOBUA/s1600/the-white-room.jpg");
-  background: url('http://res.cloudinary.com/tpayne/image/upload/s--xdim-s0F--/q_jpegmini/v1434730435/the-white-room_o9wwww.jpg');
+  background: lightgrey;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -10,6 +9,10 @@ body {
   padding: 30px;
   opacity: 0.9;
   padding-top: 15px;
+}
+
+ul.deck-list {
+  margin-top: 7%;
 }
 
 img {
@@ -50,7 +53,7 @@ form {
 
 div.login-bars {
   margin-right: 26%;
-  margin-top: 16%;
+  margin-top: 10%;
   margin-left: 26%;
 }
 
