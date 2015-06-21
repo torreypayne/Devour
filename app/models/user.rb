@@ -43,15 +43,13 @@ class User < ActiveRecord::Base
     primary_key: :id
   )
 
-  attr_accessor :password, :password_confirmation
+  attr_accessor :password, :password_confirmation, :password_reset_token
 
   def password_confirmed
     if (password != password_confirmation)
       self.errors[:password] = "Passwords did not match!"
     end
   end
-
-
 
   def password=(password)
     @password = password
@@ -70,6 +68,12 @@ class User < ActiveRecord::Base
     self.session_token = SecureRandom::urlsafe_base64(16)
     self.save!
     self.session_token
+  end
+
+  def create_reset_digest
+    self.password_reset_token = SecureRandom::urlsafe_base64(24)
+    self.password_reset_digest = BCrypt::Password.create(self.password_reset_token)
+    self.password_reset_sent_at = Time.zone.now
   end
 
   def self.find_by_credentials(params)
@@ -97,6 +101,16 @@ class User < ActiveRecord::Base
       review_times.push(lapsed_time.round)
     end
     review_times
+  end
+
+  def authenticated?(attribute, token)
+    digest = self.send("#{attribute}_digest")
+    return false if digest.nil?
+    BCrypt::Password.new(digest).is_password?(token)
+  end
+
+  def password_reset_expired?
+    reset_sent_at < 2.hours.ago
   end
 
 end

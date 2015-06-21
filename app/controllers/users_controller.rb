@@ -41,6 +41,12 @@ class UsersController < ApplicationController
     render json: @user
   end
 
+  def reset_password
+    user = User.find_by_email(params[:email])
+    user.reset_authenticity_token!
+    AuthMailer.reset_password_email(user).deliver
+  end
+
   private
 
   def ensure_logged_in

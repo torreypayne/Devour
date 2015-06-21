@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'password_resets/create'
+
+  get 'password_resets/new'
+  get 'password_resets/edit'
+
+  resource :password_reset, only: [:edit, :update, :new, :create]
+
   root to: 'static_pages#root'
 
   resource :session
   get '/users/guest', to: 'users#guest_login'
+  get 'users/authenticate', to: 'users#reset_password'
   resources :users
   namespace :api, defaults: { format: :json } do
     resources :decks

@@ -37,8 +37,4 @@ class Card < ActiveRecord::Base
     lapsed_time = (Time.now.to_f * 1000 - last_passed)/one_day
     return (lapsed_time >= next_rep)
   end
-
-  def new_stuff
-
-  end
 end
