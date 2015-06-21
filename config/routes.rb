@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'password_resets/create'
-
-  get 'password_resets/new'
-  get 'password_resets/edit'
-
   resource :password_reset, only: [:edit, :update, :new, :create]
 
   root to: 'static_pages#root'
