@@ -18,6 +18,9 @@ class Card < ActiveRecord::Base
   has_many :responses
   has_one :owner, through: :deck
 
+  # Intentionally labelled differently from Response attrs; for JSON details output only
+  attr_accessor :curr_e_factor, :curr_repetitions, :passed_at, :next_interval, :days_out
+
   def latest_response(user_id)
     if responses
       user_responses = responses.where("user_id = ?", user_id)

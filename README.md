@@ -28,7 +28,7 @@ Devour is a clone of Anki built on Rails and Backbone. Users can:
 - [x] Share decks with other users
 - [x] Search through a public database for other decks to import
 - [ ] See other users' progress
-- [ ] Have competitions to learn the most flashcards
+- [x] Have competitions to learn the most flashcards
 
 ## Design Docs
 * [View Wireframes][views]

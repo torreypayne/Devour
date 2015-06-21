@@ -11,6 +11,7 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
     '':'index',
     'decks/new':'newDeck',
     'decks/:id/edit':'editDeck',
+    'decks/:id/data':'showDeckDetails',
     'decks/:id':'showDeck',
     'search':'search',
     'signOut':'signOut',
@@ -68,7 +69,6 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
   },
 
   showDeck: function(id) {
-    var that = this;
     var deck = this.decks.getOrFetch(id);
     var showView = new Devour.Views.DeckShow({
       model: deck,
@@ -94,15 +94,24 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
     });
   },
 
+  showDeckDetails: function(id) {
+    var deck = this.decks.getOrFetch(id);
+    var deckData = new Devour.Views.DeckData({
+      model: deck,
+      collection: this.decks,
+    });
+    this.swapView(deckData);
+  },
+
   study: function() {
     var quizView = new Devour.Views.QuizView({ collection: this.decks });
     this.swapView(quizView);
-    publicDecks.fetch({
-      success: function() {
-        console.log("we're here");
-        // $('li.study-dropdown').append(this.studyDropdown({decks: publicDecks }));
-      }
-    });
+    // publicDecks.fetch({
+    //   success: function() {
+    //     console.log("we're here");
+    //     // $('li.study-dropdown').append(this.studyDropdown({decks: publicDecks }));
+    //   }
+    // });
   },
 
   showLeaders: function() {
@@ -128,4 +137,5 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
     var messagesIndex = new Devour.Views.MessagesIndex();
     this.swapView(messagesIndex);
   },
+
 });

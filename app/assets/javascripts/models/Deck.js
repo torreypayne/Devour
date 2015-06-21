@@ -28,6 +28,18 @@ Devour.Models.Deck = Backbone.Model.extend({
       delete response.review_cards;
     }
     return response;
+  },
+
+  details: function() {
+    if (!this._details) {
+      $.ajax('/api/decks/' + this.id + '/details', {
+        success: function(response) {
+          this._details = response;
+        }
+      });
+    }
+
+    return this._details;
   }
 
 });

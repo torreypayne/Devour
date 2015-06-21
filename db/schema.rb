@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150621042321) do
+ActiveRecord::Schema.define(version: 20150621094445) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,12 +38,13 @@ ActiveRecord::Schema.define(version: 20150621042321) do
   add_index "deck_shares", ["deck_id", "user_id"], name: "index_deck_shares_on_deck_id_and_user_id", unique: true, using: :btree
 
   create_table "decks", force: :cascade do |t|
-    t.integer  "owner_id",                  null: false
-    t.string   "title",                     null: false
+    t.integer  "owner_id",                   null: false
+    t.string   "title",                      null: false
     t.integer  "course_id"
-    t.boolean  "public",     default: true, null: false
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.boolean  "public",      default: true, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.text     "description"
   end
 
   add_index "decks", ["owner_id"], name: "index_decks_on_owner_id", using: :btree

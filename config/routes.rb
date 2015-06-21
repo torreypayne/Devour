@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     resources :leaderboards, only: [:index, :show]
     resources :messages, only: [:create, :show, :index]
   end
+  get 'api/decks/:id/details', to: 'api/decks#details', defaults: { format: :json }
   get '/api/decks/:id/review', to: 'api/decks#review', defaults: { format: :json }
   get 'api/public/decks', to: 'api/decks#public_decks', defaults: { format: :json }
 end
