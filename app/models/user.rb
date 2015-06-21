@@ -74,6 +74,7 @@ class User < ActiveRecord::Base
     self.password_reset_token = SecureRandom::urlsafe_base64(24)
     self.password_reset_digest = BCrypt::Password.create(self.password_reset_token)
     self.password_reset_sent_at = Time.zone.now
+    self.save!
   end
 
   def self.find_by_credentials(params)
