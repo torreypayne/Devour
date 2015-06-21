@@ -6,7 +6,7 @@ class PasswordResetsController < ApplicationController
     @user = User.find_by(email: params[:password_reset][:email].downcase)
     if @user
       @user.create_reset_digest
-      AuthMailer.reset_password_email(@user)
+      AuthMailer.reset_password_email(@user).deliver
       flash[:info] = "Email sent with password reset instructions"
       redirect_to new_session_url
     else
