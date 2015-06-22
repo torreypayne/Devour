@@ -1,14 +1,11 @@
 <aside class="col-md-2 quiz-sizebar">
   <h2 class="col-lg-12 col-md-12"><%= deck.escape('title') %></h2>
-  <div class="col-md-2">
-    <button type="button" class="btn btn-default go-to-data">Click here to see your data!</button>
-    <button type="button" class="btn btn-default go-to-add-cards">Want To Add Cards?</button>
+  <div class="row">
+    <button type="button" class="btn btn-default go-to-data col-md-8">Click here to see your data!</button>
+  </div>
+  <div class="row">
+    <button type="button" class="btn btn-default go-to-add-cards col-md-8">Want To Add Cards?</button>
   </div>
 </aside>
 
-<ul class="deck cards-list cards-show quiz quiz-index col-lg-5 col-md-5" id="quiz">
-<!-- <canvas id="myChart" width="400" height="400"></canvas> -->
-<!-- // Get the context of the canvas element we want to select
-var ctx = document.getElementById("myChart").getContext("2d"); -->
-
-</ul>
+<ul class="deck cards-list cards-show quiz quiz-index col-md-5" id="quiz"></ul>
