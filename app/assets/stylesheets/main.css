@@ -9,11 +9,27 @@ body {
   padding: 30px;
   opacity: 0.9;
   padding-top: 15px;
+  width: 100%;
 }
 
 h1 {
   font-style: oblique;
   font-weight: 900;
+}
+
+.entire-card {
+  background: snow;
+  background-size: cover;
+}
+
+button {
+  margin-bottom: 3px;
+}
+
+.sidebar-header {
+  padding: 2px;
+  background: white;
+  background-size: cover;
 }
 
 .card-question, .card-answer {
@@ -64,7 +80,9 @@ form {
 }
 
 .panel-default {
+  -webkit-font-smoothing: antialiased;
   background: white;
+  text-align: center;
 }
 
 div.login-bars {
@@ -128,8 +146,9 @@ a.sign-up {
 
 #quiz {
   position: relative;
-  margin-top: 7%;
+  margin-top: 2%;
   margin-right: 13%;
+  margin-left: 3%;
 }
 
 #answer-label, #question-label {

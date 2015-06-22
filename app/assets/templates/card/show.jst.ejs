@@ -8,8 +8,8 @@
 
   <div class="card-show">
     <div id="active-card" href="#" class="card deck-show card-question" data-id="<%= card.id %>">
-      <div class="container">
-        <h1 class="card-question card-show quiz-show quiz col-lg-6 col-md-offset-3">
+      <div class="container entire-card">
+        <h1 class="question card-question card-show quiz-show quiz col-xs-6 col-xs-offset-3 panel-body">
           <%= card.escape('question') %>
         </h1>
         <button type="submit" class="btn btn-lg btn-block btn-primary btn-reveal">Reveal Answer</button>

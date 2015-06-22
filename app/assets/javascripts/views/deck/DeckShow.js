@@ -72,10 +72,9 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
 
   newCard: function() {
     event.preventDefault();
-    var card = new Devour.Models.Card({ deck_id: this.model.id });
-    this._currentCard = card;
+    this._currentCard = new Devour.Models.Card({ deck_id: this.model.id });
     var view = new Devour.Views.CardForm({
-      model: card,
+      model: this._currentCard,
       deck: this.model,
     });
     this.swapCard(view);

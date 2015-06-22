@@ -1,27 +1,8 @@
 <div class="answer container-fluid">
 
-  <h1 class="answer card-answer card-show quiz-show col-md-6 col-md-offset-3"><%= card.escape('answer') %></h1>
+  <h1 class="answer card-answer card-show quiz-show col-md-6 col-md-offset-3 panel-body"><%= card.escape('answer') %></h1>
   <div class="answer-buttons btn-toolbar btn-group btn-group-justified row">
-    <div class="row">
-      <div class="col-md-2">
-        <span>0: Don't remember.</span>
-      </div>
-      <div class="col-md-2">
-        <span>1: Almost.</span>
-      </div>
-      <div class="col-md-2">
-        <span>2: Took a few seconds, but I got it.</span>
-      </div>
-      <div class="col-md-2">
-        <span>3: Within 2 seconds I got it.</span>
-      </div>
-      <div class="col-md-2">
-        <span>4: Confidently recalled the item.</span>
-      </div>
-      <div class="col-md-2">
-        <span>5: This was easy.</span>
-      </div>
-    </div>
+
     <div class="row">
       <div class="col-md-2">
         <button class="btn btn-danger btn-lg answer answer-button" type="submit" data-quality="0" data-card-id="<%= card.id %>" data-e-factor="<%= card.get('e_factor') %>" value="0">0</button>
@@ -42,5 +23,27 @@
         <button class="btn btn-success btn-lg answer answer-button" type="submit" data-quality="5" data-card-id="<%= card.id %>" data-e-factor="<%= card.get('e_factor') %>" value="5">5</button>
       </div>
     </div>
+    
+    <div class="row">
+      <div class="col-md-2">
+        <span>0: Don't remember.</span>
+      </div>
+      <div class="col-md-2">
+        <span>1: Almost.</span>
+      </div>
+      <div class="col-md-2">
+        <span>2: Took a few seconds, but I got it.</span>
+      </div>
+      <div class="col-md-2">
+        <span>3: Within 2 seconds I got it.</span>
+      </div>
+      <div class="col-md-2">
+        <span>4: Confidently recalled the item.</span>
+      </div>
+      <div class="col-md-2">
+        <span>5: This was easy.</span>
+      </div>
+    </div>
+
   </div>
 </div>

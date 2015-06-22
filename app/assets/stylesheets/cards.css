@@ -22,6 +22,10 @@ form.new-card * {
   width: 25%;
 }
 
+.answer, .question {
+  text-align: center;
+}
+
 #create-card {
   width: 25%;
 }
