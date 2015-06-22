@@ -7,9 +7,11 @@
 <% } else { %>
 
   <div class="card-show">
-    <div id="active-card" href="#" class="card deck-show card-question jumbotron" data-id="<%= card.id %>">
+    <div id="active-card" href="#" class="card deck-show card-question" data-id="<%= card.id %>">
       <div class="container">
-        <h1><%= card.escape('question') %></h1>
+        <h1 class="card-question card-show quiz-show quiz col-lg-6 col-md-offset-3">
+          <%= card.escape('question') %>
+        </h1>
         <button type="submit" class="btn btn-lg btn-block btn-primary btn-reveal">Reveal Answer</button>
         <div class="card answer-box"></div>
       </div>

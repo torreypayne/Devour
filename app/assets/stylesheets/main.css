@@ -1,5 +1,5 @@
 body {
-  background: url('http://res.cloudinary.com/tpayne/image/upload/s--qrLvTi_3--/q_jpegmini/v1434731564/iStock_fork-and-knife_c5ugs3.jpg');
+  background: url('http://res.cloudinary.com/tpayne/image/upload/s--wWt7psyd--/q_jpegmini/v1434948418/white-floor-minimalist_kv9pvk.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -9,6 +9,15 @@ body {
   padding: 30px;
   opacity: 0.9;
   padding-top: 15px;
+}
+
+h1 {
+  font-style: oblique;
+  font-weight: 900;
+}
+
+.card-question, .card-answer {
+  font-size: 2.25em;
 }
 
 ul.deck-list {
@@ -119,21 +128,10 @@ a.sign-up {
 
 #quiz {
   position: relative;
-  margin-top: 2%;
-  margin-left: 13%;
+  margin-top: 7%;
   margin-right: 13%;
 }
 
 #answer-label, #question-label {
   width: 25%;
 }
-
-
-
-// #quiz {
-//   display: block;
-//   position: fixed;
-//   margin-left: auto;
-//   margin-right: auto;
-//   // clear: both;
-// }

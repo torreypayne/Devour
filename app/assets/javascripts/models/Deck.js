@@ -35,7 +35,8 @@ Devour.Models.Deck = Backbone.Model.extend({
       $.ajax('/api/decks/' + this.id + '/details', {
         success: function(response) {
           this._details = response;
-        }
+          this.fetch();
+        }.bind(this)
       });
     }
 

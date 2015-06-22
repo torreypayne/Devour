@@ -1,25 +1,46 @@
 <div class="answer container-fluid">
 
-  <small class="answer jumbotron"><%= card.escape('answer') %></small>
+  <h1 class="answer card-answer card-show quiz-show col-md-6 col-md-offset-3"><%= card.escape('answer') %></h1>
   <div class="answer-buttons btn-toolbar btn-group btn-group-justified row">
-    <div class="col-md-2">
-      <button class="btn btn-danger btn-lg answer answer-button" type="submit" data-quality="0" data-card-id="<%= card.id %>" data-e-factor="<%= card.get('e_factor') %>" value="0">0</button>
+    <div class="row">
+      <div class="col-md-2">
+        <span>0: Don't remember.</span>
+      </div>
+      <div class="col-md-2">
+        <span>1: Almost.</span>
+      </div>
+      <div class="col-md-2">
+        <span>2: Took a bit, but I got it.</span>
+      </div>
+      <div class="col-md-2">
+        <span>3: Not immediate, but I got it.</span>
+      </div>
+      <div class="col-md-2">
+        <span>4: Confidently recalled the item.</span>
+      </div>
+      <div class="col-md-2">
+        <span>5: This was easy.</span>
+      </div>
     </div>
-    <div class="col-md-2">
-      <button class="btn btn-danger btn-lg answer answer-button" type="submit" data-quality="1" data-card-id="<%= card.id %>" data-e-factor="<%= card.get('e_factor') %>" value="1">1</button>
-    </div>
-    <div class="col-md-2">
-      <button class="btn btn-primary btn-lg answer answer-button" type="submit" data-quality="2" data-card-id="<%= card.id %>" data-e-factor="<%= card.get('e_factor') %>" value="2">2</button>
-    </div>
-    <div class="col-md-2">
-      <button class="btn btn-primary btn-lg answer answer-button" type="submit" data-quality="3" data-card-id="<%= card.id %>" data-e-factor="<%= card.get('e_factor') %>" value="3">3</button>
-    </div>
-    <div class="col-md-2">
-      <button class="btn btn-primary btn-lg answer answer-button" type="submit" data-quality="4" data-card-id="<%= card.id %>" data-e-factor="<%= card.get('e_factor') %>" value="4">4</button>
-    </div>
-    <div class="col-md-2">
-      <button class="btn btn-primary btn-lg answer answer-button" type="submit" data-quality="5" data-card-id="<%= card.id %>" data-e-factor="<%= card.get('e_factor') %>" value="5">5</button>
+    <div class="row">
+      <div class="col-md-2">
+        <button class="btn btn-danger btn-lg answer answer-button" type="submit" data-quality="0" data-card-id="<%= card.id %>" data-e-factor="<%= card.get('e_factor') %>" value="0">0</button>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-danger btn-lg answer answer-button" type="submit" data-quality="1" data-card-id="<%= card.id %>" data-e-factor="<%= card.get('e_factor') %>" value="1">1</button>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-warning btn-lg answer answer-button" type="submit" data-quality="2" data-card-id="<%= card.id %>" data-e-factor="<%= card.get('e_factor') %>" value="2">2</button>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-primary btn-lg answer answer-button" type="submit" data-quality="3" data-card-id="<%= card.id %>" data-e-factor="<%= card.get('e_factor') %>" value="3">3</button>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-success btn-lg answer answer-button" type="submit" data-quality="4" data-card-id="<%= card.id %>" data-e-factor="<%= card.get('e_factor') %>" value="4">4</button>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-success btn-lg answer answer-button" type="submit" data-quality="5" data-card-id="<%= card.id %>" data-e-factor="<%= card.get('e_factor') %>" value="5">5</button>
+      </div>
     </div>
   </div>
-
 </div>
