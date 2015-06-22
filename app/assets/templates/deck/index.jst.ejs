@@ -14,7 +14,7 @@
       <div class=""><%= deck.escape('description') %></div>
       <a href="#/decks/<%=deck.id%>" class="btn btn-primary btn-block">Devour <%= deck.escape('title') %>!</a>
     </div>
-    <div class="deck-list-item"><h3 class="page-footer">Add cards to this Deck</h3></div>
+    <div class="deck-list-item"><button class="add-card"><h3 class="page-footer" data-deck-id="<%=deck.id%>">Add cards to this Deck</h3></button></div>
   </li>
   <% }); %>
 </ul>

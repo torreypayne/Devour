@@ -10,7 +10,8 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
   },
 
   events: {
-    'click button.go-to-add-cards':'newCard'
+    'click button.go-to-add-cards':'newCard',
+    'click button.go-to-data':'showData',
   },
 
   render: function() {
@@ -79,4 +80,9 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
     });
     this.swapCard(view);
   },
+
+  showData: function() {
+    event.preventDefault();
+    Backbone.history.navigate('decks/' + this.model.id + '/data', { trigger: true });
+  }
 });

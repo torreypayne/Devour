@@ -4,12 +4,14 @@
     <h2>Received Messages</h2>
     <table class="table">
       <tr>
+        <th>From</th>
         <th>Subject</th>
         <th>Body</th>
       </tr>
 
       <% received_messages.each(function(message) { %>
         <tr class="message-item">
+          <td><%= message.escape('sender') %></td>
           <td><%= message.escape('subject').slice(0,8) || "Untitled" %></td>
           <td><%= message.escape('body') %></td>
         </tr>
@@ -20,12 +22,14 @@
   <div class="sent-messages">
     <h2>Sent Messages</h2>
     <table class="table">
-      <th>
-        <td>Subject</td>
-        <td>Body</td>
-      </th>
-    <% sent_messages.each(function(message) { %>
       <tr>
+        <th>To</th>
+        <th>Subject</th>
+        <th>Body</th>
+      </tr>
+      <% sent_messages.each(function(message) { %>
+      <tr class="message-item">
+        <td><%= message.escape('receiver') %></td>
         <td><%= message.escape('subject').slice(0,8) || "Untitled" %></td>
         <td><%= message.escape('body') %></td>
       </tr>

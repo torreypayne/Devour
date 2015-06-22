@@ -20,6 +20,7 @@ h1 {
 .entire-card {
   background: snow;
   background-size: cover;
+  border-radius: 1%;
 }
 
 button {

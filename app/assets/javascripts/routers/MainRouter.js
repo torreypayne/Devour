@@ -10,6 +10,7 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
   routes: {
     '':'index',
     'decks/new':'newDeck',
+    'decks/:id/new':'newCard',
     'decks/:id/edit':'editDeck',
     'decks/:id/data':'showDeckDetails',
     'decks/:id':'showDeck',
@@ -136,6 +137,16 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
   messagesIndex: function() {
     var messagesIndex = new Devour.Views.MessagesIndex();
     this.swapView(messagesIndex);
+  },
+
+  newCard: function(id) {
+    var deck = this.decks.getOrFetch(id);
+    this._currentCard = new Devour.Models.Card({ deck_id: deck.id });
+    var view = new Devour.Views.CardForm({
+      model: this._currentCard,
+      deck: deck,
+    });
+    this.swapView(view);
   },
 
 });
