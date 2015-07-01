@@ -7,13 +7,14 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-user = User.create!(email: 'payne@payne.com', password: 'password')
-user2 = User.create!(email: 'payne2@payne.com', password: 'password')
+user = User.create!(email: 'payne@payne.com', password: 'password', password_confirmation: 'password')
+user2 = User.create!(email: 'payne2@payne.com', password: 'password', password_confirmation: 'password')
 10.times do |n|
-  User.create!(email: Faker::Internet.email, password: Faker::Internet.password)
+  password = Faker::Internet.password
+  User.create!(email: Faker::Internet.email, password: password, password_confirmation: password)
 end
 
-languages = ['dutch', 'esperanto', 'icelandic', 'indonesian', 'japanese', 'portuguese', 'russian', 'spanish']
+languages = ['dutch', 'japanese', 'portuguese', 'russian', 'spanish']
 languages.each_with_index do |language, idx|
   foreign_language_deck = Deck.create!(title: language.capitalize, public: true, course_id: idx, owner_id: user.id)
   File.open('./vendor/assets/languages/' + language + '.txt','r') do |foreign_text|

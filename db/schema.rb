@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20150621094445) do
   create_table "messages", force: :cascade do |t|
     t.integer  "sender_id",   null: false
     t.integer  "receiver_id", null: false
+    t.string   "subject"
     t.text     "body",        null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

@@ -28,7 +28,7 @@ group :development, :test do
   gem 'spring'
   gem 'guard-rspec'
   gem 'database_cleaner'
-  gem 'capybara-webkit'
+  # gem 'capybara-webkit'
 end
 
 group :test do
