@@ -1,20 +1,46 @@
+<% if (currentUser) { %>
 <ul class="deck-list" id="index">
-  <div class="jumbotron">
-    <p>Devour uses the SuperMemo-2 algorithm to schedule the best time for a card to come up for review. Difficult cards that you tend to forget quickly will be scheduled more often, while the app will not waste your time with over-review of easier items. Add as many decks as you like from the Public directory, and have fun beating my score.</p>
+  <% if (decks.length > 0) { %>
+    <p>  Difficult cards that you tend to forget quickly will be scheduled more often, while the app will not waste your time with over-review of easier items.
+    Add decks from the Public directory, and have fun beating my score.
+    </p>
+    <% decks.each(function(deck) { %>
+    <li class="deck-list-item-background list-inline clearfix">
+      <div class="deck-list-item">
+        <button class="btn btn-danger btn-small delete-deck" data-deck-id="<%=deck.id%>"><span class="glyphicon glyphicon-remove"></span></button>
+        <a href="#decks/<%=deck.id%>">
+          <h2 class="page-header" id="deck-title"><%= deck.escape('title') %></h2>
+          <span>Total Cards: <%= deck.escape('cards_length') %></span>
+        </a>
+        <a href="#decks/<%=deck.id%>/data">Detailed data for <%= deck.escape('title') %></a>
+        <div class=""><%= deck.escape('description') %></div>
+        <a href="#/decks/<%=deck.id%>" class="btn btn-primary btn-block">Devour <%= deck.escape('title') %>!</a>
+      </div>
+      <div class="deck-list-item"><button class="add-card"><h3 class="page-footer" data-deck-id="<%=deck.id%>">Add cards to this Deck</h3></button></div>
+    </li>
+    <% }); %>
+  <% } else { %>
+    <div class="deck-list deck-list-empty">
+      <h1>Devour Data. Devour Information. Set Yourself Free.</h1>
+      <img src="http://res.cloudinary.com/tpayne/image/upload/v1436225110/product1_ky8ad4.png" height="500" width="800" alt="Demo">
+      <button class="btn deck-list" id="guide"><a href="#/publicIndex">Go To Public Decks</a></button>
+      <h2>Go To Public Decks or Add Your Own. Memorize Everything. Learn At Your Own Pace.</h2><br>
+      <h3>
+        Devour is a program which makes remembering things easy.
+         Because it's a lot more efficient than traditional study methods, you can either greatly decrease your time spent studying, or greatly increase the amount you learn.
+       </h3>
+      <span>
+        Anyone who needs to remember things in their daily life can benefit from Devour. It will soon be content-agnostic and support images, audio, videos and scientific markup (via LaTeX).
+         You can learn incredible amounts using Devour.
+        For example:
+      </span>
+      <ul class="description" id="welcome">
+        <li><span>Learning a language</span></li>
+        <li><span>Memorizing programming/CS concepts, functions, and properties</span></li>
+        <li><span>Studying for medical and law exams</span></li>
+        <li><span>Mastering long poems</span></li>
+      </ul>
     </div>
-  <% decks.each(function(deck) { %>
-  <li class="deck-list-item-background list-inline clearfix">
-    <div class="deck-list-item">
-      <button class="btn btn-danger btn-small delete-deck" data-deck-id="<%=deck.id%>"><span class="glyphicon glyphicon-remove"></span></button>
-      <a href="#decks/<%=deck.id%>">
-        <h2 class="page-header" id="deck-title"><%= deck.escape('title') %></h2>
-        <span>Total Cards: <%= deck.escape('cards_length') %></span>
-      </a>
-      <a href="#decks/<%=deck.id%>/data">Detailed data for <%= deck.escape('title') %></a>
-      <div class=""><%= deck.escape('description') %></div>
-      <a href="#/decks/<%=deck.id%>" class="btn btn-primary btn-block">Devour <%= deck.escape('title') %>!</a>
-    </div>
-    <div class="deck-list-item"><button class="add-card"><h3 class="page-footer" data-deck-id="<%=deck.id%>">Add cards to this Deck</h3></button></div>
-  </li>
-  <% }); %>
+  <% } %>
 </ul>
+<% } %>

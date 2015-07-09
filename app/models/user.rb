@@ -12,6 +12,7 @@
 
 class User < ActiveRecord::Base
   validate :password_confirmed
+  validate :valid_email
   validates :email, :password_digest, :session_token, presence: true
   validates :email, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
@@ -51,11 +52,15 @@ class User < ActiveRecord::Base
     end
   end
 
+  def valid_email
+    /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/ =~ self.email.upcase
+  end
+
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)
   end
-  
+
   def is_password?(password)
     BCrypt::Password.new(self.password_digest).is_password?(password)
   end

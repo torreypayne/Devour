@@ -33,3 +33,50 @@ form.new-card * {
 .two-way-question {
   background: snow;
 }
+
+.button{
+   border: 0 none;
+  border-radius: 2px 2px 2px 2px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial,sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+  margin-left: 10px;
+  margin-top: 3px;
+  padding: 7px 10px;
+  text-transform: none;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  width: 150px;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.btn-red {
+  background: #c0392b;
+}
+
+.btn-red:hover {
+  background: #e74c3c;
+}
+
+.btn-green {
+  background: #27ae60;
+}
+
+.btn-green:hover {
+  background: #2ecc71;
+}
+
+.btn-blue {
+  background: #2980b9;
+}
+
+.btn-blue:hover {
+  background: #3498db;
+}

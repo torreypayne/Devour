@@ -23,16 +23,16 @@
     <h2>Sent Messages</h2>
     <table class="table">
       <tr>
-        <th>To</th>
-        <th>Subject</th>
-        <th>Body</th>
+        <th class="sent-header">From</th>
+        <th class="sent-header">Subject</th>
+        <th class="sent-header">Body</th>
       </tr>
       <% sent_messages.each(function(message) { %>
-      <tr class="message-item">
-        <td><%= message.escape('receiver') %></td>
-        <td><%= message.escape('subject').slice(0,8) || "Untitled" %></td>
-        <td><%= message.escape('body') %></td>
-      </tr>
+        <tr class="message-item">
+          <td><%= message.escape('receiver') %></td>
+          <td><%= message.escape('subject').slice(0,8) || "Untitled" %></td>
+          <td><%= message.escape('body') %></td>
+        </tr>
     <% }); %>
     </table>
   </div>

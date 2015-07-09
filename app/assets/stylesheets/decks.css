@@ -1,3 +1,7 @@
+ul.deck-list {
+  margin-top: 2%;
+}
+
 .deck-list button.btn-primary {
   background-color: cadetblue;
 }
@@ -15,4 +19,39 @@ button.delete-deck {
 
 .deck-list-item {
   padding: 5px;
+}
+
+.deck-list-empty {
+  background: "#f7f7f7";
+  /*font-size: 24px;*/
+  font-weight: 700;
+  font-family: arial;
+  color: #333;
+  padding: 5px;
+  /*opacity: 0.9;*/
+}
+
+/*.deck-list-empty a span {}*/
+
+.deck-list-empty a {
+  font-size: 24px;
+  color: white;
+}
+
+.deck-list-empty h1 {
+  font-size: 64px;
+  /*color: #333;*/
+  letter-spacing: -0.05em;
+}
+
+#guide {
+  background-color: #69a478;
+  margin-right: auto;
+  margin-left: auto;
+  width: 33%;
+  height: 68px;
+}
+
+#welcome {
+  background: "#f7f7f7";
 }

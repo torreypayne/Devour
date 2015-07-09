@@ -19,8 +19,11 @@ Devour.Views.DecksIndex = Backbone.View.extend({
   },
 
   render: function() {
-    // Need to overwrite the fetch method for Deck collections I believe
-    var indexViewer = this.template({ decks: this.collection });
+    var currentUser = $('#current-user').data('id');
+    var indexViewer = this.template({
+      decks: this.collection,
+      currentUser: currentUser
+    });
     this.$el.html(indexViewer);
     return this;
   },

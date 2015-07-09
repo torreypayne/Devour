@@ -21,10 +21,12 @@ languages.each_with_index do |language, idx|
     File.open('./vendor/assets/languages/extracted_text.txt', 'r') do |english_text|
       question = foreign_text.gets
       answer = english_text.gets
-      while (question && answer)
+      count = 0
+      while (count < 100)
         card = Card.create(deck_id: foreign_language_deck.id, question: question, answer: answer)
         question = foreign_text.gets
         answer = english_text.gets
+        count+=1
       end
     end
   end
