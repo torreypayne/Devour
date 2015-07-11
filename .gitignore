@@ -1,4 +1,4 @@
 *.log
-
+/tmp/*.html
 # Ignore application configuration
 /config/application.yml
