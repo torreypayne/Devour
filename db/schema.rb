@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150713202110) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "cards", force: :cascade do |t|
     t.integer  "deck_id",    null: false
     t.text     "question",   null: false
@@ -24,9 +21,9 @@ ActiveRecord::Schema.define(version: 20150713202110) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "cards", ["answer"], name: "index_cards_on_answer", using: :btree
-  add_index "cards", ["deck_id"], name: "index_cards_on_deck_id", using: :btree
-  add_index "cards", ["question"], name: "index_cards_on_question", using: :btree
+  add_index "cards", ["answer"], name: "index_cards_on_answer"
+  add_index "cards", ["deck_id"], name: "index_cards_on_deck_id"
+  add_index "cards", ["question"], name: "index_cards_on_question"
 
   create_table "deck_shares", force: :cascade do |t|
     t.integer  "deck_id",    null: false
@@ -35,7 +32,7 @@ ActiveRecord::Schema.define(version: 20150713202110) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "deck_shares", ["deck_id", "user_id"], name: "index_deck_shares_on_deck_id_and_user_id", unique: true, using: :btree
+  add_index "deck_shares", ["deck_id", "user_id"], name: "index_deck_shares_on_deck_id_and_user_id", unique: true
 
   create_table "decks", force: :cascade do |t|
     t.integer  "owner_id",                   null: false
@@ -47,8 +44,8 @@ ActiveRecord::Schema.define(version: 20150713202110) do
     t.text     "description"
   end
 
-  add_index "decks", ["owner_id"], name: "index_decks_on_owner_id", using: :btree
-  add_index "decks", ["title"], name: "index_decks_on_title", using: :btree
+  add_index "decks", ["owner_id"], name: "index_decks_on_owner_id"
+  add_index "decks", ["title"], name: "index_decks_on_title"
 
   create_table "messages", force: :cascade do |t|
     t.integer  "sender_id",   null: false
@@ -59,8 +56,8 @@ ActiveRecord::Schema.define(version: 20150713202110) do
     t.datetime "updated_at",  null: false
   end
 
-  add_index "messages", ["receiver_id"], name: "index_messages_on_receiver_id", using: :btree
-  add_index "messages", ["sender_id"], name: "index_messages_on_sender_id", using: :btree
+  add_index "messages", ["receiver_id"], name: "index_messages_on_receiver_id"
+  add_index "messages", ["sender_id"], name: "index_messages_on_sender_id"
 
   create_table "post_subs", force: :cascade do |t|
     t.integer  "sub_id",     null: false
@@ -69,9 +66,9 @@ ActiveRecord::Schema.define(version: 20150713202110) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "post_subs", ["post_id", "sub_id"], name: "index_post_subs_on_post_id_and_sub_id", unique: true, using: :btree
-  add_index "post_subs", ["post_id"], name: "index_post_subs_on_post_id", using: :btree
-  add_index "post_subs", ["sub_id"], name: "index_post_subs_on_sub_id", using: :btree
+  add_index "post_subs", ["post_id", "sub_id"], name: "index_post_subs_on_post_id_and_sub_id", unique: true
+  add_index "post_subs", ["post_id"], name: "index_post_subs_on_post_id"
+  add_index "post_subs", ["sub_id"], name: "index_post_subs_on_sub_id"
 
   create_table "posts", force: :cascade do |t|
     t.string   "title",      null: false
@@ -94,8 +91,8 @@ ActiveRecord::Schema.define(version: 20150713202110) do
     t.datetime "updated_at",                null: false
   end
 
-  add_index "responses", ["card_id"], name: "index_responses_on_card_id", using: :btree
-  add_index "responses", ["user_id"], name: "index_responses_on_user_id", using: :btree
+  add_index "responses", ["card_id"], name: "index_responses_on_card_id"
+  add_index "responses", ["user_id"], name: "index_responses_on_user_id"
 
   create_table "subs", force: :cascade do |t|
     t.string   "title",        null: false
@@ -105,7 +102,7 @@ ActiveRecord::Schema.define(version: 20150713202110) do
     t.datetime "updated_at",   null: false
   end
 
-  add_index "subs", ["title", "moderator_id"], name: "index_subs_on_title_and_moderator_id", unique: true, using: :btree
+  add_index "subs", ["title", "moderator_id"], name: "index_subs_on_title_and_moderator_id", unique: true
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  null: false
@@ -117,6 +114,6 @@ ActiveRecord::Schema.define(version: 20150713202110) do
     t.datetime "password_reset_sent_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end

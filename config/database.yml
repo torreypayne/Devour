@@ -15,12 +15,12 @@
 # gem 'pg'
 #
 default: &default
-  adapter: postgresql
+  adapter: sqlite3
   encoding: unicode
   pool: 5
 
 development:
-  adapter: postgresql
+  adapter: sqlite3
   database: devour_app
   host: localhost
   # The specified database role being used to connect to postgres.
