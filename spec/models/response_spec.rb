@@ -6,10 +6,10 @@
 #  user_id     :integer          not null
 #  card_id     :integer          not null
 #  quality     :integer          not null
-#  e_factor    :float            default(2.5), not null
+#  e_factor    :float            default(2.3), not null
 #  next_rep    :integer          not null
 #  repetitions :integer          default(0), not null
-#  last_passed :float            default(1434164372236.362), not null
+#  last_passed :float            not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #

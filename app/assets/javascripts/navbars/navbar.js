@@ -23,7 +23,6 @@ Devour.Navbars.Navbar = Backbone.View.extend({
     var currentUser = $('#current-user').data('id');
     this.$navEl.html(this.template({ currentUser: currentUser }));
     return this;
-    debugger;
   },
 
   // dropdown: function(event) {

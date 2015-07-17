@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: messages
+#
+#  id          :integer          not null, primary key
+#  sender_id   :integer          not null
+#  receiver_id :integer          not null
+#  subject     :string
+#  body        :text             not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
 class Message < ActiveRecord::Base
   belongs_to(
   :sender,

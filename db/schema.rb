@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150713202110) do
+ActiveRecord::Schema.define(version: 20150716051204) do
 
   create_table "cards", force: :cascade do |t|
     t.integer  "deck_id",    null: false
@@ -24,6 +24,17 @@ ActiveRecord::Schema.define(version: 20150713202110) do
   add_index "cards", ["answer"], name: "index_cards_on_answer"
   add_index "cards", ["deck_id"], name: "index_cards_on_deck_id"
   add_index "cards", ["question"], name: "index_cards_on_question"
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "body",              null: false
+    t.integer  "post_id",           null: false
+    t.integer  "user_id",           null: false
+    t.integer  "parent_comment_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "comments", ["post_id"], name: "index_comments_on_post_id"
 
   create_table "deck_shares", force: :cascade do |t|
     t.integer  "deck_id",    null: false
