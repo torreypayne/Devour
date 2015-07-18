@@ -9,7 +9,6 @@ Devour.Views.CardShow = Backbone.CompositeView.extend({
   events: {
     'click button.answer-button':'assessResponse',
     'click button.btn-reveal':'revealAnswer',
-    // 'click button.edit-button':'editCard',
   },
 
   initialize: function(options) {
@@ -42,11 +41,7 @@ Devour.Views.CardShow = Backbone.CompositeView.extend({
   revealAnswer: function(event) {
     $('button.btn-reveal').prop('disabled', true);
     $('div.answer-box').append(this.answerTemplate({ card: this.model }));
-    // this.activateAnswerButtons();
   },
-
-  // editCard: function(event) {
-  // },
 
   destroyCard: function(event) {
     event.preventDefault();

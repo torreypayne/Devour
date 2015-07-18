@@ -1,5 +1,12 @@
 module Api
   class CardsController < ApiController
+    def ensured_ownership(card)
+      unless current_user != card.owner
+        return true
+      end
+      false
+    end
+
     def new
     end
 
@@ -18,6 +25,12 @@ module Api
     end
 
     def update
+      card = Card.find(params[:id])
+      if ensured_ownership(card) && card.update(card_params)
+        render json: card
+      else
+        render json: { errors: card.errors.full_messages }, as: 422
+      end
     end
 
     def destroy

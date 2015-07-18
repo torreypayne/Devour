@@ -1,6 +1,11 @@
 <form class="new-card create-card" action="#" method="post">
   <div class="form-group has-error"></div>
 
+
+  <% if (card.id) { %>
+    <div id="card-id" data-card-id="<%= card.id %>"></div>
+  <% } %>
+
   <div class="question-box input-group input-group-lg">
     <label class="input-group-addon" for="question" id="question-label">Question</label>
     <textarea class="" rows="6" name="card[question]" placeholder="Question of Yo Choice!"><%= card.escape('question') %></textarea>
@@ -13,17 +18,23 @@
   </div>
   <input type="hidden" name="card[deck_id]" value="<%= card.get('deck_id') %>">
   <div class="btn-toolbar" role="toolbar" aria-label="">
-    <div class="btn-group" role="group" aria-label="">
+    <% if (!card.id) { %>
+      <div class="btn-group" role="group" aria-label="">
       <% if(oneSided) { %>
-          <button class="btn one-sided">One Sided</button>
-          <button class="btn btn-primary two-sided">Two Sided</button>
-    <%  } else { %>
-      <button class="btn btn-primary one-sided">One Sided</button>
-      <button class="btn two-sided">Two Sided</button>
-    <%  } %>
-    </div>
+        <button class="btn one-sided">One Sided</button>
+        <button class="btn btn-primary two-sided">Two Sided</button>
+      <%  } else { %>
+        <button class="btn btn-primary one-sided">One Sided</button>
+        <button class="btn two-sided">Two Sided</button>
+      <%  } %>
+      </div>
+    <% } %>
   </div>
 
-  <input id="create-card" type="submit" class="confirm create-card create-card-form create-card-button btn btn-success" value="Create Card"><br>
+  <% if (card.id) { %>
+    <input id="edit-confirm" type="submit" class="confirm create-card create-card-form create-card-button btn btn-success" value="Edit Card"><br>
+  <% } else { %>
+    <input id="create-card" type="submit" class="confirm create-card create-card-form create-card-button btn btn-success" value="Create Card"><br>
+  <% } %>
 
 </form>

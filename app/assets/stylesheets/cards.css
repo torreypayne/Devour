@@ -30,7 +30,7 @@ form.new-card * {
   text-align: center;
 }
 
-#create-card {
+#create-card, #edit-confirm {
   width: 25%;
 }
 

@@ -15,7 +15,7 @@ gem 'newrelic_rpm'
 gem 'faker'
 gem 'kaminari'
 gem 'figaro'
-gem 'puma'
+# gem 'puma'
 
 group :development, :test do
   gem 'byebug'

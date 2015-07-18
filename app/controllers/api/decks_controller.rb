@@ -2,10 +2,10 @@ module Api
   class DecksController < ApiController
 
     def ensure_ownership(deck)
-      unless current_user == deck.owner
+      unless current_user != deck.owner
         return true
       end
-      return false
+      false
     end
 
     def new

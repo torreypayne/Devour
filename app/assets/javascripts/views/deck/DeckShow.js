@@ -13,6 +13,7 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
     'click button.go-to-add-cards':'newCard',
     'click button.go-to-data':'showData',
     'click button.edit-button':'editCard',
+    'click button.edit-card':'nextCard',
   },
 
   render: function() {
@@ -87,6 +88,7 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
     var view = new Devour.Views.CardForm({
       model: this._currentCard,
       deck: this.model,
+      deckView: this,
     });
     this.swapCard(view);
   },
