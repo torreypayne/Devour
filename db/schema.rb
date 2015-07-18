@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150716051204) do
+ActiveRecord::Schema.define(version: 20150718044008) do
 
   create_table "cards", force: :cascade do |t|
     t.integer  "deck_id",    null: false
@@ -114,6 +114,18 @@ ActiveRecord::Schema.define(version: 20150716051204) do
   end
 
   add_index "subs", ["title", "moderator_id"], name: "index_subs_on_title_and_moderator_id", unique: true
+
+  create_table "user_votes", force: :cascade do |t|
+    t.integer  "value",        null: false
+    t.integer  "user_id",      null: false
+    t.integer  "votable_id",   null: false
+    t.string   "votable_type", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "user_votes", ["user_id", "votable_id", "votable_type"], name: "index_user_votes_on_user_id_and_votable_id_and_votable_type", unique: true
+  add_index "user_votes", ["votable_id", "votable_type"], name: "index_user_votes_on_votable_id_and_votable_type"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  null: false
