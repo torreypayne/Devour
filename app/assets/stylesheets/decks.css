@@ -55,3 +55,11 @@ button.delete-deck {
 #welcome {
   background: "#f7f7f7";
 }
+
+.sidebar-header {
+  border-radius: 0.9;
+}
+
+h2.sidebar-header {
+  text-align: center;
+}
