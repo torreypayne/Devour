@@ -12,6 +12,8 @@
 #
 
 FactoryGirl.define do
-  value 1
-  user_id 1
+  factory :user_vote do
+    value 1
+    user_id 1
+  end
 end

@@ -19,8 +19,6 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
-  attr_accessor :score
-
   after_initialize :ensure_session_token
 
   has_many(
@@ -46,7 +44,8 @@ class User < ActiveRecord::Base
     primary_key: :id
   )
 
-  attr_accessor :password, :password_confirmation, :password_reset_token
+  attr_accessor :password, :password_confirmation,
+                :password_reset_token, :score
 
   def password_confirmed
     if (password != password_confirmation)
@@ -85,7 +84,7 @@ class User < ActiveRecord::Base
   end
 
   def self.find_by_credentials(params)
-    user = User.find_by_email(params[:email])
+    user = User.find_by(email: params[:email].downcase)
     if user && user.is_password?(params[:password])
       return user
     else
@@ -120,5 +119,4 @@ class User < ActiveRecord::Base
   def password_reset_expired?
     reset_sent_at < 2.hours.ago
   end
-
 end
