@@ -34,7 +34,7 @@ form.new-card * {
   background: snow;
 }
 
-.button{
+.button {
    border: 0 none;
   border-radius: 2px 2px 2px 2px;
   color: #FFFFFF;
@@ -55,6 +55,23 @@ form.new-card * {
   text-align: center;
   -webkit-user-select: none;
   -moz-user-select: none;
+}
+
+#entire-card {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.entire-card button {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+button.edit-button {
+  color: #f4f4f4;
+  background: #4aaaa5;
+  font-weight: bold;
+  padding: 8px 25px 8px 25px;
 }
 
 .btn-red {

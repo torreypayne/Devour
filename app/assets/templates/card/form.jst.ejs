@@ -3,13 +3,13 @@
 
   <div class="question-box input-group input-group-lg">
     <label class="input-group-addon" for="question" id="question-label">Question</label>
-    <textarea class="" rows="6" name="card[question]" placeholder="Question of Yo Choice!"></textarea>
+    <textarea class="" rows="6" name="card[question]" placeholder="Question of Yo Choice!"><%= card.escape('question') %></textarea>
   </div>
 
 
   <div class="answer-box input-group input-group-lg">
     <label class="input-group-addon" for="answer" id="answer-label">Answer</label>
-    <textarea class="" rows="6" name="card[answer]" placeholder="Answer of Yo Damn Choice!"></textarea>
+    <textarea class="" rows="6" name="card[answer]" placeholder="Answer of Yo Damn Choice!"><%= card.escape('answer') %></textarea>
   </div>
   <input type="hidden" name="card[deck_id]" value="<%= card.get('deck_id') %>">
   <div class="btn-toolbar" role="toolbar" aria-label="">
