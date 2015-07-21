@@ -7,6 +7,24 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
     this._currentIndex = 0;
     this.listenTo(this.model, 'sync', this.resetCards);
     this.nextQuestion();
+    $(document).on('keydown', this.keyAction.bind(this));
+  },
+  
+  keyAction: function(event) {
+    // debugger;
+    event.preventDefault();
+    var key = event.keyCode;
+    if (key === 32) {
+      this._currentView.revealAnswer();
+    } else if (key  === 47 || key  === 48 || key  === 49 || key  === 50 || key  === 51 || key  === 52 || key  === 53) {
+      this.stopListening();
+      $('#' + key).click();
+      console.log(key);
+      // this.stopListening();
+    } else {
+      console.log(key + " has no button");
+    }
+    return false;
   },
 
   events: {
@@ -68,6 +86,7 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
     if (this._currentView) {
       this.removeSubview('ul.quiz', this._currentView);
     }
+    this._currentView && this._currentView.remove();
     this._currentView = view;
     this.addSubview('ul.quiz', this._currentView);
     this.render();
@@ -76,11 +95,11 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
   newCard: function() {
     event.preventDefault();
     this._currentCard = new Devour.Models.Card({ deck_id: this.model.id });
-    var view = new Devour.Views.CardForm({
+    this._currentCardView = new Devour.Views.CardForm({
       model: this._currentCard,
       deck: this.model,
     });
-    this.swapCard(view);
+    this.swapCard(this._currentCardView);
   },
 
   editCard: function() {
