@@ -1,3 +1,7 @@
+* {
+  font-family: 'Indie Flower', cursive;
+}
+
 body {
   background: url('http://res.cloudinary.com/tpayne/image/upload/s--wWt7psyd--/q_jpegmini/v1434948418/white-floor-minimalist_kv9pvk.jpg');
   -webkit-background-size: cover;
