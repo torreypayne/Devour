@@ -14,7 +14,7 @@
 
 class User < ActiveRecord::Base
   validate :password_confirmed
-  validate :valid_email
+  before_save :valid_email
   validates :email, :password_digest, :session_token, presence: true
   validates :email, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }

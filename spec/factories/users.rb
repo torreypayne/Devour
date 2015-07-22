@@ -16,6 +16,7 @@ FactoryGirl.define do
   factory :user do
     email { Faker::Internet.email }
     password { Faker::Internet.password }
+    password_confirmation { password }
     # association :owned_decks, factory: :deck
     # association :deck_shares, factory: :deck_share
     # association :decks, factory: :deck

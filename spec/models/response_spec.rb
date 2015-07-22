@@ -35,7 +35,7 @@ describe Response do
 
   describe "A new card's first response is a new response:" do
     let(:card) { build(:card) }
-    let(:user) { create(:user) }
+    let(:user) { build(:user) }
     it "should have a blank latest_response with default values" do
       resp = card.latest_response(user.id)
       expect(resp.class).to eq(Response)

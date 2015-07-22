@@ -29,11 +29,10 @@ group :development, :test do
   gem 'spring'
   gem 'guard-rspec'
   gem 'database_cleaner'
-  # gem 'capybara-webkit'
+  gem 'capybara'
 end
 
 group :test do
-  gem 'capybara'
   gem 'launchy'
   gem 'shoulda-matchers'
 end
