@@ -151,8 +151,11 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
   },
   
   forumIndex: function() {
-    var forum = new Devour.Views.ForumIndex({});
-    this.swapView(forum);
+    var reddit = new Devour.Views.RedditIndex({
+      collection: new Devour.Collections.SubReddits
+    });
+    var redditView = new Devour.Views.RedditIndex({});
+    this.swapView(redditView);
   },
 
 });
