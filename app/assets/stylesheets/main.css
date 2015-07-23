@@ -1,5 +1,5 @@
 * {
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Indie Flower';
 }
 
 body {
@@ -43,6 +43,7 @@ button {
 
 nav {
   margin-bottom: 6%;
+  font-weight: 400;
 }
 
 #flash {
@@ -64,11 +65,6 @@ small.answer {
 
 h1.main-header {
   margin-top: 10%;
-  // font-size: ;
-}
-
-.main-header {
-  // margin-top: 10%;
 }
 
 form {

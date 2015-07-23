@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     
     <div class="navbar-header">
@@ -16,7 +16,7 @@
 
     <div class="collapse navbar-collapse" id="devour-navbar-collapse-1">
       <% if (currentUser) { %>
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav navbar-center">
         <li><a href="#">Decks</a></li>
         <li><a href="#/decks/new">Create</a></li>
         <li><a href="#/search">Search</a></li>
@@ -28,7 +28,7 @@
       </ul>
       <% } else { %>
       <ul class="nav navbar-nav slogan">
-        <li><h1 class="text-center navbar-brand">Memorization. Made Easy. Get Your Full.</h1></li>
+        <li><span class="text-center">Memorization. Made Easy. Get Your Full.</span></li>
       </ul>
       <% } %>
 

@@ -36,3 +36,14 @@ end
   5.times { |n| Message.create!(receiver_id: user.id, sender_id: Random.rand(10), body: Faker::Lorem.paragraph) }
   5.times { |n| Message.create!(receiver_id: Random.rand(10), sender_id: user.id, body: Faker::Lorem.paragraph) }
 end
+
+10.times do |n|
+  subReddit = Sub.create(title: Faker::Name.title, description: Faker::Hacker.say_something_smart, moderator_id: user.id)
+  10.times do |m|
+    newPost = subReddit.posts.create(title: Faker::Name.title, url: Faker::Internet.url, content: Faker::Lorem.paragraph, user_id: user.id)
+    3.times do |r|
+      comment = newPost.comments.create(body: Faker::Lorem.sentence, post_id: newPost.id, user_id: user2.id)
+      comment2 = newPost.comments.create(body: Faker::Lorem.sentence, post_id: newPost.id, user_id: user2.id)
+    end
+  end
+end

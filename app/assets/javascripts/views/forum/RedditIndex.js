@@ -7,7 +7,7 @@ Devour.Views.RedditIndex = Backbone.CompositeView.extend({
     },
     
     render: function() {
-        this.$el.html(this.template({ forum: this.model }));
+        this.$el.html(this.template({ forum: this.collection }));
         return this;
     },
     
