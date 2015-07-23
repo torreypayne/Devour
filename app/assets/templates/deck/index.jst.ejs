@@ -1,10 +1,10 @@
 <% if (currentUser) { %>
 <ul class="deck-list" id="index">
   <% if (decks.length > 0) { %>
-    <p class="jumbotron">
+    <h4 class="jumbotron">
         Difficult cards that you tend to forget quickly will be scheduled more often, while the app will not waste your time with over-review of easier items.
     Add decks from the Public directory, and have fun beating my score.
-    </p>
+    </h4>
     <% decks.each(function(deck) { %>
     <li class="deck-list-item-background list-inline clearfix">
       <div class="deck-list-item">
