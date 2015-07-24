@@ -124,8 +124,6 @@ div.card-item {
 }
 
 #background {
-  // background-size: cover;
-  // background-size: contain;
   position: absolute;
   z-index: -200;
   height: 80%;
