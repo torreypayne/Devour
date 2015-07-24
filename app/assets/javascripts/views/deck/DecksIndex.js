@@ -10,6 +10,7 @@ Devour.Views.DecksIndex = Backbone.View.extend({
     'click button.show-data':'showData',
     'click button.btn-danger':'deleteDeckShare',
     'scroll':'addDecks',
+    'click button#guide':'publicDirectory',
   },
 
   initialize: function(options) {
@@ -55,6 +56,11 @@ Devour.Views.DecksIndex = Backbone.View.extend({
     event.preventDefault();
     var data = $(event.target).data('deck-id');
     Backbone.history.navigate('decks/' + data + '/new', { trigger: true });
+  },
+
+  publicDirectory: function() {
+    event.preventDefault();
+    Backbone.history.navigate('publicIndex', { trigger: true });
   },
 
 });

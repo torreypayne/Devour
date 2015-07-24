@@ -1,5 +1,5 @@
 * {
-  font-family: 'Indie Flower';
+  font-family: 'monospace';
 }
 
 body {
@@ -28,6 +28,7 @@ h1 {
 }
 
 button {
+  font-size: large;
   margin-bottom: 3px;
 }
 
