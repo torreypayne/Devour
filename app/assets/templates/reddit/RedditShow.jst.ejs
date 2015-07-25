@@ -1,0 +1,11 @@
+<div class="subreddit-show">
+  <h1><%= model.escape('title') %></h1>
+  <ul class="posts">
+    <% model.posts().forEach(function(post, idx) { %>
+      <div class="post">
+        <li class="post-title"><%= post.escape('title') %></li>
+        <li class="post-url"><%= post.escape('url') %></li>
+      </div><br>
+    <% }); %>
+  </ul>
+</div>

@@ -34,10 +34,11 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
   },
 
   render: function() {
-    this.$el.html(this.template({ deck: this.model }));
-    this.attachSubviews();
     if (!this._currentCard) {
       this.$el.html(this.tryAgainTemplate);
+    } else {
+      this.$el.html(this.template({ deck: this.model }));
+      this.attachSubviews();
     }
     return this;
   },
