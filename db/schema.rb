@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150718044008) do
+ActiveRecord::Schema.define(version: 20150725004725) do
 
   create_table "cards", force: :cascade do |t|
     t.integer  "deck_id",    null: false
@@ -111,8 +111,10 @@ ActiveRecord::Schema.define(version: 20150718044008) do
     t.integer  "moderator_id", null: false
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "image_url"
   end
 
+  add_index "subs", ["image_url"], name: "index_subs_on_image_url"
   add_index "subs", ["title", "moderator_id"], name: "index_subs_on_title_and_moderator_id", unique: true
 
   create_table "user_votes", force: :cascade do |t|

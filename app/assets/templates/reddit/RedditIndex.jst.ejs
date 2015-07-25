@@ -1,7 +1,21 @@
 <div class="forum-index">
-    <span class="jumbotron">Welcome to Devour.Space.</span>
-    <div class="jumbotron"><%= forum %></div>
-    
-    
-    
+    <h1 class="jumbotron">Welcome to the Devour.Space Forum.</h1><br>
+    <div class="subreddit-list">
+      <ul class="col-xs-12">
+        <h2>SubReddits</h2>
+      <% forum.models.forEach(function(subReddit, idx) { %>
+        <li class="col-xs-12">
+          <a class="thumbnail" href="#"><img width="42" height="42" class="col-xs-2" src="<%= subReddit.escape('image_url') %>" class="col-xs-4" ></a>
+          <h2 class="col-xs-6" ><a><%= subReddit.escape('title') %></a></h2>
+          <h3 class="col-xs-4" ><%= subReddit.escape('description') %></h3>
+        </li>
+      <% }); %>
+      </ul>
+      <ul class="col-xs-12">
+        <h2>Trending Posts</h2>
+      </ul>
+    </div>
+
+
+
 </div>

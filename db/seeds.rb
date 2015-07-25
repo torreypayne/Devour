@@ -38,9 +38,19 @@ end
 end
 
 10.times do |n|
-  subReddit = Sub.create(title: Faker::Name.title, description: Faker::Hacker.say_something_smart, moderator_id: user.id)
+  subReddit = Sub.create(
+    title: Faker::Name.title,
+    description: Faker::Hacker.say_something_smart,
+    image_url: Faker::Avatar.image,
+    moderator_id: user.id
+  )
   10.times do |m|
-    newPost = subReddit.posts.create(title: Faker::Name.title, url: Faker::Internet.url, content: Faker::Lorem.paragraph, user_id: user.id)
+    newPost = subReddit.posts.create(
+      title: Faker::Name.title, 
+      url: Faker::Internet.url,
+      content: Faker::Lorem.paragraph,
+      user_id: user.id
+    )
     3.times do |r|
       comment = newPost.comments.create(body: Faker::Lorem.sentence, post_id: newPost.id, user_id: user2.id)
       comment2 = newPost.comments.create(body: Faker::Lorem.sentence, post_id: newPost.id, user_id: user2.id)
