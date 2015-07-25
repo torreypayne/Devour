@@ -3,7 +3,7 @@ Devour.Models.SubReddit = Backbone.Model.extend({
 
     posts: function() {
         if (!this._posts) {
-            this._posts = new Devour.Collections.Posts([], { sub: this });
+            this._posts = new Devour.Collections.RedditPosts([], { sub: this });
         }
         return this._posts;
     },

@@ -21,6 +21,7 @@ class Api::SubsController < ApplicationController
 
   def show
     @sub = Sub.find(params[:id])
+    render json: @sub
   end
 
   def update

@@ -19,9 +19,14 @@ Devour.Views.RedditIndex = Backbone.CompositeView.extend({
     },
 
     showSubreddit: function(event) {
+      event.preventDefault();
       var sub = $(event.currentTarget);
       var id = sub.data('id');
-      var subView = new Devour.Views.RedditShow({ collection: this.collection });
+      var subReddit = this.collection.getOrFetch(id);
+      var subView = new Devour.Views.RedditShow({
+        model: subReddit,
+        collection: this.collection
+      });
       this.swapReddit(subView);
     },
 
@@ -30,8 +35,8 @@ Devour.Views.RedditIndex = Backbone.CompositeView.extend({
         this.removeSubview(this._currentView);
       }
       this._currentView && this._currentView.remove();
-      this_currentView = view;
-      this.addSubView(this._currentView);
+      this._currentView = view;
+      this.addSubview('.forum-index', this._currentView);
       this.render();
       return view;
     },
