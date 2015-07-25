@@ -7,24 +7,23 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
     this._currentIndex = 0;
     this.listenTo(this.model, 'sync', this.resetCards);
     this.nextQuestion();
+    this._revealedCard = false;
+    this._submitting = false;
     $(document).on('keydown', this.keyAction.bind(this));
   },
-  
+
   keyAction: function(event) {
     // debugger;
-    event.preventDefault();
+    // event.preventDefault();
     var key = event.keyCode;
-    if (key === 32) {
-      this._currentView.revealAnswer();
-    } else if (key  === 47 || key  === 48 || key  === 49 || key  === 50 || key  === 51 || key  === 52 || key  === 53) {
-      this.stopListening();
+    if (key === 32 && !this._revealedCard) {
+      this._revealedCard = true;
+      $('#show-answer').click();
+    } else if ((key  === 47 || key  === 48 || key  === 49 || key  === 50 || key  === 51 || key  === 52 || key  === 53) && this._submitting === false) {
+      this._submitting = true;
       $('#' + key).click();
       console.log(key);
-      // this.stopListening();
-    } else {
-      console.log(key + " has no button");
     }
-    return false;
   },
 
   events: {
@@ -90,6 +89,8 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
     this._currentView = view;
     this.addSubview('ul.quiz', this._currentView);
     this.render();
+    this._revealedCard = false;
+    this._submitting = false;
   },
 
   newCard: function() {
