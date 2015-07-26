@@ -2,7 +2,7 @@
 
 [Heroku link][heroku]
 
-[heroku]: http://devour.herokuapp.com
+[heroku]: http://www.devour.space
 
 Devour comes complete with a test suite that verifies the functionality of the
 app. The frequency list that provided the English words used in the test databases

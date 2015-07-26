@@ -1,21 +1,35 @@
+nav.navbar {
+  height: 100px;
+}
+
 .navbar-nav a {
   margin-right: 20px;
   font-size: large;
 }
 
-span#slogan {
-  /*margin-left: 79px;*/
+a.navbar-brand {
+  padding-top: 0px;
+}
+
+a.navbar-link {
+  padding-right: 2px;
+}
+
+.navbar-brand {
+  text-align: center;
 }
 
 ul.slogan {
   padding-top: 2%;
-  margin-left: 38%;
+  text-align: center;
+  /*margin-left: 38%;*/
+}
+
+li#slogan-list-item {
+  /*float: none;
+  display: block;*/
 }
 
 #sign-out {
   padding-top: 6px;
-}
-
-img#brand {
-  margin-top: -8%;
 }
