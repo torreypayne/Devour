@@ -15,10 +15,16 @@ button.delete-deck {
   float: right;
 }
 
-.deck-list-item-background {
+li.deck-list-item {
   background: snow;
   opacity: 0.9;
-  padding: 3px;
+  padding: 10px;
+  margin-right: 10px;
+  border: 4px solid lightblue;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  font-size: 16px;
+  font-weight: bolder;
 }
 
 .deck-list-item {
@@ -54,6 +60,12 @@ button.delete-deck {
   margin-left: auto;
   width: 31%;
   height: 68px;
+}
+
+button#deck-options {
+  border-radius: 0px;
+  border: 0px;
+  margin-left: 0px;
 }
 
 #welcome {

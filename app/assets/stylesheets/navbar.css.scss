@@ -1,0 +1,54 @@
+nav.navbar {
+  height: 100px;
+}
+
+ul.navbar-nav {
+  margin-top: 4px;
+}
+
+.navbar-nav a {
+  padding-right: 10px;
+  line-spacing: 2px;
+  font-size: large;
+}
+
+a.navbar-brand {
+  padding-top: 0px;
+}
+
+li.navbar-link {
+
+}
+
+a.navbar-link {
+  border-top: 4px solid white;
+  transition: border-top .3s;
+  &:hover {
+    border-top: 4px solid dodgerblue;
+  }
+  // padding: 10px 15px 10px;
+  margin-top: 30px;
+}
+
+.navbar-brand {
+  text-align: center;
+}
+
+span#slogan {
+  padding-left: 47px;
+}
+
+ul.slogan {
+  padding-top: 2%;
+  text-align: center;
+  /*margin-left: 38%;*/
+}
+
+li#slogan-list-item {
+  /*float: none;
+  display: block;*/
+}
+
+#sign-out {
+  padding-top: 6px;
+}

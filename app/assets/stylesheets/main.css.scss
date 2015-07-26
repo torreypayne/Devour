@@ -1,0 +1,165 @@
+* {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  letter-spacing: 0.04em;
+}
+
+body {
+  background-image: url('http://res.cloudinary.com/tpayne/image/upload/v1437885623/cookie-monster_00282175_v4t8dv.jpg');
+  background-position: center;
+
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  // padding: 30px;
+  // opacity: 0.9;
+  // padding-top: 15px;
+  width: 100%;
+}
+
+h1 {
+  font-style: oblique;
+  font-weight: 900;
+}
+
+.entire-card {
+  background: snow;
+  background-size: cover;
+  border-radius: 1%;
+}
+
+button {
+  font-size: large;
+}
+
+.sidebar-header {
+  padding: 2px;
+  background: white;
+  background-size: cover;
+}
+
+.card-question, .card-answer {
+  font-size: 2.25em;
+}
+
+nav {
+  margin-bottom: 6%;
+  font-weight: 400;
+}
+
+#flash {
+  margin-top: 5%;
+  color: white;
+}
+
+img {
+  margin-bottom: 20px;
+}
+
+h1, p {
+  padding: 10px;
+}
+
+small.answer {
+  display: block;
+  font-size: 64px;
+}
+
+h1.main-header {
+  margin-top: 10%;
+}
+
+form {
+  position: relative;
+  text-align: center;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 25px;
+}
+
+.panel-default {
+  -webkit-font-smoothing: antialiased;
+  background: white;
+  text-align: center;
+}
+
+div.login-bars {
+  margin-right: 26%;
+  margin-top: 10%;
+  margin-left: 26%;
+}
+
+div.col-xs-5 {
+  left: 30%;
+  min-width: 200px;
+  clear: left;
+}
+
+.btn-block + .btn-block {
+    margin-top: 0px!important;
+}
+a.sign-up {
+  margin-top: 12%;
+}
+
+form:first-child {
+  margin-top: 4%;
+}
+
+form.log-out {
+  position: absolute;
+  top: -25%;
+}
+
+p {
+  padding-top: 10px;
+}
+
+div.card-item {
+  margin-right: 25%;
+}
+
+
+#hero {
+  z-index: -1;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: 600px;
+  overflow: hidden;
+  min-width: 1045px;
+}
+
+#background {
+  position: absolute;
+  z-index: -200;
+  height: 80%;
+}
+
+video, iframe {
+  width: 75%;
+  height: 75%;
+  disabled: true;
+}
+
+
+#quiz {
+  position: relative;
+  margin-top: 2%;
+  margin-right: 13%;
+  margin-left: 3%;
+}
+
+#answer-label, #question-label {
+  width: 25%;
+}
+
+@media (max-width: 1200px) {
+  div#devour-navbar-collapse {
+    background: mintcream;
+  }
+}

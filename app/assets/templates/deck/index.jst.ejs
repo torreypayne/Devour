@@ -1,24 +1,32 @@
 <% if (currentUser) { %>
 <ul class="deck-list" id="index">
   <% if (decks.length > 0) { %>
-    <h4 class="jumbotron">
-        Difficult cards that you tend to forget quickly will be scheduled more often, while the app will not waste your time with over-review of easier items.
-    Add decks from the Public directory, and have fun beating my score.
-    </h4>
+    <div class="page-header">
+      <h1>
+        Difficult cards will be scheduled more often. Devour will not waste your time over-reviewing.
+        Get to work and beat my score.
+    </h1>
+  </div>
     <% decks.each(function(deck) { %>
-    <li class="deck-list-item-background list-inline clearfix">
-      <div class="deck-list-item">
-        <button class="btn btn-danger btn-small delete-deck" data-deck-id="<%=deck.id%>"><span class="glyphicon glyphicon-remove"></span></button>
-        <a href="#decks/<%=deck.id%>">
-          <h2 class="page-header" id="deck-title"><%= deck.escape('title') %></h2>
-          <span>Total Cards: <%= deck.escape('cards_length') %></span>
-        </a>
-        <a href="#decks/<%=deck.id%>/data">Detailed data for <%= deck.escape('title') %></a>
-        <div class=""><%= deck.escape('description') %></div>
-        <a href="#/decks/<%=deck.id%>" class="btn btn-primary btn-block">Devour <%= deck.escape('title') %>!</a>
-      </div>
-      <div class="deck-list-item"><button class="add-card"><h3 class="page-footer" data-deck-id="<%=deck.id%>">Add cards to this Deck</h3></button></div>
-    </li>
+    <div class="decks list-group">
+      <li class="deck-list-item list-group-item col-lg-4 col-md-12">
+        <div class="deck-list-item">
+          <button class="btn btn-danger btn-small delete-deck" data-deck-id="<%=deck.id%>"><span class="glyphicon glyphicon-remove"></span></button>
+          <a href="#decks/<%=deck.id%>">
+            <h2 class="page-header" id="deck-title"><%= deck.escape('title') %></h2>
+            <div>Total Cards: <span class="badge"><%= deck.escape('cards_length') %></span></div>
+          </a>
+          <a href="#decks/<%=deck.id%>/data">Detailed data for <%= deck.escape('title') %></a>
+          <div class=""><%= deck.escape('description') %></div>
+          <a href="#/decks/<%=deck.id%>" class="btn btn-default btn-block" style="color: black;">Devour <%= deck.escape('title') %>!</a>
+        </div>
+        <div class="btn-group btn-group-lg">
+          <button class="btn btn-blue btn-block" id="deck-options"><span class="page-footer" data-deck-id="<%=deck.id%>">Add cards to this Deck</span></button>
+          <button class="btn btn-blue btn-block" id="deck-options"><span>View Cards</span></button>
+          <button class="btn btn-blue btn-block" id="deck-options" href="#decks/<%=deck.id%>/data"><span>Detailed data for <%= deck.escape('title') %></span></button>
+        </div>
+      </li>
+    </div>
     <% }); %>
   <% } else { %>
     <div class="deck-list deck-list-empty">
