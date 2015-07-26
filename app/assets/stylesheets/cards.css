@@ -27,6 +27,8 @@ form.new-card * {
 }
 
 .answer, .question {
+  color: black;
+  background: transparent;
   text-align: center;
 }
 

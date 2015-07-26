@@ -1,13 +1,14 @@
 <div class="forum-index">
-    <h1 class="jumbotron">Welcome to the Devour.Space Forum.</h1><br>
+    <h1 class="jumbotron" style="color: black;">Welcome to the Devour.Space Forum.</h1><br>
     <div class="subreddit-list">
       <ul class="col-xs-12">
+        <button class="btn btn-block btn-default">Create A Sub-Forum</button>
         <h2>SubReddits</h2>
       <% forum.models.forEach(function(subReddit, idx) { %>
         <li class="col-xs-12">
           <a class="thumbnail subreddit" data-id="<%=subReddit.id%>" href="#"><img width="42" height="42" class="col-xs-2" src="<%= subReddit.escape('image_url') %>" class="col-xs-4" ></a>
           <h2 class="col-xs-6" ><a data-id="<%=subReddit.id%>" href="#" class="subreddit"><%= subReddit.escape('title') %></a></h2>
-          <h3 class="col-xs-4" ><%= subReddit.escape('description') %></h3>
+          <h3 class="col-xs-4" style="color: black; background: lightblue;"><%= subReddit.escape('description') %></h3>
         </li>
       <% }); %>
       </ul>

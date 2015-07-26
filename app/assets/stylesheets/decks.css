@@ -1,5 +1,9 @@
 ul.deck-list {
-  margin-top: 2%;
+  /*margin-top: 2%;*/
+}
+
+div.controls {
+  color: black;
 }
 
 .deck-list button.btn-primary {
@@ -48,7 +52,7 @@ button.delete-deck {
   background-color: #69a478;
   margin-right: auto;
   margin-left: auto;
-  width: 33%;
+  width: 31%;
   height: 68px;
 }
 
