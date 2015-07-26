@@ -2,7 +2,7 @@
   <div class="container-fluid">
 
     <div class="navbar-header">
-      <button type="button" id="dropdown-button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#devour-navbar-collapse-1" aria-expanded="false">
+      <button type="button" id="dropdown-button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#devour-navbar-collapse" aria-expanded="false">
         <span class="sr-only">Toggle navigation/Make this actually toggle a dropdown</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -11,23 +11,23 @@
       </button>
     </div>
 
-    <div class="collapse navbar-collapse" id="devour-navbar-collapse-1">
+    <div class="collapse navbar-collapse" id="devour-navbar-collapse">
       <a class="navbar-brand col-xs-4" href="/">
         <img id="brand" src="http://farm1.staticflickr.com/551/18692277976_73ce78935a_b.jpg" height="100" width="100" alt="Eat memory for dinner">
       </a>
       <% if (currentUser) { %>
       <ul class="nav navbar-nav col-xs-4">
         <div class="row">
-          <li class="col-xs-3"><a class="navbar-link" href="#">Decks</a></li>
-          <li class="col-xs-3"><a class="navbar-link" href="#/decks/new">Create</a></li>
-          <li class="col-xs-3"><a class="navbar-link" href="#/search">Search</a></li>
-          <li class="col-xs-3"><a class="navbar-link" href="#/publicIndex">Public Directory</a></li>
+          <li class="col-md-3 col-xs-12"><a class="navbar-link" href="#">Decks</a></li>
+          <li class="col-md-3 col-xs-12"><a class="navbar-link" href="#/decks/new">Create</a></li>
+          <li class="col-md-3 col-xs-12"><a class="navbar-link" href="#/search">Search</a></li>
+          <li class="col-md-3 col-xs-12"><a class="navbar-link" href="#/publicIndex">Public Directory</a></li>
         </div>
         <div class="row">
-          <li class="col-xs-3"><a class="navbar-link" href="#/leaderboard">Leaderboard</a></li>
-          <li class="col-xs-3"><a class="navbar-link" href="#/usersIndex">Contact Users</a></li>
-          <li class="col-xs-3"><a class="navbar-link" href="#/messages">Messages</a></li>
-          <li class="col-xs-3"><a class="navbar-link" href="#/forum">Forum</a></li>
+          <li class="col-md-3 col-xs-12"><a class="navbar-link" href="#/leaderboard">Leader Board</a></li>
+          <li class="col-md-3 col-xs-12"><a class="navbar-link" href="#/usersIndex">Contact Users</a></li>
+          <li class="col-md-3 col-xs-12"><a class="navbar-link" href="#/messages">Messages</a></li>
+          <li class="col-md-3 col-xs-12"><a class="navbar-link" href="#/forum">Forum</a></li>
         </div>
       </ul>
       <% } else { %>
