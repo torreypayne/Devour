@@ -162,6 +162,14 @@ video, iframe {
   width: 25%;
 }
 
+.btn-new-user {
+  min-width:200px;
+}
+
+input.form-control {
+  min-width: 200px;
+}
+
 @media (max-width: 1200px) {
   div#devour-navbar-collapse {
     background: mintcream;
