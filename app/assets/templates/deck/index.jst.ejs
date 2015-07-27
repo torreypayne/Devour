@@ -1,8 +1,8 @@
 <% if (currentUser) { %>
 <ul class="deck-list" id="index">
   <% if (decks.length > 0) { %>
-    <div class="page-header">
-      <h1>
+    <div class="jumotron">
+      <h1 style="color: aliceblue">
         Difficult cards will be scheduled more often. Devour will not waste your time over-reviewing.
         Get to work and beat my score.
     </h1>
@@ -22,31 +22,24 @@
         </div>
         <div class="btn-group btn-group-lg">
           <button class="btn btn-blue btn-block" id="deck-options" href="#decks/<%=deck.id%>/data"><span>Detailed data for <%= deck.escape('title') %></span></button>
-        </div>
+        </div><br>
       </li>
     </div>
     <% }); %>
   <% } else { %>
-    <div class="deck-list deck-list-empty">
-      <h1>Devour Data. Devour Information. Set Yourself Free.</h1>
-      <img src="http://res.cloudinary.com/tpayne/image/upload/s--OY77ymbs--/q_jpegmini/v1437893128/Screen_Shot_2015-07-25_at_11.43.55_PM_tlhhrb.jpg" height="340" width="560" alt="Demo"><br>
+    <div class="deck-list deck-list-empty" id="deck-list-empty">
+      <h1 style="color: aliceblue">Devour Information. Set Yourself Free.</h1>
+      <img src="http://res.cloudinary.com/tpayne/image/upload/s--OY77ymbs--/q_jpegmini/v1437893128/Screen_Shot_2015-07-25_at_11.43.55_PM_tlhhrb.jpg" height="340" width="760" alt="Demo"><br>
       <button class="btn deck-list" id="guide"><a href="#/publicIndex">Go To Public Decks</a></button>
-      <h2>Go To Public Decks or Add Your Own. Memorize Everything. Learn At Your Own Pace.</h2><br>
-      <h3>
-        Devour is a program which makes remembering things easy.
-         Because it's a lot more efficient than traditional study methods, you can either greatly decrease your time spent studying, or greatly increase the amount you learn.
-       </h3>
-      <span>
-        Anyone who needs to remember things in their daily life can benefit from Devour. It will soon be content-agnostic and support images, audio, videos and scientific markup (via LaTeX).
-         You can learn incredible amounts using Devour.
-        For example:
-      </span>
-      <ul class="description" id="welcome">
-        <li><span>Learning a language</span></li>
-        <li><span>Memorizing programming/CS concepts, functions, and properties</span></li>
-        <li><span>Studying for medical and law exams</span></li>
-        <li><span>Mastering long poems</span></li>
-      </ul>
+      <div class="jumbotron">
+        <h2>- Quiz yourself on flashcards. Submit responses based off your recall</h2>
+        <h2>Use Public Decks or Add Your Own. Learn At Your Own Pace.</h2><br>
+        <h3>
+          Devour is a program which makes remembering things easy.
+           Because it's a lot more efficient than traditional study methods, you can either greatly decrease your time spent studying, or greatly increase the amount you learn.
+        </h3>
+      </div>
+      
     </div>
   <% } %>
 </ul>
