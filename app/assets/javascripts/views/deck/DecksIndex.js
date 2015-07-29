@@ -8,9 +8,12 @@ Devour.Views.DecksIndex = Backbone.View.extend({
     'click button.add-card':'newCard',
     'click button.btn-success':'study',
     'click button.show-data':'showData',
+    'click button#data-options':'showData',
     'click button.btn-danger':'deleteDeckShare',
     'scroll':'addDecks',
     'click button#guide':'publicDirectory',
+    'click button.public-list':'publicDirectory',
+    'click a.public-list':'publicDirectory',
   },
 
   initialize: function(options) {
