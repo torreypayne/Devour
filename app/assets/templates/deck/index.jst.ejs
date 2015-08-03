@@ -7,8 +7,8 @@
     </h1>
   </div>
     <% decks.each(function(deck) { %>
-    <div class="decks list-group">
-      <li class="deck-list-item list-group-item col-lg-4 col-md-12">
+    <div class="decks list-group col-lg-4 col-md-12">
+      <li class="deck-list-item list-group-item">
         <div class="deck-list-item">
           <button class="btn btn-danger btn-small delete-deck" data-deck-id="<%=deck.id%>"><span class="glyphicon glyphicon-remove"></span></button>
           <a href="#decks/<%=deck.id%>">
@@ -38,7 +38,7 @@
            Because it's a lot more efficient than traditional study methods, you can either greatly decrease your time spent studying, or greatly increase the amount you learn.
         </h3>
       </div>
-      
+
     </div>
   <% } %>
 </ul>
