@@ -1,0 +1,9 @@
+<div class="list-group-item">
+  <button class="btn btn-danger btn-small delete-deck" data-deck-id="<%=deck.id%>"><span class="glyphicon glyphicon-remove"></span></button>
+  <a href="#decks/<%=deck.id%>">
+    <h2 class="page-header">
+      <%= deck.escape('title') %>
+    </h2>
+  </a>
+  <button type="submit" data-deck-id="<%=deck.id%>" class="btn btn-default btn-block">Add <%= deck.escape('title') %> to Your Collection</button>
+</div>

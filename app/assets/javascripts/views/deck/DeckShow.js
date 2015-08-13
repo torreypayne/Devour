@@ -13,8 +13,6 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
   },
 
   keyAction: function(event) {
-    // debugger;
-    // event.preventDefault();
     var key = event.keyCode;
     if (key === 32 && !this._revealedCard) {
       this._revealedCard = true;

@@ -11,7 +11,12 @@ Devour.Views.PublicIndex = Backbone.View.extend({
   },
 
   render: function() {
-    this.$el.html(this.template({ decks: this.collection }));
+    this.$el.html(this.template());
+    var mainView = this;
+    this.collection.each(function(deck) {
+      var subView = new Devour.Views.PublicDeckItem({ model: deck });
+      mainView.$('form.list-group').append(subView.render().$el);
+    });
     return this;
   },
 

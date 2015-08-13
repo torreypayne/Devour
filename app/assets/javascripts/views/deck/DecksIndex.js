@@ -10,7 +10,6 @@ Devour.Views.DecksIndex = Backbone.View.extend({
     'click button.show-data':'showData',
     'click button#data-options':'showData',
     'click button.btn-danger':'deleteDeckShare',
-    'scroll':'addDecks',
     'click button#guide':'publicDirectory',
     'click button.public-list':'publicDirectory',
     'click a.public-list':'publicDirectory',
@@ -28,15 +27,13 @@ Devour.Views.DecksIndex = Backbone.View.extend({
       decks: this.collection,
       currentUser: currentUser
     });
+    var mainView = this;
     this.$el.html(indexViewer);
-    return this;
-  },
-
-  addDecks: function() {
-    this.page += 1;
-    this.collection.fetch({
-      data: { page: this.page }
+    this.collection.each(function(deck) {
+      var subView = new Devour.Views.DeckItem({ model: deck });
+      mainView.$el.append(subView.render().$el);
     });
+    return this;
   },
 
   study: function(event) {

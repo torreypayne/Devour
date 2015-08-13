@@ -6,25 +6,7 @@
         Remember Things Easy.
     </h1>
   </div>
-    <% decks.each(function(deck) { %>
-    <div class="decks list-group col-lg-4 col-md-12">
-      <li class="deck-list-item list-group-item">
-        <div class="deck-list-item">
-          <button class="btn btn-danger btn-small delete-deck" data-deck-id="<%=deck.id%>"><span class="glyphicon glyphicon-remove"></span></button>
-          <a href="#decks/<%=deck.id%>">
-            <h2 class="page-header" id="deck-title"><%= deck.escape('title') %></h2>
-            <div>Total Cards: <span class="badge"><%= deck.escape('cards_length') %></span></div>
-          </a>
-          <a href="#decks/<%=deck.id%>/data">Detailed data for <%= deck.escape('title') %></a>
-          <div class=""><%= deck.escape('description') %></div>
-          <a href="#/decks/<%=deck.id%>" class="btn btn-default btn-block" style="color: black;">Devour <%= deck.escape('title') %>!</a>
-        </div>
-        <div class="btn-group btn-group-lg">
-          <a class="btn btn-blue btn-block" style="color: white; display: none;" id="deck-options" href="#decks/<%=deck.id%>/data"><span>See Your Schedule!</span></a>
-        </div><br>
-      </li>
-    </div>
-    <% }); %>
+
   <% } else { %>
     <div class="deck-list deck-list-empty" id="deck-list-empty">
       <h1 style="color: gold">Remember Things Easy.</h1>
