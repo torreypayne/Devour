@@ -2,10 +2,6 @@ Devour.Views.DeckForm = Backbone.View.extend({
 
   template: JST["deck/form"],
 
-  // initialize: function(options) {
-  //
-  // },
-
   events: {
     'submit form':'submit'
   },

@@ -23,23 +23,6 @@ Devour.Views.CardShow = Backbone.CompositeView.extend({
     this.$el.html(question);
     return this;
   },
-  
-  // keyAction: function(event) {
-  //   // debugger;
-  //   event.preventDefault();
-  //   var key = event.keyCode;
-  //   if (key === 32) {
-  //     this.revealAnswer();
-  //   } else if (key  === 47 || key  === 48 || key  === 49 || key  === 50 || key  === 51 || key  === 52 || key  === 53) {
-  //     this.stopListening();
-  //     $('#' + key).click();
-  //     console.log(key);
-  //     // this.stopListening();
-  //   } else {
-  //     console.log(key + " has no button");
-  //   }
-  //   return false;
-  // },
 
   assessResponse: function(event) {
     var cardShow = this;
@@ -63,7 +46,6 @@ Devour.Views.CardShow = Backbone.CompositeView.extend({
       $('button.btn-reveal').prop('disabled', true);
       $('div.answer-box').append(this.answerTemplate({ card: this.model }));
     }
-
   },
 
   destroyCard: function(event) {
@@ -71,6 +53,6 @@ Devour.Views.CardShow = Backbone.CompositeView.extend({
     console.log('You deleted a card!');
     this.model.destroy();
     this.remove();
-  }
+  },
 
 });

@@ -11,13 +11,6 @@
         <th>Score</th>
       </tr>
     </thead>
-    <tbody>
-      <% _(leaderboard.attributes.users).each(function(user) { %>
-      <tr>
-        <td><%= user.email %></td>
-        <td><%= user.score %></td>
-      </tr>
-      <% }); %>
-    </tbody>
+    <tbody class="leaderboard"></tbody>
   </table>
 </div>

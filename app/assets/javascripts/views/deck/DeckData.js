@@ -52,6 +52,6 @@ Devour.Views.DeckData = Backbone.View.extend({
       }.bind(this));
     }
     this.render();
-  }
+  },
 
 });
