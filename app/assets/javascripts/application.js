@@ -21,6 +21,8 @@
 //= require devour
 //= require utils/composite_view
 //= require_tree ../templates
+//= require_tree ./forum/models
+//= require_tree ./forum/collections
 //= require_tree ./models
 //= require_tree ./collections
 //= require_tree ./views

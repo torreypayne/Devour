@@ -1,5 +1,5 @@
 Devour.Collections.RedditPosts = Backbone.Collection.extend({
-    url: 'api/posts',
-    
+    url: 'forum/posts',
+
     model: Devour.Models.RedditPost,
 })

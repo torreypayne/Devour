@@ -1,8 +1,8 @@
 Devour.Collections.SubReddits = Backbone.Collection.extend({
-    url: 'api/subs',
-    
+    url: 'forum/subs',
+
     model: Devour.Models.SubReddit,
-    
+
     getOrFetch: function(id) {
         var collection = this;
         var subReddit = this.get(id);

@@ -1,4 +1,4 @@
-class Api::SubsController < ApplicationController
+class Forum::SubsController < ApplicationController
   def new
   end
 

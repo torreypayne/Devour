@@ -1,5 +1,5 @@
 Devour.Models.SubReddit = Backbone.Model.extend({
-    urlRoot: 'api/subs',
+    urlRoot: 'forum/subs',
 
     posts: function() {
         if (!this._posts) {

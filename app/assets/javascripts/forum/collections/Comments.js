@@ -1,5 +1,5 @@
 Devour.Collections.Comments = Backbone.Collection.extend({
-    url: 'api/comments',
-    
+    url: 'forum/comments',
+
     model: Devour.Models.Comment,
 });

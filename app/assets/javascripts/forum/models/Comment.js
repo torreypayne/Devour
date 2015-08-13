@@ -1,4 +1,4 @@
 Devour.Models.Comments = Backbone.Model.extend({
-    urlRoot: 'api/comments',
-    
+    urlRoot: 'forum/comments',
+
 });
