@@ -21,7 +21,8 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
     'leaderboard':'showLeaders',
     'usersIndex':'userIndex',
     'messages':'messagesIndex',
-    'forum':'forumIndex'
+    'forum':'forumIndex',
+    'forum/:id':'showSubforum',
   },
 
   search: function() {
@@ -108,12 +109,6 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
   study: function() {
     var quizView = new Devour.Views.QuizView({ collection: this.decks });
     this.swapView(quizView);
-    // publicDecks.fetch({
-    //   success: function() {
-    //     console.log("we're here");
-    //     // $('li.study-dropdown').append(this.studyDropdown({decks: publicDecks }));
-    //   }
-    // });
   },
 
   showLeaders: function() {
@@ -149,12 +144,25 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
     });
     this.swapView(view);
   },
-  
+
   forumIndex: function() {
-    var redditView = new Devour.Views.RedditIndex({ 
-      collection: new Devour.Collections.SubReddits
+    this.subReddits = new Devour.Collections.SubReddits;
+    var redditView = new Devour.Views.RedditIndex({
+      collection: this.subReddits
     });
     this.swapView(redditView);
+  },
+
+  showSubforum: function(id) {
+    if (!this.subReddits) {
+      this.subReddits = new Devour.Collections.SubReddits;
+    }
+    var subReddit = this.subReddits.getOrFetch(id);
+    var subView = new Devour.Views.RedditShow({
+      model: subReddit,
+      collection: this.subReddits
+    });
+    this.swapView(subView);
   },
 
 });

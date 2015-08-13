@@ -3,7 +3,7 @@ Devour.Views.RedditIndex = Backbone.CompositeView.extend({
     template: JST['reddit/RedditIndex'],
 
     events: {
-      'click a.subreddit':'showSubreddit',
+      'click subreddit.a':'showSubreddit',
     },
 
     initialize: function(options) {
@@ -12,7 +12,6 @@ Devour.Views.RedditIndex = Backbone.CompositeView.extend({
     },
 
     render: function() {
-        console.log('rendered');
         if (this._currentView) {
           this.attachSubviews();
           this._currentView.render();
@@ -24,13 +23,13 @@ Devour.Views.RedditIndex = Backbone.CompositeView.extend({
             that.addSubview('.subreddits', subView);
           });
           this.attachSubviews();
-          console.log(this.collection);
         }
         return this;
     },
 
     showSubreddit: function(event) {
       event.preventDefault();
+      debugger;
       var sub = $(event.currentTarget);
       var id = sub.data('id');
       this.subReddit = this.collection.getOrFetch(id);
