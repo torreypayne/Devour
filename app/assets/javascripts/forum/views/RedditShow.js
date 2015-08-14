@@ -12,7 +12,7 @@ Devour.Views.RedditShow = Backbone.CompositeView.extend({
     var subforumView = this;
     this.model.posts().forEach(function(post) {
       var postView = new Devour.Views.PostItem({ model: post });
-      subforumView.addSubview(postView.render().$el);
+      subforumView.addSubview('tbody.posts-table', postView);
     });
     this.attachSubviews();
     return this;
