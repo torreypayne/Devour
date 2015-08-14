@@ -46,14 +46,14 @@ end
   )
   10.times do |m|
     newPost = subReddit.posts.create(
-      title: Faker::Name.title, 
+      title: Faker::Name.title,
       url: Faker::Internet.url,
       content: Faker::Lorem.paragraph,
       user_id: user.id
     )
     3.times do |r|
       comment = newPost.comments.create(body: Faker::Lorem.sentence, post_id: newPost.id, user_id: user2.id)
-      comment2 = newPost.comments.create(body: Faker::Lorem.sentence, post_id: newPost.id, user_id: user2.id)
+      comment2 = newPost.comments.create(body: Faker::Lorem.sentence, post_id: newPost.id, user_id: user2.id, parent_comment_id: comment.id)
     end
   end
 end

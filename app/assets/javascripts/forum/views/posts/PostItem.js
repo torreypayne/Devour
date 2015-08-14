@@ -4,7 +4,7 @@ Devour.Views.PostItem = Backbone.View.extend({
 
   tagName: 'tr',
 
-  className: 'post',
+  className: 'post info',
 
   initialize: function(options) {
     this.listenTo(this.model, 'sync', this.render);
