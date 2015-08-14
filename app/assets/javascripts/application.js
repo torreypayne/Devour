@@ -23,6 +23,7 @@
 //= require_tree ../templates
 //= require_tree ./forum/models
 //= require_tree ./forum/collections
+//= require_tree ./forum/views
 //= require_tree ./models
 //= require_tree ./collections
 //= require_tree ./views

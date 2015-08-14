@@ -20,8 +20,8 @@ class Forum::SubsController < ApplicationController
   end
 
   def show
-    @sub = Sub.find(params[:id])
-    render json: @sub
+    @sub = Sub.includes(:posts).find(params[:id])
+    render :show
   end
 
   def update

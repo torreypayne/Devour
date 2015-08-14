@@ -6,7 +6,7 @@ Devour.Collections.SubReddits = Backbone.Collection.extend({
     getOrFetch: function(id) {
         var collection = this;
         var subReddit = this.get(id);
-        if (!subReddit) {
+        if (subReddit) {
             subReddit.fetch();
         } else {
             subReddit = new Devour.Models.SubReddit({ id: id });

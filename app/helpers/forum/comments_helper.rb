@@ -1,0 +1,2 @@
+module Forum::CommentsHelper
+end
