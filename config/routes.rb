@@ -23,9 +23,6 @@ Rails.application.routes.draw do
     resources :deck_shares, only: [:create, :destroy]
     resources :leaderboards, only: [:index, :show]
     resources :messages, only: [:create, :show, :index]
-    # resources :subs
-    # resources :posts, only: [:index, :create, :show]
-    # resources :comments, only: :create
   end
   namespace :forum, defaults: { format: :json } do
     resources :subs

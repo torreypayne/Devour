@@ -4,4 +4,9 @@ class Forum::PostsController < ApplicationController
 
   def index
   end
+
+  def show
+    @post = Post.includes(:comments).find(params[:id])
+    render :show
+  end
 end

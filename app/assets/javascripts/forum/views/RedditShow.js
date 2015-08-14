@@ -8,6 +8,7 @@ Devour.Views.RedditShow = Backbone.CompositeView.extend({
   },
 
   render: function() {
+    this.removeSubviews();
     this.$el.html(this.template({ model: this.model }));
     var subforumView = this;
     this.model.posts().forEach(function(post) {

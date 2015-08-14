@@ -1,4 +1,4 @@
-Devour.Models.Comments = Backbone.Model.extend({
+Devour.Models.Comment = Backbone.Model.extend({
     urlRoot: 'forum/comments',
 
 });

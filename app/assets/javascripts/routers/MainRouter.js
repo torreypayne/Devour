@@ -23,6 +23,7 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
     'messages':'messagesIndex',
     'forum':'forumIndex',
     'forum/:id':'showSubforum',
+    'forum/posts/:id':'showPost',
   },
 
   search: function() {
@@ -163,6 +164,18 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
       collection: this.subReddits
     });
     this.swapView(subView);
+  },
+
+  showPost: function(id) {
+    var post = new Devour.Models.RedditPost({ id: id });
+    post.fetch({
+      success: function() {
+        var postView = new Devour.Views.PostShow({
+          model: post
+        });
+        this.swapView(postView);
+      }.bind(this)
+    });
   },
 
 });
