@@ -40,7 +40,6 @@ module Api
 
     def index
       @decks = current_user.decks.includes(:cards) if current_user
-      @decks.page(params[:page])
       render :index
     end
 

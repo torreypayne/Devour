@@ -13,7 +13,7 @@
 #
 
 class Deck < ActiveRecord::Base
-  validates :title, :owner_id, :public, presence: true
+  validates :title, :owner_id, presence: true
 
   after_save :share_with_self
 
