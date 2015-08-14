@@ -1,7 +1,7 @@
 <div class="deck-show">
 
   <aside class="col-xs-2 quiz-sizebar">
-    <input type="hidden" data-owner-id="<%=deck.get('owner_id')%>" name="name" value="">
+    <input type="hidden" id="deck-owner" data-owner-id="<%=deck.get('owner_id')%>" name="name" value="">
     <h2 class="col-xs-12 sidebar-header" style="color: black;"><%= deck.escape('title') %><span style="color: tomato;" class="fa fa-heart"></span></h2>
     <div class="row">
       <button type="button" class="btn btn-default go-to-data col-xs-12">See your data!</button>
