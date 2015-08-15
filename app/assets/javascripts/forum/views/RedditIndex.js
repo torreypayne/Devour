@@ -22,7 +22,6 @@ Devour.Views.RedditIndex = Backbone.CompositeView.extend({
             var subView = new Devour.Views.RedditItem({ model: subReddit });
             that.addSubview('.subreddits', subView);
           });
-          debugger;
           this.attachSubviews();
         }
         return this;
