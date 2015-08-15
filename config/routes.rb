@@ -1,13 +1,5 @@
 Rails.application.routes.draw do
 
-  namespace :forum do
-  get 'posts/create'
-  end
-
-  namespace :forum do
-  get 'posts/index'
-  end
-
   resource :password_reset, only: [:edit, :update, :new, :create]
 
   root to: 'static_pages#root'

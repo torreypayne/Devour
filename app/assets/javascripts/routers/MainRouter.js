@@ -24,6 +24,7 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
     'forum':'forumIndex',
     'forum/:id':'showSubforum',
     'forum/posts/:id':'showPost',
+    'forum/subs/new':'newSub',
   },
 
   search: function() {
@@ -177,5 +178,10 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
       }.bind(this)
     });
   },
+
+  newSub: function() {
+    var form = new Devour.Views.SubForm();
+    this.swapView(form);
+  }
 
 });

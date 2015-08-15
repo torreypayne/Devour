@@ -37,6 +37,6 @@ class Forum::SubsController < ApplicationController
   end
 
   def sub_params
-    params.require(:subs).permit(:title, :description, :moderator_id)
+    params.require(:sub).permit(:title, :description, :moderator_id)
   end
 end
