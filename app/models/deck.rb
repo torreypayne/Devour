@@ -15,7 +15,6 @@
 class Deck < ActiveRecord::Base
   validates :title, :owner_id, presence: true
 
-  after_save :share_with_self
 
   belongs_to(
   :owner,
@@ -158,16 +157,6 @@ class Deck < ActiveRecord::Base
     end
 
     review_array
-  end
-
-  def share_with_self
-    DeckShare.create!(user_id: owner.id, deck_id: self.id)
-  end
-
-
-  def public?
-    # return self['public'] == true
-    #code
   end
 
   def self.extract_words(location)

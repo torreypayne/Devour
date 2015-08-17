@@ -12,12 +12,12 @@ module Api
     end
 
     def create
-      deck = Deck.new(deck_params)
-      if deck.save
-        render json: deck
-      else
-        render json: deck.errors, as: :unprocessable_entity
+      begin
+        deck = current_user.decks.create(deck_params)
+      rescue Exception => e
+        render json: e, as: :unprocessable_entity
       end
+      render json: deck unless e
     end
 
     def edit
