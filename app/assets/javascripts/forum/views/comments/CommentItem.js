@@ -15,7 +15,7 @@ Devour.Views.CommentItem = Backbone.CompositeView.extend({
         model: child_comment,
       });
       this.addSubview('.child-comments', subCommentView);
-    });
+    }.bind(this));
     this.attachSubviews();
     return this;
   },

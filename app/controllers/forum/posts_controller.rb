@@ -6,6 +6,7 @@ class Forum::PostsController < ApplicationController
   end
 
   def show
+    puts "hitting show action"
     @post = Post.includes(:comments).find(params[:id])
     render :show
   end
