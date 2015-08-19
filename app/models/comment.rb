@@ -16,6 +16,9 @@ class Comment < ActiveRecord::Base
 
   validates :body, :author, :post, presence: true
 
+  # Used for authoring comments in forum
+  attr_accessor :author_name
+
   belongs_to :post, inverse_of: :comments
   belongs_to(
     :author,
@@ -38,4 +41,7 @@ class Comment < ActiveRecord::Base
     primary_key: :id
   )
 
+  def author_name
+    self.author.email.scan(/[^@]+/).first
+  end
 end

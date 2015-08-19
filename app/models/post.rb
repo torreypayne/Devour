@@ -30,11 +30,9 @@ class Post < ActiveRecord::Base
   def comments_by_parent
     # Cloned from RedditOnRails, a/A
     comments_by_parent = Hash.new { |hash, key| hash[key] = [] }
-
     self.comments.includes(:author).each do |comment|
-      comments_by_parent[comment.parent_comment_id] << comment
+      comments_by_parent[comment.parent_comment_id] << comment.as_json(methods: :author_name)
     end
-
     comments_by_parent
   end
 end

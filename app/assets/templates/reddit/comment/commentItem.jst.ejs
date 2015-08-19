@@ -1,4 +1,7 @@
 <p class="jumbotron">
-    <%= comment.escape('body') %>
+    <p><%= comment.escape('body') %></p>
+
+    <span><%= comment.escape('author_name') %></span>
+
     <ul class="child-comments" id="<%=comment.id%>"></ul>
 </p>
