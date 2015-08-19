@@ -19,7 +19,6 @@ class Post < ActiveRecord::Base
   has_many :post_subs, inverse_of: :post, dependent: :destroy
   has_many :comments, inverse_of: :post
   has_many :subs, through: :post_subs, source: :sub
-  has_many :user_votes, as: :votable
 
   belongs_to(
     :author,
@@ -27,4 +26,15 @@ class Post < ActiveRecord::Base
     foreign_key: :user_id,
     primary_key: :id
   )
+
+  def comment_by_parent
+    # Cloned from RedditOnRails, a/A
+    comment_by_parent = Hash.new { |hash, key| hash[key] = [] }
+
+    self.comments.includes(:author).each do |comment|
+      comments_by_parent[comment.parent_comment_id] << comment
+    end
+
+    comments_by_parent
+  end
 end
