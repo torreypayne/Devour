@@ -17,9 +17,6 @@ gem 'faker'
 gem 'kaminari'
 gem 'figaro'
 gem 'json'
-gem 'httparty'
-# gem 'rest-client'
-# gem 'puma'
 
 group :development, :test do
   gem 'byebug'
