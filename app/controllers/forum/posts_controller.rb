@@ -7,7 +7,7 @@ class Forum::PostsController < ApplicationController
 
   def show
     puts "hitting show action"
-    @post = Post.includes(:comments).find(params[:id])
+    @post = Post.includes(comments: :author).find(params[:id])
     render :show
   end
 end

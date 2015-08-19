@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :users
   namespace :api, defaults: { format: :json } do
     resources :decks
-    resources :cards
+    resources :cards, only: [:create, :edit, :show, :index]
     resources :responses, only: :create
     resources :deck_shares, only: [:create, :destroy]
     resources :leaderboards, only: [:index, :show]
