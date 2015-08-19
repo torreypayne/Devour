@@ -52,8 +52,8 @@ end
       user_id: user.id
     )
     3.times do |r|
-      comment = newPost.comments.create(body: Faker::Lorem.sentence, post_id: newPost.id, user_id: user2.id)
-      comment2 = newPost.comments.create(body: Faker::Lorem.sentence, post_id: newPost.id, user_id: user2.id, parent_comment_id: comment.id)
+      comment = newPost.comments.create(body: Faker::Lorem.sentence, user_id: user2.id)
+      comment2 = newPost.comments.create(body: Faker::Lorem.sentence, user_id: user2.id, parent_comment_id: comment.id)
     end
   end
 end

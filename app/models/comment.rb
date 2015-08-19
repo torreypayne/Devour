@@ -15,7 +15,6 @@ class Comment < ActiveRecord::Base
   include Votable
 
   validates :body, :author, :post, presence: true
-  has_many :userVotes, as: :votable
 
   belongs_to :post, inverse_of: :comments
   belongs_to(

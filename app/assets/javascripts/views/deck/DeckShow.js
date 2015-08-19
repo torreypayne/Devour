@@ -67,11 +67,11 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
   nextQuestion: function() {
     this.nextCard();
     if (this._currentCard) {
-      this.addCardSubview(this._currentCard);
+      this.switchCardSubview(this._currentCard);
     }
   },
 
-  addCardSubview: function(card) {
+  switchCardSubview: function(card) {
     var cardItem = new Devour.Views.CardShow({
       model: card,
       deck: this,
