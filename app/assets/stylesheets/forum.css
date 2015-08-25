@@ -1,3 +1,7 @@
 .forum-index {
   margin-top: 5%;
 }
+
+form.new-forum {
+  background: rgba(0, 0, 0, 0.75);
+}

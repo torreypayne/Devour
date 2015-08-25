@@ -1,0 +1,34 @@
+<form class="new-forum form-inline">
+
+  <div class="form-inline">
+    <div class="input-group input-group-lg">
+      <label for="title">Title</label>
+      <input class="form-control" type="text" id="title" name="post[title]" placeholder="Title">
+    </div>
+  </div>
+  <div class="form-inline">
+    <div class="input-group input-group-lg">
+      <label for="url">URL</label>
+      <input type="text" class='form-control' name="post[url]" id="url" placeholder="Optional URL for post">
+    </div>
+  </div>
+  <div class="form-inline">
+    <div class="input-group input-group-lg">
+      <label for="description">Content</label>
+      <textarea class="form-control" id="description" name="post[content]" placeholder="Description"></textarea><br>
+    </div>
+  </div>
+  <div class="form-inline">
+    <div class="input-group input-group-lg">
+      <label for="subs">SubForums</label>
+      <ul>
+        <% subs.forEach(function(sub) { %>
+          <div class="checkbox"><input type="checkbox" name="post[subs]" value="<%= sub.id %>"><%= sub.escape('title') %></div>
+        <% }); %>
+      </ul>
+    </div>
+  </div>
+  <input type="submit" class="btn btn-lg" style="color: black;" value="Create Dat Post">
+
+
+</form>

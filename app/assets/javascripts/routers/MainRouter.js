@@ -23,6 +23,7 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
     'messages':'messagesIndex',
     'forum':'forumIndex',
     'forum/:id':'showSubforum',
+    'forum/posts/new':'newPost',
     'forum/posts/:id':'showPost',
     'forum/subs/new':'newSub',
   },
@@ -182,6 +183,18 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
   newSub: function() {
     var form = new Devour.Views.SubForm();
     this.swapView(form);
+  },
+
+  newPost: function() {
+    var subs = new Devour.Collections.SubReddits();
+    subs.fetch({
+      success: function(resp) {
+        var form = new Devour.Views.PostForm({
+          subs: subs
+        });
+        this.swapView(form);
+      }.bind(this)
+    });
   }
 
 });
