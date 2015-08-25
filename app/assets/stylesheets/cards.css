@@ -80,6 +80,10 @@ button.edit-button {
   padding: 8px 25px 8px 25px;
 }
 
+.create-card {
+  color: black;
+}
+
 .btn-red {
   background: #c0392b;
 }

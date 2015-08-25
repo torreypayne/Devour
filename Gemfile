@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.1'
-gem 'unicorn-rails'
 gem 'bcrypt'
+gem 'webrick'
+gem 'tzinfo-data'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -12,9 +13,8 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'newrelic_rpm'
 gem 'faker'
-gem 'kaminari'
+gem 'kaminari', '>= 0.16.3'
 gem 'figaro'
 gem 'json'
 
@@ -44,6 +44,8 @@ group :development do
 end
 
 group :production do
+  # gem 'newrelic_rpm'
+  # gem 'unicorn-rails'
   gem 'heroku-deflater'
   gem 'pg'
 end
