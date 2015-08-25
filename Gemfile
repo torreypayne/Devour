@@ -44,8 +44,8 @@ group :development do
 end
 
 group :production do
-  # gem 'newrelic_rpm'
-  # gem 'unicorn-rails'
+  gem 'newrelic_rpm'
+  gem 'unicorn-rails'
   gem 'heroku-deflater'
   gem 'pg'
 end
