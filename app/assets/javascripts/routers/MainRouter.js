@@ -158,7 +158,7 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
 
   showSubforum: function(id) {
     if (!this.subforums) {
-      this.subforums = new Devour.Collections.Subforums;
+      this.subforums = new Devour.Collections.Subforums();
     }
     var subforum = this.subforums.getOrFetch(id);
     var subView = new Devour.Views.forumShow({
