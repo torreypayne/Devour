@@ -24,7 +24,7 @@ Devour.Views.PostForm = Backbone.View.extend({
     var post = new Devour.Models.forumPost($data);
     post.save({}, {
       success: function(resp) {
-        Backbone.history.navigate('#/forum/posts' + post.id);
+        Backbone.history.navigate('#/forum/posts/' + post.id);
       },
       error: function(resp) {
         console.log(resp);
