@@ -1,6 +1,6 @@
-Devour.Views.RedditShow = Backbone.CompositeView.extend({
+Devour.Views.forumShow = Backbone.CompositeView.extend({
 
-  template: JST['reddit/RedditShow'],
+  template: JST['forum/forumShow'],
 
   initialize: function(options) {
     this.listenTo(this.model, 'sync', this.render);

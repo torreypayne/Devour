@@ -1,6 +1,6 @@
 Devour.Views.PostItem = Backbone.View.extend({
 
-  template: JST['reddit/post/PostItem'],
+  template: JST['forum/post/PostItem'],
 
   tagName: 'tr',
 

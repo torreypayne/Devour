@@ -13,6 +13,7 @@
 
 class Post < ActiveRecord::Base
   include Votable
+  require 'byebug'
 
   validates :title, :author, presence: true
 
@@ -28,11 +29,17 @@ class Post < ActiveRecord::Base
   )
 
   def comments_by_parent
-    # Cloned from RedditOnRails, a/A
+    # Cloned from forumOnRails, a/A
     comments_by_parent = Hash.new { |hash, key| hash[key] = [] }
     self.comments.includes(:author).each do |comment|
       comments_by_parent[comment.parent_comment_id] << comment.as_json(methods: :author_name)
     end
+    # debugger
+    # comments_by_parent[nil].sort! do |a,b|
+    #   time1 = Time.new(a['created_at'].to_s)
+    #   time2 = Time.new(b['created_at'].to_s)
+    #   time1 <=> time2
+    #  end
     comments_by_parent
   end
 end

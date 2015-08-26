@@ -1,5 +1,5 @@
 Devour.Views.CommentItem = Backbone.CompositeView.extend({
-  template: JST['reddit/comment/commentItem'],
+  template: JST['forum/comment/commentItem'],
 
   initialize: function(options) {
     this.listenTo(this.model, 'sync add', this.render);

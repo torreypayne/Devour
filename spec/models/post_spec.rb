@@ -28,12 +28,12 @@ describe Post do
     
     context "User creates posts" do
         let(:user) { create(:user) }
-        let(:subReddit) { user.subs.new }
+        let(:subforum) { user.subs.new }
         
         it "can be created by a User" do
-            let(:post) { subReddit.posts.new(user_id: user.id) }
+            let(:post) { subforum.posts.new(user_id: user.id) }
             expect(post.author).to eq(user)
-            expect(subReddit.posts.first).to eq(post)
+            expect(subforum.posts.first).to eq(post)
         end
     end
 end

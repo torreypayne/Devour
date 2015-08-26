@@ -149,27 +149,27 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
   },
 
   forumIndex: function() {
-    this.subReddits = new Devour.Collections.SubReddits;
-    var redditView = new Devour.Views.RedditIndex({
-      collection: this.subReddits
+    this.subforums = new Devour.Collections.Subforums;
+    var forumView = new Devour.Views.forumIndex({
+      collection: this.subforums
     });
-    this.swapView(redditView);
+    this.swapView(forumView);
   },
 
   showSubforum: function(id) {
-    if (!this.subReddits) {
-      this.subReddits = new Devour.Collections.SubReddits;
+    if (!this.subforums) {
+      this.subforums = new Devour.Collections.Subforums;
     }
-    var subReddit = this.subReddits.getOrFetch(id);
-    var subView = new Devour.Views.RedditShow({
-      model: subReddit,
-      collection: this.subReddits
+    var subforum = this.subforums.getOrFetch(id);
+    var subView = new Devour.Views.forumShow({
+      model: subforum,
+      collection: this.subforums
     });
     this.swapView(subView);
   },
 
   showPost: function(id) {
-    var post = new Devour.Models.RedditPost({ id: id });
+    var post = new Devour.Models.forumPost({ id: id });
     post.fetch({
       success: function() {
         var postView = new Devour.Views.PostShow({
@@ -186,7 +186,7 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
   },
 
   newPost: function() {
-    var subs = new Devour.Collections.SubReddits();
+    var subs = new Devour.Collections.Subforums();
     subs.fetch({
       success: function(resp) {
         var form = new Devour.Views.PostForm({

@@ -31,14 +31,14 @@ end
 end
 
 10.times do |n|
-  subReddit = Sub.create(
+  subforum = Sub.create(
     title: Faker::Name.title,
     description: Faker::Hacker.say_something_smart,
     image_url: Faker::Avatar.image,
     moderator_id: user.id
   )
   10.times do |m|
-    newPost = subReddit.posts.create(
+    newPost = subforum.posts.create(
       title: Faker::Name.title,
       url: Faker::Internet.url,
       content: Faker::Lorem.paragraph,

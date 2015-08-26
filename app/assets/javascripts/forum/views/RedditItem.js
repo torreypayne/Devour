@@ -1,6 +1,6 @@
-Devour.Views.RedditItem = Backbone.View.extend({
+Devour.Views.forumItem = Backbone.View.extend({
 
-  template: JST['reddit/redditItem'],
+  template: JST['forum/forumItem'],
 
   tagName: 'li',
 
@@ -9,7 +9,7 @@ Devour.Views.RedditItem = Backbone.View.extend({
   },
 
   render: function() {
-    var content = this.template({ subReddit: this.model });
+    var content = this.template({ subforum: this.model });
     this.$el.html(content);
     return this;
   },

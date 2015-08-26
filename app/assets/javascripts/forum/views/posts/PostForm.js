@@ -1,6 +1,6 @@
 Devour.Views.PostForm = Backbone.View.extend({
 
-  template: JST['reddit/post/postForm'],
+  template: JST['forum/post/postForm'],
 
   events: {
     'submit form':'submit'
@@ -21,7 +21,7 @@ Devour.Views.PostForm = Backbone.View.extend({
   submit: function(event) {
     event.preventDefault();
     var $data = $(event.currentTarget).serializeJSON();
-    var post = new Devour.Models.RedditPost($data);
+    var post = new Devour.Models.forumPost($data);
     post.save({}, {
       success: function(resp) {
         Backbone.history.navigate('#/forum/posts' + post.id);

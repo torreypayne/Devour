@@ -14,10 +14,10 @@ Devour.Models.Comment = Backbone.Model.extend({
     },
 
     parse: function(response) {
-      if (response.comments_by_parent[this.id]) {
+      if (response.comments_by_parent && response.comments_by_parent[this.id]) {
         this.child_comments().set(response.comments_by_parent[this.id]);
+        delete response.comments_by_parent[this.id];
       }
-      delete response.comments_by_parent[this.id];
       this.child_comments().forEach(function(child_comment) {
         child_comment.parse(response);
       });

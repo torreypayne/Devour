@@ -1,4 +1,4 @@
-Devour.Models.RedditPost = Backbone.Model.extend({
+Devour.Models.forumPost = Backbone.Model.extend({
     urlRoot: 'forum/posts',
 
     top_level_comments: function() {

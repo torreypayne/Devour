@@ -1,9 +1,9 @@
-Devour.Models.SubReddit = Backbone.Model.extend({
+Devour.Models.Subforum = Backbone.Model.extend({
     urlRoot: 'forum/subs',
 
     posts: function() {
         if (!this._posts) {
-            this._posts = new Devour.Collections.RedditPosts([], { sub: this });
+            this._posts = new Devour.Collections.forumPosts([], { sub: this });
         }
         return this._posts;
     },

@@ -8,7 +8,7 @@ Devour.Views.SubForm = Backbone.View.extend({
     'submit form':'submit',
   },
 
-  template: JST['reddit/RedditForm'],
+  template: JST['forum/forumForm'],
 
   render: function() {
     this.$el.html(this.template({ sub: this.model }));
@@ -19,7 +19,7 @@ Devour.Views.SubForm = Backbone.View.extend({
     event.preventDefault();
     var form = this;
     var data = $(event.currentTarget).serializeJSON();
-    var sub = new Devour.Models.SubReddit(data);
+    var sub = new Devour.Models.Subforum(data);
     sub.save({}, {
       success: function() {
         Backbone.history.navigate('#/forum');

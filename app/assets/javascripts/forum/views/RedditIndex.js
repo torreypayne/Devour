@@ -1,9 +1,9 @@
-Devour.Views.RedditIndex = Backbone.CompositeView.extend({
+Devour.Views.forumIndex = Backbone.CompositeView.extend({
 
-    template: JST['reddit/RedditIndex'],
+    template: JST['forum/forumIndex'],
 
     events: {
-      'click subreddit.a':'showSubreddit',
+      'click subforum.a':'showSubforum',
     },
 
     initialize: function(options) {
@@ -18,29 +18,29 @@ Devour.Views.RedditIndex = Backbone.CompositeView.extend({
         } else {
           this.$el.html(this.template());
           var that = this;
-          this.collection.each(function(subReddit) {
-            var subView = new Devour.Views.RedditItem({ model: subReddit });
-            that.addSubview('.subreddits', subView);
+          this.collection.each(function(subforum) {
+            var subView = new Devour.Views.forumItem({ model: subforum });
+            that.addSubview('.subforums', subView);
           });
           this.attachSubviews();
         }
         return this;
     },
 
-    showSubreddit: function(event) {
+    showSubforum: function(event) {
       event.preventDefault();
       debugger;
       var sub = $(event.currentTarget);
       var id = sub.data('id');
-      this.subReddit = this.collection.getOrFetch(id);
-      var subView = new Devour.Views.RedditShow({
-        model: this.subReddit,
+      this.subforum = this.collection.getOrFetch(id);
+      var subView = new Devour.Views.forumShow({
+        model: this.subforum,
         collection: this.collection
       });
-      this.swapReddit(subView);
+      this.swapforum(subView);
     },
 
-    swapReddit: function(view) {
+    swapforum: function(view) {
       this.removeSubviews();
       this._currentView && this._currentView.remove();
       this._currentView = view;

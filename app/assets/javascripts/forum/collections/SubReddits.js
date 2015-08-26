@@ -1,21 +1,21 @@
-Devour.Collections.SubReddits = Backbone.Collection.extend({
+Devour.Collections.Subforums = Backbone.Collection.extend({
     url: 'forum/subs',
 
-    model: Devour.Models.SubReddit,
+    model: Devour.Models.Subforum,
 
     getOrFetch: function(id) {
         var collection = this;
-        var subReddit = this.get(id);
-        if (subReddit) {
-            subReddit.fetch();
+        var subforum = this.get(id);
+        if (subforum) {
+            subforum.fetch();
         } else {
-            subReddit = new Devour.Models.SubReddit({ id: id });
-            subReddit.fetch({
+            subforum = new Devour.Models.Subforum({ id: id });
+            subforum.fetch({
                 success: function() {
-                    collection.add(subReddit);
+                    collection.add(subforum);
                 }
             });
         }
-        return subReddit;
+        return subforum;
     }
 })
