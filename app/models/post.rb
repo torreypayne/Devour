@@ -13,7 +13,6 @@
 
 class Post < ActiveRecord::Base
   include Votable
-  require 'byebug'
 
   validates :title, :author, presence: true
 
