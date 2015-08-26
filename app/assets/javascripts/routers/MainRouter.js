@@ -149,7 +149,7 @@ Devour.Routers.MainRouter = Backbone.Router.extend({
   },
 
   forumIndex: function() {
-    this.subforums = new Devour.Collections.Subforums;
+    this.subforums = new Devour.Collections.Subforums();
     var forumView = new Devour.Views.forumIndex({
       collection: this.subforums
     });
