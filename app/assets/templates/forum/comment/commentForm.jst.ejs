@@ -1,0 +1,11 @@
+<form class="new-forum form-inline">
+
+  <div class="form-inline">
+    <div class="input-group input-group-lg">
+      <label for="title">Body</label>
+      <textarea class="form-control" type="text" id="title" name="comment[body]" placeholder="Title"></textarea>
+    </div>
+  </div>
+  <input type="hidden" name="comment[post_id]" value="<%= post.id %>">
+  <input type="submit" class="btn btn-lg" style="color: black;" value="Create Dat Comment">
+</form>
