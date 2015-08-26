@@ -8,7 +8,7 @@ Devour.Views.SubForm = Backbone.View.extend({
     'submit form':'submit',
   },
 
-  template: JST['forum/forumForm'],
+  template: JST['forum/subForm'],
 
   render: function() {
     this.$el.html(this.template({ sub: this.model }));

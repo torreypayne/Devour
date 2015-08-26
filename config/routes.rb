@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     resources :messages, only: [:create, :show, :index]
   end
   namespace :forum, defaults: { format: :json } do
-    resources :subs
+    resources :subs, only: [:index, :create, :show]
     resources :posts, only: [:index, :create, :show]
     resources :comments, only: :create
   end
