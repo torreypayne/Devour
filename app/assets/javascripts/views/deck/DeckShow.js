@@ -82,11 +82,11 @@ Devour.Views.DeckShow = Backbone.CompositeView.extend({
 
   swapCard: function(view) {
     if (this._currentView) {
-      this.removeSubview('ul.quiz', this._currentView);
+      this.removeSubview('#quiz', this._currentView);
     }
     this._currentView && this._currentView.remove();
     this._currentView = view;
-    this.addSubview('ul.quiz', this._currentView);
+    this.addSubview('#quiz', this._currentView);
     this.render();
     this._revealedCard = false;
     this._submitting = false;

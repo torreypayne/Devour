@@ -66,6 +66,8 @@ form.new-card * {
 #entire-card {
   padding-left: 0px;
   padding-right: 0px;
+  height: 300px;
+  width: 400px;
 }
 
 .entire-card button {

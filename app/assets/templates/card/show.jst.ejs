@@ -6,19 +6,15 @@
 
 <% } else { %>
 
-  <div class="card-show">
-    <div id="active-card" href="#" class="card deck-show card-question" data-id="<%= card.id %>">
-      <div class="container entire-card" id="entire-card">
-        <h1 class="question card-question card-show quiz-show quiz col-xs-12 panel-body">
-          <%= card.escape('question') %>
-        </h1>
-        <button type="submit" id="show-answer" class="btn btn-lg btn-block btn-primary btn-reveal">Reveal Answer</button>
-        <% if ($('#current-user').data('id') === $('#deck-owner').data('owner-id')) { %>
-          <button type="submit" class="btn btn-lg btn-block edit-card edit-button">Edit Card</button>
-        <% } %>
+    <div id="entire-card" class="container-fluid entire-card card-question" data-id="<%= card.id %>">
+      <span class="question card-question card-show quiz-show quiz col-xs-12 panel-body">
+        <%= card.escape('question') %>
+      </span>
+      <button type="submit" id="show-answer" class="btn btn-lg btn-block btn-primary btn-reveal">Reveal Answer</button>
+      <% if ($('#current-user').data('id') === $('#deck-owner').data('owner-id')) { %>
+        <button type="submit" class="btn btn-lg btn-block edit-card edit-button">Edit Card</button>
+      <% } %>
 
-        <div class="card answer-box"></div>
-      </div>
-    </div><br>
+      <div class="card answer-box"></div>
   </div>
 <% } %>

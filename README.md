@@ -1,6 +1,6 @@
 # Devour
 
-[Heroku link][heroku]
+[Devour.Space][heroku]
 
 [heroku]: http://www.devour.space
 
